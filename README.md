@@ -12,7 +12,7 @@ A **developer-friendly static site generator** built with Next.js and Tailwind C
 
 
 ## DEMO
-[selam](https://i.hizliresim.com/p0s9gqg.jpg)
+![selam](https://i.hizliresim.com/p0s9gqg.jpg)
 ## ✨ Features
 
 ### 🎯 Core Features
