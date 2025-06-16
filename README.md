@@ -1,16 +1,17 @@
-# 🚀 zyros 
+# 🚀 zyros
 
 ⚫ Name changed from Zyros-ssg to Zyros.
 
 A **developer-friendly static site generator** built with Next.js and Tailwind CSS. Transform a simple JSON file into a beautiful, fast static website with powerful features that developers and content creators love.
 
-![zyros](https://img.shields.io/badge/zyros-v2.0.6-blue)
+![zyros](https://img.shields.io/badge/zyros-v2.0.9-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![npm](https://img.shields.io/npm/v/zyros)
 ![License](https://img.shields.io/npm/l/zyros)
 ![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)
+
 
 ## DEMO
 **https://zyros.vercel.app/**
@@ -72,22 +73,58 @@ A **developer-friendly static site generator** built with Next.js and Tailwind C
 
 ## 🚀 Quick Start
 
-### Installation & Setup
+### ⚡ Recommended: Using npx (No Installation Required)
 
-The easiest way to get started with zyros is using npx:
+The easiest and recommended way to get started:
 
 ```bash
-# Create a new project (gets complete zyros project)
-npx zyros init my-blog
+# Create a new project (recommended)
+npx zyros@latest init my-blog or zyros init after npm install -g zyros
 
 # Navigate to your project
 cd my-blog
 
-# Start development server (dependencies auto-installed!)
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
 Your site will be available at `http://localhost:3000`!
+
+> **💡 Why npx?** Using `npx zyros@latest init` ensures you always get the latest version without installing zyros globally.
+
+### 🌍 Alternative: Global Installation
+
+If you prefer to install zyros globally:
+
+```bash
+# Install globally
+npm install -g zyros
+
+# Create projects anywhere
+zyros init my-blog
+cd my-blog
+npm install
+npm run dev
+```
+
+### ⚠️ Important: Don't Install as Project Dependency
+
+**❌ Don't do this:**
+```bash
+npm install zyros  # This installs zyros as a dependency, not what you want!
+```
+
+**✅ Do this instead:**
+```bash
+npx zyros@latest init my-project  # Creates a new project
+# OR
+npm install -g zyros              # Installs CLI globally
+```
+
+> **Note:** zyros is a CLI tool for creating projects, not a library dependency. If you accidentally run `npm install zyros` in a project directory, you can safely delete the created `package.json` and `node_modules`.
 
 ### What You Get
 
@@ -99,21 +136,10 @@ When you run `npx zyros init`, you get a **complete copy** of the entire zyros p
 - ✅ **Full functionality** - Analytics, social sharing, newsletter, etc.
 - ✅ **Development tools** - TypeScript, ESLint, Tailwind CSS configured
 - ✅ **Deployment ready** - Build scripts and deployment configurations
-- ✅ **Dependencies included** - No need to run npm install separately!
 - ✅ **Production tested** - Thoroughly validated and error-free
 
-### Alternative Installation Methods
+### 🛠️ For Contributors & Advanced Users
 
-#### Global Installation
-```bash
-# Install globally to use zyros command anywhere
-npm install -g zyros
-
-# Then create projects
-zyros init my-blog
-```
-
-#### Local Development
 ```bash
 # Clone for contributing or customization
 git clone https://github.com/zyrasoftware/zyros.git
