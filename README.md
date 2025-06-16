@@ -11,8 +11,7 @@ A **developer-friendly static site generator** built with Next.js and Tailwind C
 ![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)
 
 
-## DEMO
-![selam](https://i.hizliresim.com/p0s9gqg.jpg)
+
 ## ✨ Features
 
 ### 🎯 Core Features
