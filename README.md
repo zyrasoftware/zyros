@@ -11,7 +11,7 @@ A **developer-friendly static site generator** built with Next.js and Tailwind C
 ![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)
 
 ## DEMO
-
+**https://zyros.vercel.app/**
 ![Demo](p0s9gqg.jpg)
 
 ## ✨ Features
