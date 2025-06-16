@@ -8,6 +8,7 @@ A **developer-friendly static site generator** built with Next.js and Tailwind C
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![npm](https://img.shields.io/npm/v/zyros)
 ![License](https://img.shields.io/npm/l/zyros)
+![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)
 
 ## ✨ Features
 
@@ -86,13 +87,14 @@ Your site will be available at `http://localhost:3000`!
 
 When you run `npx zyros init`, you get a **complete copy** of the entire zyros project including:
 
-- ✅ **All components** - Advanced search, content blocks, forms, layouts
+- ✅ **All components** - Advanced search, content blocks, forms, layouts (including Layout.tsx)
 - ✅ **All themes** - 8 beautiful themes ready to use
 - ✅ **Demo content** - Rich example content to learn from
 - ✅ **Full functionality** - Analytics, social sharing, newsletter, etc.
 - ✅ **Development tools** - TypeScript, ESLint, Tailwind CSS configured
 - ✅ **Deployment ready** - Build scripts and deployment configurations
 - ✅ **Dependencies included** - No need to run npm install separately!
+- ✅ **Production tested** - Thoroughly validated and error-free
 
 ### Alternative Installation Methods
 
@@ -427,7 +429,7 @@ All analytics are privacy-first and stored locally.
 
 ## 🗺️ Roadmap
 
-### ✅ Recently Added (v2.0)
+### ✅ Recently Added (v2.0.5)
 - [x] **NPM Package** - Install globally or use with npx
 - [x] **CLI Tool** - Complete command-line interface
 - [x] **Template System** - Multiple starter templates
@@ -435,6 +437,9 @@ All analytics are privacy-first and stored locally.
 - [x] **Image Optimization** - Automatic image processing
 - [x] **One-click Deployment** - Deploy to multiple platforms
 - [x] **TypeScript Support** - Full type definitions
+- [x] **Enhanced Reliability** - Fixed critical file filtering issues
+- [x] **Windows Compatibility** - Improved cross-platform support
+- [x] **Comprehensive Testing** - Thoroughly tested and validated
 
 ### 🚧 Coming Soon (v2.1)
 - [ ] **Plugin System** - Extensible architecture
