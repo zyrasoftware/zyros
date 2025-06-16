@@ -2,15 +2,13 @@
 
 A **developer-friendly static site generator** built with Next.js and Tailwind CSS. Transform a simple JSON file into a beautiful, fast static website with powerful features that developers and content creators love.
 
-![zyros](https://img.shields.io/badge/zyros-v2.0.5-blue)
+![zyros](https://img.shields.io/badge/zyros-v2.0.6-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![npm](https://img.shields.io/npm/v/zyros)
 ![License](https://img.shields.io/npm/l/zyros)
 ![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)
-
-
 
 ## ✨ Features
 
