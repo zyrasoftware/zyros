@@ -1,4 +1,6 @@
-# 🚀 zyros
+# 🚀 zyros 
+
+⚫ Name changed from Zyros-ssg to Zyros.
 
 A **developer-friendly static site generator** built with Next.js and Tailwind CSS. Transform a simple JSON file into a beautiful, fast static website with powerful features that developers and content creators love.
 
