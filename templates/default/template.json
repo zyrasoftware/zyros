@@ -1,0 +1,19 @@
+{
+  "name": "default",
+  "description": "Clean and minimal blog template with modern design",
+  "version": "1.0.0",
+  "defaultTheme": "light",
+  "features": [
+    "Responsive design",
+    "Search functionality",
+    "Social sharing",
+    "Reading progress",
+    "Table of contents",
+    "Code highlighting",
+    "SEO optimized"
+  ],
+  "author": "Zyra Software",
+  "preview": "https://github.com/zyrasoftware/zyros/templates/default",
+  "tags": ["blog", "minimal", "clean", "modern"],
+  "category": "blog"
+} 

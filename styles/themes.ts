@@ -1,0 +1,137 @@
+export interface Theme {
+  name: string;
+  background: string;
+  text: string;
+  accent: string;
+  secondary: string;
+  border: string;
+  card: string;
+  code: string;
+  link: string;
+  linkHover: string;
+  gradient?: string;
+  shadow?: string;
+}
+
+export const themes: Record<string, Theme> = {
+  light: {
+    name: 'light',
+    background: 'bg-white',
+    text: 'text-gray-900',
+    accent: 'text-blue-600',
+    secondary: 'text-gray-600',
+    border: 'border-gray-200',
+    card: 'bg-gray-50/50',
+    code: 'bg-gray-100 text-gray-800 border-gray-200',
+    link: 'text-blue-600 hover:text-blue-700',
+    linkHover: 'hover:text-blue-700',
+    gradient: 'bg-gradient-to-br from-blue-50 to-indigo-100',
+    shadow: 'shadow-lg shadow-gray-200/50',
+  },
+  dark: {
+    name: 'dark',
+    background: 'bg-slate-900',
+    text: 'text-slate-100',
+    accent: 'text-blue-400',
+    secondary: 'text-slate-400',
+    border: 'border-slate-700',
+    card: 'bg-slate-800/50',
+    code: 'bg-slate-800 text-slate-200 border-slate-700',
+    link: 'text-blue-400 hover:text-blue-300',
+    linkHover: 'hover:text-blue-300',
+    gradient: 'bg-gradient-to-br from-slate-900 to-slate-800',
+    shadow: 'shadow-lg shadow-black/25',
+  },
+  minimal: {
+    name: 'minimal',
+    background: 'bg-stone-50',
+    text: 'text-stone-800',
+    accent: 'text-stone-900',
+    secondary: 'text-stone-500',
+    border: 'border-stone-300',
+    card: 'bg-white/80',
+    code: 'bg-stone-100 text-stone-700 border-stone-200',
+    link: 'text-stone-900 hover:text-stone-700',
+    linkHover: 'hover:text-stone-700',
+    gradient: 'bg-gradient-to-br from-stone-50 to-stone-100',
+    shadow: 'shadow-lg shadow-stone-200/50',
+  },
+  ocean: {
+    name: 'ocean',
+    background: 'bg-gradient-to-br from-cyan-50 to-blue-100',
+    text: 'text-slate-800',
+    accent: 'text-cyan-600',
+    secondary: 'text-slate-600',
+    border: 'border-cyan-200',
+    card: 'bg-white/70 backdrop-blur-sm',
+    code: 'bg-cyan-50 text-cyan-800 border-cyan-200',
+    link: 'text-cyan-600 hover:text-cyan-700',
+    linkHover: 'hover:text-cyan-700',
+    gradient: 'bg-gradient-to-br from-cyan-100 to-blue-200',
+    shadow: 'shadow-lg shadow-cyan-200/50',
+  },
+  sunset: {
+    name: 'sunset',
+    background: 'bg-gradient-to-br from-orange-50 to-pink-100',
+    text: 'text-slate-800',
+    accent: 'text-orange-600',
+    secondary: 'text-slate-600',
+    border: 'border-orange-200',
+    card: 'bg-white/70 backdrop-blur-sm',
+    code: 'bg-orange-50 text-orange-800 border-orange-200',
+    link: 'text-orange-600 hover:text-orange-700',
+    linkHover: 'hover:text-orange-700',
+    gradient: 'bg-gradient-to-br from-orange-100 to-pink-200',
+    shadow: 'shadow-lg shadow-orange-200/50',
+  },
+  forest: {
+    name: 'forest',
+    background: 'bg-gradient-to-br from-green-50 to-emerald-100',
+    text: 'text-slate-800',
+    accent: 'text-emerald-600',
+    secondary: 'text-slate-600',
+    border: 'border-emerald-200',
+    card: 'bg-white/70 backdrop-blur-sm',
+    code: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+    link: 'text-emerald-600 hover:text-emerald-700',
+    linkHover: 'hover:text-emerald-700',
+    gradient: 'bg-gradient-to-br from-emerald-100 to-green-200',
+    shadow: 'shadow-lg shadow-emerald-200/50',
+  },
+  midnight: {
+    name: 'midnight',
+    background: 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900',
+    text: 'text-slate-100',
+    accent: 'text-purple-400',
+    secondary: 'text-slate-400',
+    border: 'border-purple-800',
+    card: 'bg-slate-800/50 backdrop-blur-sm',
+    code: 'bg-slate-800 text-purple-200 border-purple-700',
+    link: 'text-purple-400 hover:text-purple-300',
+    linkHover: 'hover:text-purple-300',
+    gradient: 'bg-gradient-to-br from-purple-900 to-slate-900',
+    shadow: 'shadow-lg shadow-purple-900/25',
+  },
+  neon: {
+    name: 'neon',
+    background: 'bg-black',
+    text: 'text-green-400',
+    accent: 'text-cyan-400',
+    secondary: 'text-green-300',
+    border: 'border-green-500',
+    card: 'bg-gray-900/80 backdrop-blur-sm border border-green-500/30',
+    code: 'bg-gray-900 text-green-400 border-green-500',
+    link: 'text-cyan-400 hover:text-cyan-300',
+    linkHover: 'hover:text-cyan-300',
+    gradient: 'bg-gradient-to-br from-gray-900 to-black',
+    shadow: 'shadow-lg shadow-green-500/25',
+  },
+};
+
+export function getTheme(themeName: string): Theme {
+  return themes[themeName] || themes.light;
+}
+
+export function getThemeNames(): string[] {
+  return Object.keys(themes);
+} 

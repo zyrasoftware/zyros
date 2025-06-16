@@ -1,27 +1,120 @@
 {
-  "name": "zyros-ssg",
-  "version": "0.1.0",
-  "private": true,
+  "name": "zyros",
+  "version": "2.0.5",
+  "description": "A developer-friendly static site generator built with Next.js and Tailwind CSS. Transform a simple JSON file into a beautiful, fast static website.",
+  "main": "index.js",
+  "bin": {
+    "zyros": "./bin/zyros.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "components/",
+    "pages/",
+    "styles/",
+    "scripts/",
+    "templates/",
+    "public/",
+    "types/",
+    "next.config.ts",
+    "tailwind.config.js",
+    "postcss.config.mjs",
+    "tsconfig.json",
+    "eslint.config.mjs",
+    "next-env.d.ts",
+    "index.js",
+    "README.md",
+    "LICENSE",
+    "INSTALLATION.md",
+    "CUSTOMIZATION.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/build.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run type-check"
+  },
+  "keywords": [
+    "static-site-generator",
+    "nextjs",
+    "tailwindcss",
+    "markdown",
+    "blog",
+    "cms",
+    "ssg",
+    "jamstack",
+    "typescript",
+    "react",
+    "json-driven",
+    "developer-tools",
+    "website-builder",
+    "static-site",
+    "blog-generator"
+  ],
+  "author": {
+    "name": "Zyra Software",
+    "email": "zyrasoftwaredev@gmail.com",
+    "url": "https://zyra.software"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zyrasoftware/zyros.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zyrasoftware/zyros/issues"
+  },
+  "homepage": "https://github.com/zyrasoftware/zyros",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "@tailwindcss/container-queries": "^0.1.1",
+    "autoprefixer": "^10.4.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "framer-motion": "^11.0.0",
+    "fs-extra": "^11.1.0",
+    "fuse.js": "^7.0.0",
+    "glob": "^10.3.0",
+    "gray-matter": "^4.0.3",
+    "inquirer": "^8.2.6",
+    "lucide-react": "^0.400.0",
+    "next": "15.3.3",
+    "ora": "^5.4.1",
+    "postcss": "^8.4.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "react-markdown": "^10.1.0",
+    "reading-time": "^1.5.0",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-highlight": "^7.0.0",
+    "rehype-slug": "^6.0.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-html": "^16.0.1",
+    "sharp": "^0.32.0",
+    "yaml": "^2.3.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/fs-extra": "^11.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   }
 }

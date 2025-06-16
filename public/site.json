@@ -1,0 +1,681 @@
+{
+  "site": {
+    "title": "Zyros  - Advanced Features",
+    "theme": "ocean",
+    "description": "A modern developer blog showcasing the power of zyros with advanced features like content blocks, forms, and custom layouts",
+    "layout": "blog",
+    "author": "Zyros Team",
+            "url": "https://github.com/zyrasoftware/zyros",
+    "language": "en",
+    "favicon": "/favicon.svg",
+    "logo": "public/sa.png",
+    "social": {
+      "twitter": "https://twitter.com/zyros_ssg",
+      "github": "https://github.com/zyrasoftware/zyros",
+      "linkedin": "https://linkedin.com/company/zyra-software",
+      "email": "hello@zyros.dev",
+      "facebook": "https://facebook.com/zyrosssg",
+      "instagram": "https://instagram.com/zyros.ssg"
+    },
+    "analytics": {
+      "googleAnalytics": "GA_MEASUREMENT_ID"
+    },
+    "seo": {
+      "keywords": ["static site generator", "nextjs", "tailwindcss", "blog", "cms"],
+      "ogImage": "/og-image.jpg",
+      "twitterCard": "summary_large_image"
+    },
+    "features": {
+      "search": true,
+      "newsletter": true,
+      "comments": false,
+      "darkMode": true,
+      "analytics": true,
+      "socialShare": true,
+      "tableOfContents": true,
+      "readingProgress": true
+    }
+  },
+  "header": {
+    "logo": {
+      "text": "Zyros SSG",
+      "image": "/sa.png",
+      "url": "/",
+      "size": "medium",
+      "position": "left"
+    },
+    "navigation": [
+      {
+        "title": "Home",
+        "href": "/",
+        "icon": "🏠"
+      },
+      {
+        "title": "Features",
+        "href": "#",
+        "icon": "⚡",
+        "children": [
+          {
+            "title": "Content Blocks",
+            "href": "/features/content-blocks",
+            "icon": "🧱"
+          },
+          {
+            "title": "Form Builder",
+            "href": "/features/forms",
+            "icon": "📝"
+          },
+          {
+            "title": "Custom Layouts",
+            "href": "/features/layouts",
+            "icon": "🎨"
+          }
+        ]
+      },
+      {
+        "title": "Gallery",
+        "href": "/gallery",
+        "icon": "🖼️"
+      },
+      {
+        "title": "Team",
+        "href": "/team",
+        "icon": "👥"
+      },
+      {
+        "title": "Pricing",
+        "href": "/pricing",
+        "icon": "💰",
+        "badge": "Popular"
+      },
+      {
+        "title": "Documentation",
+        "href": "/docs",
+        "icon": "📚",
+        "badge": "New"
+      }
+    ],
+    
+    "search": true,
+    "themeToggle": true,
+    "sticky": true,
+    "transparent": false,
+    "height": "normal",
+    "style": "modern",
+    "background": {
+      "type": "blur"
+    },
+    "border": {
+      "show": true,
+      "style": "solid",
+      "width": "thin"
+    },
+    "layout": "spread",
+    "mobileMenu": {
+      "style": "slide",
+      "position": "right"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Zyros SSG. All rights reserved.",
+    "columns": [
+      {
+        "title": "Product",
+        "links": [
+          {
+            "title": "Features",
+            "href": "/features"
+          },
+          {
+            "title": "Gallery",
+            "href": "/gallery"
+          },
+          {
+            "title": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "title": "Documentation",
+            "href": "/docs"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "title": "About Us",
+            "href": "/team"
+          },
+          {
+            "title": "Contact",
+            "href": "/contact"
+          },
+          {
+            "title": "Careers",
+            "href": "/careers"
+          },
+          {
+            "title": "Press",
+            "href": "/press"
+          }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          {
+            "title": "Blog",
+            "href": "/blog"
+          },
+          {
+            "title": "Tutorials",
+            "href": "/tutorials"
+          },
+          {
+            "title": "Community",
+            "href": "/community"
+          },
+          {
+            "title": "FAQ",
+            "href": "/faq"
+          }
+        ]
+      }
+    ],
+    "newsletter": false,
+    "social": true,
+    "backToTop": true,
+    "style": "modern",
+    "layout": "columns",
+    "background": {
+      "type": "gradient",
+      "gradient": {
+        "from": "#1e293b",
+        "to": "#0f172a",
+        "direction": "diagonal"
+      }
+    },
+    "spacing": "normal",
+    "border": {
+      "show": true,
+      "style": "solid",
+      "width": "thin"
+    },
+    "socialLinks": [
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/zyros_dev",
+        "icon": "🐦",
+        "color": "#1DA1F2"
+      },
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/zyrasoftware/zyros",
+        "icon": "🐙",
+        "color": "#333"
+      },
+      {
+        "platform": "Discord",
+        "url": "https://discord.gg/zyros",
+        "icon": "💬",
+        "color": "#5865F2"
+      },
+      {
+        "platform": "YouTube",
+        "url": "https://youtube.com/@zyros",
+        "icon": "📺",
+        "color": "#FF0000"
+      }
+    ],
+    "customSections": [
+      {
+        "id": "mission",
+        "title": "Our Mission",
+        "content": "Empowering developers to create beautiful websites with the simplicity of JSON configuration.",
+        "position": "left"
+      },
+      {
+        "id": "support",
+        "title": "24/7 Support",
+        "content": "Get help whenever you need it with our dedicated support team and community.",
+        "position": "right"
+      }
+    ]
+  },
+  "contentBlocks": [
+    {
+      "id": "hero-main",
+      "type": "hero",
+      "title": "Build Beautiful Websites with JSON",
+      "subtitle": "✨ Introducing Advanced Features",
+      "content": "Transform your ideas into stunning websites using just JSON configuration. No coding required, infinite possibilities.",
+      "data": {
+        "backgroundImage": "/hero-bg.jpg",
+        "buttons": [
+          {
+            "text": "Get Started Free",
+            "href": "/getting-started",
+            "style": "primary"
+          },
+          {
+            "text": "View Examples",
+            "href": "/examples",
+            "style": "outline"
+          }
+        ],
+        "features": [
+          "No coding required",
+          "Lightning fast",
+          "SEO optimized",
+          "Mobile responsive"
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "features-main",
+      "type": "features",
+      "title": "Powerful Features",
+      "subtitle": "Everything you need",
+      "content": "Built-in components and features that make creating websites effortless and enjoyable.",
+      "data": {
+        "layout": "grid",
+        "features": [
+          {
+            "title": "Content Blocks",
+            "description": "Pre-built sections like hero, features, testimonials, and more. Mix and match to create unique layouts.",
+            "icon": "🧱"
+          },
+          {
+            "title": "Form Builder",
+            "description": "Create complex forms with validation, file uploads, and custom styling using simple JSON configuration.",
+            "icon": "📝"
+          },
+          {
+            "title": "Custom Layouts",
+            "description": "Choose from multiple layout types: blog, portfolio, landing page, documentation, and more.",
+            "icon": "🎨"
+          }
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "stats-main",
+      "type": "stats",
+      "title": "Trusted by Developers Worldwide",
+      "content": "Join thousands of developers who have already discovered the power of JSON-driven web development.",
+      "data": {
+        "stats": [
+          {
+            "value": "10,000+",
+            "label": "Websites Created",
+            "description": "Built with Zyros SSG",
+            "icon": "🌐"
+          },
+          {
+            "value": "50+",
+            "label": "Content Blocks",
+            "description": "Ready to use",
+            "icon": "🧱"
+          },
+          {
+            "value": "99.9%",
+            "label": "Uptime",
+            "description": "Reliable performance",
+            "icon": "⚡"
+          }
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "gallery-showcase",
+      "type": "gallery",
+      "title": "Project Gallery",
+      "subtitle": "Our Latest Work",
+      "content": "Explore our portfolio of beautiful websites created with Zyros SSG.",
+      "data": {
+        "layout": "grid",
+        "columns": 3,
+        "images": [
+          {
+            "src": "/gallery/project1.jpg",
+            "alt": "Modern Blog Design",
+            "title": "Modern Blog",
+            "description": "A clean, minimalist blog with dark mode support"
+          },
+          {
+            "src": "/gallery/project2.jpg",
+            "alt": "E-commerce Site",
+            "title": "E-commerce Platform",
+            "description": "Full-featured online store with payment integration"
+          },
+          {
+            "src": "/gallery/project3.jpg",
+            "alt": "Portfolio Website",
+            "title": "Creative Portfolio",
+            "description": "Stunning portfolio for creative professionals"
+          },
+          {
+            "src": "/gallery/project4.jpg",
+            "alt": "Corporate Website",
+            "title": "Corporate Site",
+            "description": "Professional business website with CMS"
+          },
+          {
+            "src": "/gallery/project5.jpg",
+            "alt": "Landing Page",
+            "title": "Product Landing",
+            "description": "High-converting product landing page"
+          },
+          {
+            "src": "/gallery/project6.jpg",
+            "alt": "Documentation Site",
+            "title": "Documentation Hub",
+            "description": "Comprehensive documentation with search"
+          }
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "team-showcase",
+      "type": "team",
+      "title": "Meet Our Team",
+      "subtitle": "The People Behind Zyros SSG",
+      "content": "Our passionate team of developers and designers working to make web development accessible to everyone.",
+      "data": {
+        "members": [
+          {
+            "name": "Jhon Doe",
+            "role": "Lead Developer",
+            "bio": "Full-stack developer with 8+ years of experience in modern web technologies.",
+            "avatar": "/team/jhon.jpg",
+            "social": {
+              "twitter": "https://twitter.com/alexjohnson",
+              "linkedin": "https://linkedin.com/in/alexjohnson",
+              "github": "https://github.com/alexjohnson"
+            }
+          },
+          {
+            "name": "Jhon Doe",
+            "role": "Lead Developer",
+            "bio": "Full-stack developer with 8+ years of experience in modern web technologies.",
+            "avatar": "/team/jhon.jpg",
+            "social": {
+              "twitter": "https://twitter.com/alexjohnson",
+              "linkedin": "https://linkedin.com/in/alexjohnson",
+              "github": "https://github.com/alexjohnson"
+            }
+          },
+          {
+            "name": "Jhon Doe",
+            "role": "Lead Developer",
+            "bio": "Full-stack developer with 8+ years of experience in modern web technologies.",
+            "avatar": "/team/jhon.jpg",
+            "social": {
+              "twitter": "https://twitter.com/alexjohnson",
+              "linkedin": "https://linkedin.com/in/alexjohnson",
+              "github": "https://github.com/alexjohnson"
+            }
+          }
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "faq-section",
+      "type": "faq",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything You Need to Know",
+      "content": "Find answers to common questions about Zyros SSG and how to get started.",
+      "data": {
+        "faqs": [
+          {
+            "question": "What is Zyros SSG?",
+            "answer": "Zyros SSG is a modern static site generator that allows you to create beautiful, fast websites using just JSON configuration. No coding required!"
+          },
+          {
+            "question": "How do I get started?",
+            "answer": "Simply install Zyros SSG via npm, create a site.json file with your content, and run the build command. Your website will be generated automatically."
+          },
+          {
+            "question": "Can I customize the design?",
+            "answer": "Absolutely! Zyros SSG comes with 8 built-in themes, and you can customize colors, layouts, and components through the JSON configuration."
+          },
+          {
+            "question": "Is it SEO-friendly?",
+            "answer": "Yes! All sites generated with Zyros SSG are optimized for search engines with proper meta tags, structured data, and fast loading times."
+          },
+          {
+            "question": "Can I add custom functionality?",
+            "answer": "Yes, you can extend Zyros SSG with custom components, forms, content blocks, and integrations through the flexible plugin system."
+          }
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "pricing-plans",
+      "type": "pricing",
+      "title": "Simple, Transparent Pricing",
+      "subtitle": "Choose the Perfect Plan",
+      "content": "Start free and scale as you grow. All plans include our core features with no hidden fees.",
+      "data": {
+        "plans": [
+          {
+            "name": "Free",
+            "price": "$0",
+            "period": "forever",
+            "description": "Perfect for personal projects and getting started",
+            "features": [
+              "Up to 3 websites",
+              "Basic themes",
+              "Community support",
+              "Standard templates",
+              "Basic analytics"
+            ],
+            "buttonText": "Get Started Free",
+            "buttonLink": "/signup"
+          },
+          {
+            "name": "Pro",
+            "price": "$19",
+            "period": "month",
+            "description": "Ideal for professionals and small businesses",
+            "popular": true,
+            "features": [
+              "Unlimited websites",
+              "Premium themes",
+              "Priority support",
+              "Advanced templates",
+              "Advanced analytics",
+              "Custom domains",
+              "Form builder",
+              "E-commerce ready"
+            ],
+            "buttonText": "Start Pro Trial",
+            "buttonLink": "/signup?plan=pro"
+          },
+          {
+            "name": "Enterprise",
+            "price": "$99",
+            "period": "month",
+            "description": "For teams and large organizations",
+            "features": [
+              "Everything in Pro",
+              "Team collaboration",
+              "White-label solution",
+              "Custom integrations",
+              "Dedicated support",
+              "SLA guarantee",
+              "Advanced security",
+              "Custom development"
+            ],
+            "buttonText": "Contact Sales",
+            "buttonLink": "/contact"
+          }
+        ]
+      },
+      "visible": true
+    }
+  ],
+  "forms": [
+    {
+      "id": "contact-form",
+      "title": "Contact Us",
+      "description": "Send us a message and we'll get back to you as soon as possible.",
+      "fields": [
+        {
+          "id": "name",
+          "type": "text",
+          "label": "Full Name",
+          "placeholder": "Enter your full name",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 50
+          }
+        },
+        {
+          "id": "email",
+          "type": "email",
+          "label": "Email Address",
+          "placeholder": "Enter your email",
+          "required": true
+        },
+        {
+          "id": "subject",
+          "type": "select",
+          "label": "Subject",
+          "placeholder": "Select a subject",
+          "required": true,
+          "options": [
+            "General Inquiry",
+            "Technical Support",
+            "Feature Request",
+            "Bug Report"
+          ]
+        },
+        {
+          "id": "message",
+          "type": "textarea",
+          "label": "Message",
+          "placeholder": "Tell us how we can help you...",
+          "required": true,
+          "validation": {
+            "minLength": 10,
+            "maxLength": 1000
+          }
+        }
+      ],
+      "submitText": "Send Message",
+      "successMessage": "Thank you for your message! We'll get back to you within 24 hours.",
+      "action": "/api/contact",
+      "method": "POST"
+    }
+  ],
+  "pages": [
+    {
+      "title": "Getting Started with Zyros SSG",
+      "slug": "getting-started",
+      "description": "Learn how to build beautiful static sites with just a JSON file and zero configuration.",
+      "category": "tutorial",
+      "tags": ["getting-started", "tutorial", "static-site", "nextjs"],
+      "publishedAt": "2024-01-15",
+      "readingTime": 8,
+      "layout": "default",
+      "contentBlocks": ["hero-main"],
+      "content": "# Getting Started with Zyros SSG\n\nWelcome to the future of static site generation! **Zyros SSG** transforms your simple JSON configuration into a beautiful, fast, and SEO-optimized website.\n\n## Why Zyros SSG?\n\nBuilding websites shouldn't be complicated. With Zyros SSG, you get:\n\n- ⚡ **Lightning Fast** - Static generation means instant loading\n- 📝 **JSON-Driven** - Manage content with simple JSON files\n- 🎨 **Beautiful Themes** - Multiple built-in themes to choose from\n- 📱 **Mobile First** - Responsive design out of the box\n- 🔍 **SEO Ready** - Optimized for search engines\n\n## New Advanced Features\n\n### Content Blocks\n\nCreate rich, interactive sections using pre-built content blocks. Simply define them in your JSON configuration and reference them in your pages.\n\n### Form Builder\n\nCreate complex forms with validation, multiple field types, and custom styling. All configured through JSON.\n\n### Enhanced Navigation\n\nCreate sophisticated navigation with mega menus, icons, badges, and nested structures.\n\n## Multiple Themes\n\nChoose from eight carefully crafted themes:\n\n1. **Light** - Clean and minimal\n2. **Dark** - Modern and sleek\n3. **Minimal** - Elegant simplicity\n4. **Ocean** - Cool and refreshing\n5. **Sunset** - Warm and vibrant\n6. **Forest** - Natural and calming\n7. **Midnight** - Deep and mysterious\n8. **Neon** - Bold and electric\n\n---\n\n*Ready to build something amazing? Let's get started!*"
+    },
+    {
+      "title": "Advanced Features & Customization",
+      "slug": "advanced-features",
+      "description": "Explore the advanced capabilities of Zyros SSG and learn how to customize your site.",
+      "category": "advanced",
+      "tags": ["customization", "themes", "seo", "performance"],
+      "publishedAt": "2024-01-20",
+      "readingTime": 12,
+      "layout": "full-width",
+      "contentBlocks": ["features-main"],
+      "content": "# Advanced Features & Customization\n\nOnce you've mastered the basics, Zyros SSG offers powerful features for creating truly unique websites.\n\n## Content Blocks System\n\nThe content blocks system allows you to create rich, interactive sections without writing code:\n\n### Available Block Types\n\n- **Hero** - Eye-catching header sections with CTAs\n- **Features** - Showcase your product features\n- **Testimonials** - Social proof from customers\n- **Stats** - Display impressive numbers\n- **CTA** - Call-to-action sections\n- **Contact** - Contact information and forms\n\n## Form Builder\n\nCreate sophisticated forms with validation, file uploads, and custom styling:\n\n### Field Types\n\n- **Text** - Single line text input\n- **Email** - Email validation\n- **Textarea** - Multi-line text\n- **Select** - Dropdown selection\n- **Checkbox** - Multiple selections\n- **Radio** - Single selection\n- **File** - File uploads\n\n## Custom Layouts\n\nChoose from multiple layout types:\n\n- **Default** - Standard blog layout\n- **Full-width** - Edge-to-edge content\n- **Sidebar** - Content with sidebar\n- **Minimal** - Clean, distraction-free\n- **Landing** - Optimized for conversions\n\n---\n\n*The possibilities are endless. What will you build next?*"
+    },
+    {
+      "title": "About This Project",
+      "slug": "about",
+      "description": "Learn about the philosophy and technology behind Zyros SSG.",
+      "category": "general",
+      "tags": ["about", "philosophy", "technology", "open-source"],
+      "publishedAt": "2024-01-10",
+      "readingTime": 6,
+      "layout": "minimal",
+      "contentBlocks": ["stats-main"],
+      "content": "# About This Project\n\n**Zyros SSG** was born from a simple idea: building websites should be as easy as writing JSON.\n\n## The Philosophy\n\nIn a world of complex build tools, endless configuration files, and framework fatigue, we believe in:\n\n### Simplicity First\n- One JSON file to rule them all\n- Zero configuration required\n- Sensible defaults everywhere\n\n### Performance by Default\n- Static generation for speed\n- Optimized assets out of the box\n- Lighthouse scores of 100\n\n## New Advanced Features\n\n### Content Blocks System\nPre-built, customizable sections that you can mix and match:\n- Hero sections\n- Feature lists\n- Testimonials\n- Statistics\n- Call-to-action blocks\n- Contact sections\n\n### Form Builder\nCreate complex forms with:\n- Multiple field types\n- Validation rules\n- File uploads\n- Custom styling\n- Success messages\n\n### Enhanced Navigation\n- Mega menus\n- Icons and badges\n- Nested structures\n- Custom CTAs\n\n---\n\n*Built with ❤️ for developers who value simplicity and performance.*"
+    },
+    {
+      "title": "Contact & Demo Forms",
+      "slug": "contact",
+      "description": "Get in touch with us and see our advanced form builder in action.",
+      "category": "general",
+      "tags": ["contact", "forms", "demo"],
+      "publishedAt": "2024-01-25",
+      "readingTime": 4,
+      "layout": "sidebar",
+      "customFields": {
+        "showContactForm": true,
+        "priority": "high"
+      },
+      "content": "# Contact & Demo Forms\n\nWelcome to our contact page! Here you can see our advanced form builder in action and get in touch with our team.\n\n## Advanced Form Features\n\nOur form builder supports:\n\n### Field Types\n- **Text inputs** with validation\n- **Email fields** with format checking\n- **Dropdown selects** with custom options\n- **Checkboxes** for multiple selections\n- **Radio buttons** for single selections\n- **File uploads** with drag & drop\n- **Textarea** for longer messages\n\n### Validation Rules\n- Required field validation\n- Minimum/maximum length\n- Custom regex patterns\n- Email format validation\n- Real-time error messages\n\n## Get in Touch\n\nHave questions about **Zyros SSG**? Want to collaborate on a project? We'd love to hear from you!\n\n### Ways to Connect\n\n- 📧 **Email**: hello@zyros.dev\n- 💼 **LinkedIn**: Connect with our team\n- 🐙 **GitHub**: Check out our code\n- 🐦 **Twitter**: Follow for updates\n\n---\n\n*Looking forward to connecting with you! 🚀*"
+    },
+    {
+      "title": "Showcase Gallery",
+      "slug": "gallery",
+      "description": "Explore our portfolio of beautiful websites and projects created with Zyros SSG.",
+      "category": "showcase",
+      "tags": ["gallery", "portfolio", "showcase", "examples"],
+      "publishedAt": "2024-01-30",
+      "readingTime": 5,
+      "layout": "portfolio",
+      "contentBlocks": ["gallery-showcase"],
+      "content": "# Project Showcase\n\nDiscover the amazing websites and applications built with **Zyros SSG**. From simple blogs to complex e-commerce platforms, see what's possible with our powerful static site generator.\n\n## Why Choose Zyros SSG?\n\nOur platform empowers developers and designers to create stunning websites without the complexity of traditional development workflows.\n\n### Key Benefits\n\n- **Lightning Fast** - Static generation means instant loading\n- **SEO Optimized** - Built-in SEO best practices\n- **Mobile First** - Responsive design out of the box\n- **Developer Friendly** - Simple JSON configuration\n- **Highly Customizable** - Flexible theming system\n\n---\n\n*Ready to build something amazing? [Get started today](/getting-started)!*"
+    },
+    {
+      "title": "Our Team",
+      "slug": "team",
+      "description": "Meet the passionate team behind Zyros SSG and learn about our mission to make web development accessible.",
+      "category": "about",
+      "tags": ["team", "about", "company", "people"],
+      "publishedAt": "2024-01-28",
+      "readingTime": 4,
+      "layout": "default",
+      "contentBlocks": ["team-showcase"],
+      "content": "# Meet Our Team\n\nBehind every great product is a passionate team of individuals working together to make a difference. At **Zyros SSG**, we're united by our mission to democratize web development and make it accessible to everyone.\n\n## Our Mission\n\nWe believe that creating beautiful, fast websites shouldn't require years of coding experience or complex build processes. Our goal is to empower creators, entrepreneurs, and developers with tools that are both powerful and simple to use.\n\n## Our Values\n\n### Simplicity First\nWe prioritize ease of use without sacrificing functionality. Every feature we build is designed with the user experience in mind.\n\n### Open Source\nWe believe in the power of community and open source development. Our tools are built transparently and with community input.\n\n### Performance\nSpeed and performance are not optional. Every site generated with Zyros SSG is optimized for the fastest possible loading times.\n\n### Innovation\nWe're constantly exploring new technologies and approaches to make web development better for everyone.\n\n---\n\n*Want to join our team? Check out our [careers page](/careers) for open positions.*"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "slug": "faq",
+      "description": "Find answers to common questions about Zyros SSG, from getting started to advanced customization.",
+      "category": "support",
+      "tags": ["faq", "help", "support", "questions"],
+      "publishedAt": "2024-01-26",
+      "readingTime": 8,
+      "layout": "minimal",
+      "contentBlocks": ["faq-section"],
+      "content": "# Frequently Asked Questions\n\nWelcome to our comprehensive FAQ section. Here you'll find answers to the most common questions about **Zyros SSG**.\n\n## Getting Help\n\nCan't find what you're looking for? We're here to help!\n\n- 📧 **Email Support**: support@zyros.dev\n- 💬 **Community Forum**: [community.zyros.dev](https://community.zyros.dev)\n- 📚 **Documentation**: [docs.zyros.dev](https://docs.zyros.dev)\n- 🐙 **GitHub Issues**: [github.com/zyrasoftware/zyros](https://github.com/zyrasoftware/zyros)\n\n## Additional Resources\n\n### Tutorials\n- [Getting Started Guide](/getting-started)\n- [Advanced Features](/advanced-features)\n- [Theme Customization](/themes)\n- [Content Management](/content)\n\n### Examples\n- [Sample Configurations](https://github.com/zyrasoftware/zyros-examples)\n- [Community Themes](https://themes.zyros.dev)\n- [Plugin Directory](https://plugins.zyros.dev)\n\n---\n\n*Still have questions? Don't hesitate to [reach out](/contact)!*"
+    },
+    {
+      "title": "Pricing & Plans",
+      "slug": "pricing",
+      "description": "Choose the perfect plan for your needs. Start free and scale as you grow with transparent, affordable pricing.",
+      "category": "pricing",
+      "tags": ["pricing", "plans", "subscription", "features"],
+      "publishedAt": "2024-01-29",
+      "readingTime": 6,
+      "layout": "landing",
+      "contentBlocks": ["pricing-plans"],
+      "content": "# Simple, Transparent Pricing\n\nAt **Zyros SSG**, we believe in fair, transparent pricing that grows with your needs. Whether you're just starting out or running a large organization, we have a plan that's right for you.\n\n## Why Our Pricing Works\n\n### No Hidden Fees\nWhat you see is what you pay. No surprise charges, no hidden costs.\n\n### Cancel Anytime\nAll our paid plans can be cancelled at any time with no penalties.\n\n### 30-Day Money Back\nNot satisfied? Get a full refund within 30 days, no questions asked.\n\n### Volume Discounts\nNeed multiple licenses? Contact us for custom enterprise pricing.\n\n## Frequently Asked Questions\n\n### Can I change plans later?\nYes! You can upgrade or downgrade your plan at any time. Changes take effect immediately.\n\n### What payment methods do you accept?\nWe accept all major credit cards, PayPal, and bank transfers for enterprise customers.\n\n### Do you offer student discounts?\nYes! Students and educators get 50% off all paid plans. Contact us with your .edu email address.\n\n### Is there a free trial?\nOur Free plan is available forever with no time limits. Pro and Enterprise plans include a 14-day free trial.\n\n---\n\n*Ready to get started? [Sign up now](/signup) or [contact our sales team](/contact) for enterprise solutions.*"
+    }
+  ]
+} 
