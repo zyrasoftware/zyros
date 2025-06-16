@@ -10,6 +10,10 @@ A **developer-friendly static site generator** built with Next.js and Tailwind C
 ![License](https://img.shields.io/npm/l/zyros)
 ![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)
 
+## DEMO
+
+![Demo](p0s9gqg.jpg)
+
 ## ✨ Features
 
 ### 🎯 Core Features
