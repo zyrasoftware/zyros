@@ -1,8 +1,7 @@
 {
   "name": "zyros",
-  "version": "2.0.5",
+  "version": "2.1.1",
   "description": "A developer-friendly static site generator built with Next.js and Tailwind CSS. Transform a simple JSON file into a beautiful, fast static website.",
-  "main": "index.js",
   "bin": {
     "zyros": "./bin/zyros.js"
   },

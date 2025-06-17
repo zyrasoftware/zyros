@@ -6,7 +6,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  distDir: 'out',
+  distDir: 'dist',
+  experimental: {
+    // Better Windows compatibility
+    esmExternals: 'loose',
+  },
 };
 
 export default nextConfig;

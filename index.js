@@ -4,6 +4,13 @@
  * Main entry point for the npm package
  */
 
+// Warn users if they're trying to use this as a regular dependency
+console.warn('\n⚠️  WARNING: zyros is a CLI tool, not a library dependency!');
+console.warn('Instead of "npm install zyros", you should use:');
+console.warn('  • npx zyros@latest init my-project (recommended)');
+console.warn('  • npm install -g zyros (for global install)');
+console.warn('See: https://github.com/zyrasoftware/zyros\n');
+
 const path = require('path');
 const fs = require('fs');
 
