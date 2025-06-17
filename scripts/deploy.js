@@ -18,7 +18,7 @@ async function deployToVercel(options = {}) {
       spinner.fail(chalk.red('Vercel CLI not found'));
       console.log(chalk.yellow('\n💡 Install Vercel CLI:'));
       console.log(chalk.gray('  npm install -g vercel'));
-      return;
+      return Promise.resolve(); // Explicitly return a resolved promise
     }
     
     // Check if project is built
@@ -54,20 +54,33 @@ async function deployToVercel(options = {}) {
     
     // Deploy
     spinner.text = 'Deploying to Vercel...';
-    const deployCommand = options.prod ? 'vercel --prod' : 'vercel';
     
-    const child = spawn('vercel', options.prod ? ['--prod'] : [], {
-      stdio: 'inherit'
-    });
-    
-    child.on('close', (code) => {
-      if (code === 0) {
-        spinner.succeed(chalk.green('Successfully deployed to Vercel!'));
-        console.log(chalk.cyan('\n🎉 Your site is live!'));
-        console.log(chalk.yellow('💡 Manage your deployment at https://vercel.com/dashboard'));
-      } else {
-        spinner.fail(chalk.red('Vercel deployment failed'));
-      }
+    return new Promise((resolve, reject) => {
+      // Windows compatibility: use shell option for spawn
+      const isWindows = process.platform === 'win32';
+      const child = spawn('vercel', options.prod ? ['--prod'] : [], {
+        stdio: 'inherit',
+        shell: isWindows
+      });
+      
+      child.on('error', (error) => {
+        spinner.fail(chalk.red('Failed to start Vercel CLI'));
+        console.log(chalk.yellow('\n💡 Make sure Vercel CLI is properly installed:'));
+        console.log(chalk.gray('  npm install -g vercel'));
+        reject(error);
+      });
+      
+      child.on('close', (code) => {
+        if (code === 0) {
+          spinner.succeed(chalk.green('Successfully deployed to Vercel!'));
+          console.log(chalk.cyan('\n🎉 Your site is live!'));
+          console.log(chalk.yellow('💡 Manage your deployment at https://vercel.com/dashboard'));
+          resolve();
+        } else {
+          spinner.fail(chalk.red('Vercel deployment failed'));
+          reject(new Error(`Vercel process exited with code ${code}`));
+        }
+      });
     });
     
   } catch (error) {
@@ -135,10 +148,12 @@ async function deployToNetlify(options = {}) {
     
     // Deploy
     spinner.text = 'Deploying to Netlify...';
-    const deployCommand = options.prod ? 'netlify deploy --prod --dir=out' : 'netlify deploy --dir=out';
     
+    // Windows compatibility: use shell option for spawn
+    const isWindows = process.platform === 'win32';
     const child = spawn('netlify', ['deploy', '--dir=out', ...(options.prod ? ['--prod'] : [])], {
-      stdio: 'inherit'
+      stdio: 'inherit',
+      shell: isWindows
     });
     
     child.on('close', (code) => {
