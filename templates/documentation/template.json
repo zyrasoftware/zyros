@@ -1,0 +1,20 @@
+{
+  "name": "documentation",
+  "description": "Technical documentation site with sidebar navigation and search",
+  "version": "1.0.0",
+  "defaultTheme": "light",
+  "features": [
+    "Sidebar navigation",
+    "Code highlighting",
+    "API docs",
+    "Search functionality",
+    "Table of contents",
+    "Breadcrumb navigation",
+    "Version control",
+    "Mobile responsive"
+  ],
+  "author": "Zyra Software",
+  "preview": "https://github.com/zyrasoftware/zyros/templates/documentation",
+  "tags": ["documentation", "technical", "api", "guides"],
+  "category": "documentation"
+} 

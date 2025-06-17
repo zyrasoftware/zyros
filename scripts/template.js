@@ -68,12 +68,14 @@ async function listTemplates() {
       features: ['Custom layout']
     };
     
-    console.log(chalk.bright(`${index + 1}. ${info.name}`));
+    console.log(chalk.bold(`${index + 1}. ${info.name}`));
     console.log(chalk.gray(`   ${info.description}`));
     console.log(chalk.green(`   Features: ${info.features.join(', ')}`));
     console.log(chalk.blue(`   Usage: zyros init my-site --template ${template}`));
     console.log();
   });
+  
+  process.exit(0);
 }
 
 /**
@@ -151,6 +153,8 @@ async function applyTemplate(templateName, options = {}) {
     console.log(chalk.gray('  npm run dev    # Start development server'));
     console.log(chalk.gray('  npm run build  # Build for production'));
     
+    process.exit(0);
+    
   } catch (error) {
     spinner.fail(chalk.red('Failed to apply template'));
     throw error;
@@ -204,6 +208,8 @@ async function createTemplate(templateName, options = {}) {
     console.log(chalk.gray(`Location: ${templatePath}`));
     console.log('\n' + chalk.yellow('Usage:'));
     console.log(chalk.gray(`  zyros init my-site --template ${templateName}`));
+    
+    process.exit(0);
     
   } catch (error) {
     spinner.fail(chalk.red('Failed to create template'));

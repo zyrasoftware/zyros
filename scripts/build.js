@@ -153,6 +153,7 @@ async function main() {
     await generateSitemap();
     
     console.log('✅ Build completed successfully!');
+    process.exit(0);
   } catch (error) {
     console.error('❌ Build failed:', error);
     process.exit(1);

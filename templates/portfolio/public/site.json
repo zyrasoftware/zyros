@@ -1,0 +1,288 @@
+{
+  "site": {
+    "title": "John Doe - Portfolio",
+    "theme": "minimal",
+    "description": "Creative developer and designer showcasing innovative projects and professional experience",
+    "layout": "portfolio",
+    "author": "John Doe",
+    "url": "https://johndoe.dev",
+    "language": "en",
+    "favicon": "/favicon.svg",
+    "social": {
+      "github": "https://github.com/johndoe",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "twitter": "https://twitter.com/johndoe",
+      "email": "hello@johndoe.dev",
+      "dribbble": "https://dribbble.com/johndoe",
+      "behance": "https://behance.net/johndoe"
+    },
+    "seo": {
+      "keywords": ["portfolio", "developer", "designer", "web development", "ui/ux"],
+      "ogImage": "/og-portfolio.jpg",
+      "twitterCard": "summary_large_image"
+    },
+    "features": {
+      "search": false,
+      "newsletter": false,
+      "comments": false,
+      "darkMode": true,
+      "analytics": true,
+      "socialShare": true,
+      "tableOfContents": false,
+      "readingProgress": false
+    }
+  },
+  "header": {
+    "logo": {
+      "text": "John Doe",
+      "url": "/",
+      "size": "large",
+      "position": "left"
+    },
+    "navigation": [
+      {
+        "title": "Home",
+        "href": "/",
+        "icon": "🏠"
+      },
+      {
+        "title": "About",
+        "href": "/about",
+        "icon": "👤"
+      },
+      {
+        "title": "Projects",
+        "href": "/projects",
+        "icon": "💼"
+      },
+      {
+        "title": "Skills",
+        "href": "/skills",
+        "icon": "⚡"
+      },
+      {
+        "title": "Contact",
+        "href": "/contact",
+        "icon": "📧"
+      }
+    ],
+    "themeToggle": true,
+    "sticky": true,
+    "style": "minimal"
+  },
+  "footer": {
+    "copyright": "© 2024 John Doe. All rights reserved.",
+    "social": true,
+    "style": "minimal",
+    "layout": "centered"
+  },
+  "contentBlocks": [
+    {
+      "id": "hero-portfolio",
+      "type": "hero",
+      "title": "Creative Developer & Designer",
+      "subtitle": "Hi, I'm John Doe",
+      "content": "I create beautiful, functional digital experiences that make a difference. With expertise in modern web technologies and design principles.",
+      "data": {
+        "buttons": [
+          {
+            "text": "View My Work",
+            "href": "/projects",
+            "style": "primary"
+          },
+          {
+            "text": "Get In Touch",
+            "href": "/contact",
+            "style": "outline"
+          }
+        ],
+        "avatar": "/avatar.jpg",
+        "skills": [
+          "React & Next.js",
+          "UI/UX Design",
+          "TypeScript",
+          "Node.js"
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "skills-showcase",
+      "type": "features",
+      "title": "Skills & Expertise",
+      "subtitle": "What I Do Best",
+      "content": "A comprehensive overview of my technical skills and areas of expertise.",
+      "data": {
+        "layout": "grid",
+        "features": [
+          {
+            "title": "Frontend Development",
+            "description": "React, Next.js, TypeScript, Tailwind CSS, and modern JavaScript frameworks.",
+            "icon": "⚛️"
+          },
+          {
+            "title": "UI/UX Design",
+            "description": "User-centered design, prototyping, wireframing, and visual design systems.",
+            "icon": "🎨"
+          },
+          {
+            "title": "Backend Development",
+            "description": "Node.js, Express, databases, APIs, and server-side architecture.",
+            "icon": "⚙️"
+          }
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "portfolio-gallery",
+      "type": "gallery",
+      "title": "Featured Projects",
+      "subtitle": "Recent Work",
+      "content": "A selection of my latest projects showcasing different skills and technologies.",
+      "data": {
+        "layout": "grid",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/projects/project1.jpg",
+            "alt": "E-commerce Platform",
+            "title": "E-commerce Platform",
+            "description": "Full-stack e-commerce solution with React and Node.js"
+          },
+          {
+            "src": "/projects/project2.jpg",
+            "alt": "Design System",
+            "title": "Design System",
+            "description": "Comprehensive design system for a SaaS platform"
+          },
+          {
+            "src": "/projects/project3.jpg",
+            "alt": "Mobile App",
+            "title": "Mobile App Design",
+            "description": "UI/UX design for a productivity mobile application"
+          },
+          {
+            "src": "/projects/project4.jpg",
+            "alt": "Dashboard",
+            "title": "Analytics Dashboard",
+            "description": "Data visualization dashboard with interactive charts"
+          }
+        ]
+      },
+      "visible": true
+    }
+  ],
+  "forms": [
+    {
+      "id": "contact-portfolio",
+      "title": "Let's Work Together",
+      "description": "Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life.",
+      "fields": [
+        {
+          "id": "name",
+          "type": "text",
+          "label": "Name",
+          "placeholder": "Your name",
+          "required": true
+        },
+        {
+          "id": "email",
+          "type": "email",
+          "label": "Email",
+          "placeholder": "your@email.com",
+          "required": true
+        },
+        {
+          "id": "project",
+          "type": "select",
+          "label": "Project Type",
+          "placeholder": "Select project type",
+          "required": true,
+          "options": [
+            "Web Development",
+            "UI/UX Design",
+            "Full-Stack Application",
+            "Consultation",
+            "Other"
+          ]
+        },
+        {
+          "id": "budget",
+          "type": "select",
+          "label": "Budget Range",
+          "placeholder": "Select budget range",
+          "options": [
+            "$1,000 - $5,000",
+            "$5,000 - $10,000",
+            "$10,000 - $25,000",
+            "$25,000+",
+            "Let's discuss"
+          ]
+        },
+        {
+          "id": "message",
+          "type": "textarea",
+          "label": "Project Details",
+          "placeholder": "Tell me about your project...",
+          "required": true
+        }
+      ],
+      "submitText": "Send Message",
+      "successMessage": "Thanks for reaching out! I'll get back to you within 24 hours.",
+      "action": "/api/contact",
+      "method": "POST"
+    }
+  ],
+  "pages": [
+    {
+      "title": "About Me",
+      "slug": "about",
+      "description": "Learn about my background, experience, and passion for creating digital experiences.",
+      "category": "about",
+      "tags": ["about", "experience", "background"],
+      "publishedAt": "2024-01-15",
+      "readingTime": 3,
+      "layout": "minimal",
+      "content": "# About Me\n\nHi, I'm **John Doe**, a passionate creative developer and designer with over 5 years of experience building digital experiences that matter.\n\n## My Journey\n\nI started my career as a graphic designer but quickly fell in love with code. The intersection of design and development is where I thrive, creating solutions that are both beautiful and functional.\n\n## What Drives Me\n\n- **User-Centered Design** - Every project starts with understanding the user\n- **Clean Code** - Writing maintainable, scalable solutions\n- **Continuous Learning** - Staying current with new technologies and trends\n- **Collaboration** - Working closely with teams to achieve shared goals\n\n## Experience\n\n### Senior Frontend Developer\n**TechCorp Inc.** • 2022 - Present\n- Lead frontend development for multiple client projects\n- Mentor junior developers and establish coding standards\n- Collaborate with design teams to implement pixel-perfect interfaces\n\n### Full-Stack Developer\n**StartupXYZ** • 2020 - 2022\n- Built and maintained web applications using React and Node.js\n- Designed and implemented RESTful APIs\n- Worked directly with founders to define product requirements\n\n### UI/UX Designer\n**Design Studio** • 2019 - 2020\n- Created user interfaces for web and mobile applications\n- Conducted user research and usability testing\n- Developed design systems and style guides\n\n---\n\n*Ready to work together? [Let's chat!](/contact)*"
+    },
+    {
+      "title": "My Projects",
+      "slug": "projects",
+      "description": "Explore my portfolio of web applications, designs, and creative projects.",
+      "category": "portfolio",
+      "tags": ["projects", "portfolio", "work"],
+      "publishedAt": "2024-01-20",
+      "readingTime": 5,
+      "layout": "portfolio",
+      "contentBlocks": ["portfolio-gallery"],
+      "content": "# My Projects\n\nHere's a collection of projects I've worked on, ranging from web applications to design systems. Each project represents a unique challenge and learning opportunity.\n\n## Featured Projects\n\n### E-commerce Platform\n**Technologies:** React, Next.js, Stripe, PostgreSQL\n\nA full-featured e-commerce platform with:\n- Product catalog and search\n- Shopping cart and checkout\n- User accounts and order history\n- Admin dashboard for inventory management\n\n[View Live Site](https://ecommerce-demo.com) • [GitHub](https://github.com/johndoe/ecommerce)\n\n### Design System\n**Technologies:** Figma, Storybook, React, TypeScript\n\nComprehensive design system including:\n- Component library with 50+ components\n- Design tokens and theming system\n- Documentation and usage guidelines\n- Automated testing and deployment\n\n[View Storybook](https://designsystem.com) • [Documentation](https://docs.designsystem.com)\n\n### Analytics Dashboard\n**Technologies:** React, D3.js, Node.js, MongoDB\n\nReal-time analytics dashboard featuring:\n- Interactive data visualizations\n- Custom chart components\n- Real-time data updates\n- Responsive design for mobile and desktop\n\n[View Demo](https://analytics-demo.com) • [Case Study](/case-studies/analytics)\n\n---\n\n*Interested in working together? [Get in touch](/contact) to discuss your project.*"
+    },
+    {
+      "title": "Skills & Technologies",
+      "slug": "skills",
+      "description": "Overview of my technical skills, tools, and areas of expertise.",
+      "category": "skills",
+      "tags": ["skills", "technologies", "expertise"],
+      "publishedAt": "2024-01-18",
+      "readingTime": 4,
+      "layout": "default",
+      "contentBlocks": ["skills-showcase"],
+      "content": "# Skills & Technologies\n\nI'm passionate about staying current with the latest technologies and best practices. Here's an overview of my technical expertise.\n\n## Frontend Development\n\n### Languages & Frameworks\n- **JavaScript/TypeScript** - ES6+, modern syntax and patterns\n- **React** - Hooks, Context API, state management\n- **Next.js** - SSR, SSG, API routes, performance optimization\n- **Vue.js** - Composition API, Vuex, Nuxt.js\n\n### Styling & Design\n- **CSS/SCSS** - Flexbox, Grid, animations, responsive design\n- **Tailwind CSS** - Utility-first styling, custom configurations\n- **Styled Components** - CSS-in-JS, theming systems\n- **Figma** - Design systems, prototyping, collaboration\n\n## Backend Development\n\n### Server Technologies\n- **Node.js** - Express, Fastify, middleware development\n- **Python** - Django, Flask, data processing\n- **PostgreSQL** - Database design, optimization, migrations\n- **MongoDB** - Document databases, aggregation pipelines\n\n### DevOps & Tools\n- **Git** - Version control, branching strategies, collaboration\n- **Docker** - Containerization, multi-stage builds\n- **AWS** - EC2, S3, Lambda, CloudFront\n- **Vercel/Netlify** - Deployment, serverless functions\n\n## Design Skills\n\n### UI/UX Design\n- **User Research** - Interviews, surveys, usability testing\n- **Wireframing** - Low and high-fidelity prototypes\n- **Visual Design** - Typography, color theory, composition\n- **Design Systems** - Component libraries, design tokens\n\n### Tools\n- **Figma** - Interface design, prototyping, team collaboration\n- **Adobe Creative Suite** - Photoshop, Illustrator, After Effects\n- **Sketch** - UI design, symbol libraries, plugins\n- **InVision** - Prototyping, user testing, feedback collection\n\n---\n\n*Want to see these skills in action? [Check out my projects](/projects) or [get in touch](/contact).*"
+    },
+    {
+      "title": "Contact Me",
+      "slug": "contact",
+      "description": "Get in touch to discuss your project, collaboration opportunities, or just to say hello.",
+      "category": "contact",
+      "tags": ["contact", "hire", "collaboration"],
+      "publishedAt": "2024-01-22",
+      "readingTime": 2,
+      "layout": "minimal",
+      "customFields": {
+        "showContactForm": true
+      },
+      "content": "# Let's Work Together\n\nI'm always interested in hearing about new projects and opportunities. Whether you're looking for a developer, designer, or consultant, I'd love to discuss how we can work together.\n\n## What I Can Help With\n\n### Web Development\n- Custom web applications\n- E-commerce platforms\n- Content management systems\n- Performance optimization\n\n### Design Services\n- UI/UX design\n- Design systems\n- Brand identity\n- User research and testing\n\n### Consulting\n- Technical architecture\n- Code reviews\n- Team mentoring\n- Project planning\n\n## Let's Connect\n\n### Quick Response\n📧 **Email**: hello@johndoe.dev\n📱 **Phone**: +1 (555) 123-4567\n\n### Social & Professional\n💼 **LinkedIn**: [linkedin.com/in/johndoe](https://linkedin.com/in/johndoe)\n🐙 **GitHub**: [github.com/johndoe](https://github.com/johndoe)\n🐦 **Twitter**: [@johndoe](https://twitter.com/johndoe)\n\n### Creative Profiles\n🎨 **Dribbble**: [dribbble.com/johndoe](https://dribbble.com/johndoe)\n📐 **Behance**: [behance.net/johndoe](https://behance.net/johndoe)\n\n---\n\n*Looking forward to hearing from you! 🚀*"
+    }
+  ]
+} 

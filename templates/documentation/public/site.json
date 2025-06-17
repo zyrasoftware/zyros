@@ -1,0 +1,275 @@
+{
+  "site": {
+    "title": "Zyros Documentation",
+    "theme": "light",
+    "description": "Complete documentation for Zyros static site generator - guides, API reference, and examples",
+    "layout": "documentation",
+    "author": "Zyra Software",
+    "url": "https://docs.zyros.dev",
+    "language": "en",
+    "favicon": "/favicon.svg",
+    "social": {
+      "github": "https://github.com/zyrasoftware/zyros",
+      "twitter": "https://twitter.com/zyros_dev",
+      "discord": "https://discord.gg/zyros"
+    },
+    "seo": {
+      "keywords": ["documentation", "static site generator", "nextjs", "api", "guides"],
+      "ogImage": "/og-docs.jpg",
+      "twitterCard": "summary_large_image"
+    },
+    "features": {
+      "search": true,
+      "newsletter": false,
+      "comments": false,
+      "darkMode": true,
+      "analytics": true,
+      "socialShare": false,
+      "tableOfContents": true,
+      "readingProgress": true
+    }
+  },
+  "header": {
+    "logo": {
+      "text": "Zyros Docs",
+      "url": "/",
+      "size": "medium",
+      "position": "left"
+    },
+    "navigation": [
+      {
+        "title": "Getting Started",
+        "href": "/getting-started",
+        "icon": "🚀"
+      },
+      {
+        "title": "API Reference",
+        "href": "/api",
+        "icon": "📚"
+      },
+      {
+        "title": "Examples",
+        "href": "/examples",
+        "icon": "💡"
+      },
+      {
+        "title": "CLI",
+        "href": "/cli",
+        "icon": "⌨️"
+      },
+      {
+        "title": "GitHub",
+        "href": "https://github.com/zyrasoftware/zyros",
+        "icon": "🐙",
+        "external": true
+      }
+    ],
+    "search": true,
+    "themeToggle": true,
+    "sticky": true,
+    "style": "documentation"
+  },
+  "footer": {
+    "copyright": "© 2024 Zyra Software. All rights reserved.",
+    "columns": [
+      {
+        "title": "Documentation",
+        "links": [
+          {
+            "title": "Getting Started",
+            "href": "/getting-started"
+          },
+          {
+            "title": "API Reference",
+            "href": "/api"
+          },
+          {
+            "title": "CLI Commands",
+            "href": "/cli"
+          }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          {
+            "title": "Examples",
+            "href": "/examples"
+          },
+          {
+            "title": "Tutorials",
+            "href": "/tutorials"
+          },
+          {
+            "title": "FAQ",
+            "href": "/faq"
+          }
+        ]
+      },
+      {
+        "title": "Community",
+        "links": [
+          {
+            "title": "GitHub",
+            "href": "https://github.com/zyrasoftware/zyros"
+          },
+          {
+            "title": "Discord",
+            "href": "https://discord.gg/zyros"
+          },
+          {
+            "title": "Twitter",
+            "href": "https://twitter.com/zyros_dev"
+          }
+        ]
+      }
+    ],
+    "social": true,
+    "style": "documentation"
+  },
+  "sidebar": {
+    "sections": [
+      {
+        "title": "Getting Started",
+        "items": [
+          {
+            "title": "Introduction",
+            "href": "/introduction"
+          },
+          {
+            "title": "Installation",
+            "href": "/installation"
+          },
+          {
+            "title": "Quick Start",
+            "href": "/quick-start"
+          },
+          {
+            "title": "Configuration",
+            "href": "/configuration"
+          }
+        ]
+      },
+      {
+        "title": "Core Concepts",
+        "items": [
+          {
+            "title": "Site Structure",
+            "href": "/site-structure"
+          },
+          {
+            "title": "Content Management",
+            "href": "/content-management"
+          },
+          {
+            "title": "Themes",
+            "href": "/themes"
+          },
+          {
+            "title": "Templates",
+            "href": "/templates"
+          }
+        ]
+      },
+      {
+        "title": "API Reference",
+        "items": [
+          {
+            "title": "Site Configuration",
+            "href": "/api/site-config"
+          },
+          {
+            "title": "Page Schema",
+            "href": "/api/page-schema"
+          },
+          {
+            "title": "Content Blocks",
+            "href": "/api/content-blocks"
+          },
+          {
+            "title": "Forms",
+            "href": "/api/forms"
+          }
+        ]
+      },
+      {
+        "title": "CLI Commands",
+        "items": [
+          {
+            "title": "zyros init",
+            "href": "/cli/init"
+          },
+          {
+            "title": "zyros build",
+            "href": "/cli/build"
+          },
+          {
+            "title": "zyros dev",
+            "href": "/cli/dev"
+          },
+          {
+            "title": "zyros deploy",
+            "href": "/cli/deploy"
+          }
+        ]
+      }
+    ]
+  },
+  "pages": [
+    {
+      "title": "Introduction to Zyros",
+      "slug": "introduction",
+      "description": "Learn about Zyros static site generator and its core features",
+      "category": "getting-started",
+      "tags": ["introduction", "overview", "features"],
+      "publishedAt": "2024-01-15",
+      "readingTime": 5,
+      "layout": "documentation",
+      "content": "# Introduction to Zyros\n\nWelcome to **Zyros**, a developer-friendly static site generator that transforms simple JSON configuration into beautiful, fast websites.\n\n## What is Zyros?\n\nZyros is a modern static site generator built with Next.js and Tailwind CSS. It allows you to create professional websites using just a JSON configuration file, without writing complex code or dealing with complicated build processes.\n\n## Key Features\n\n### 🚀 Zero Configuration\n- Works out of the box with sensible defaults\n- No complex webpack configurations or build tools\n- Single JSON file for all content and settings\n\n### 🎨 Beautiful Themes\n- 8 professionally designed themes\n- Real-time theme switching\n- Customizable color schemes and typography\n\n### ⚡ Performance Optimized\n- Static generation for lightning-fast loading\n- Automatic image optimization\n- SEO-friendly output\n\n### 🛠️ Developer Friendly\n- TypeScript support\n- Modern React components\n- Extensible architecture\n\n## Who Should Use Zyros?\n\n### Developers\n- Rapid prototyping and MVP development\n- Client projects with quick turnaround\n- Personal blogs and portfolios\n\n### Content Creators\n- Bloggers who want full control\n- Technical writers and documentation\n- Marketing teams building landing pages\n\n### Agencies\n- Client websites with easy maintenance\n- Template-based project delivery\n- Scalable multi-site management\n\n## How It Works\n\n1. **Initialize** - Create a new project with `zyros init`\n2. **Configure** - Edit the `site.json` file with your content\n3. **Develop** - Run `zyros dev` to preview your site\n4. **Deploy** - Use `zyros deploy` to publish to your hosting platform\n\n## Next Steps\n\n- [Installation Guide](/installation) - Set up Zyros on your system\n- [Quick Start](/quick-start) - Build your first site in 5 minutes\n- [API Reference](/api) - Detailed configuration options\n- [Examples](/examples) - Real-world implementation examples\n\n---\n\n*Ready to get started? Let's [install Zyros](/installation) and build something amazing!*"
+    },
+    {
+      "title": "Installation Guide",
+      "slug": "installation",
+      "description": "Step-by-step guide to installing and setting up Zyros",
+      "category": "getting-started",
+      "tags": ["installation", "setup", "npm"],
+      "publishedAt": "2024-01-16",
+      "readingTime": 3,
+      "layout": "documentation",
+      "content": "# Installation Guide\n\nGet Zyros up and running on your system in just a few minutes.\n\n## System Requirements\n\n### Prerequisites\n- **Node.js** 18.0.0 or higher\n- **npm** 8.0.0 or higher (or yarn/pnpm)\n- **Git** (recommended for version control)\n\n### Supported Platforms\n- macOS (Intel and Apple Silicon)\n- Windows 10/11\n- Linux (Ubuntu, Debian, CentOS, etc.)\n\n## Installation Methods\n\n### Method 1: Using npx (Recommended)\n\nThe easiest way to get started without installing Zyros globally:\n\n```bash\n# Create a new project\nnpx zyros@latest init my-website\n\n# Navigate to your project\ncd my-website\n\n# Install dependencies\nnpm install\n\n# Start development server\nnpm run dev\n```\n\n### Method 2: Global Installation\n\nInstall Zyros globally to use it anywhere:\n\n```bash\n# Install globally\nnpm install -g zyros\n\n# Create a new project\nzyros init my-website\n\n# Navigate and start\ncd my-website\nnpm install\nnpm run dev\n```\n\n### Method 3: From Source (Advanced)\n\nFor contributors or advanced customization:\n\n```bash\n# Clone the repository\ngit clone https://github.com/zyrasoftware/zyros.git\ncd zyros\n\n# Install dependencies\nnpm install\n\n# Build the project\nnpm run build\n\n# Link for global use\nnpm link\n```\n\n## Verification\n\nVerify your installation:\n\n```bash\n# Check Zyros version\nzyros --version\n\n# View available commands\nzyros --help\n\n# Create a test project\nzyros init test-site\n```\n\n## Troubleshooting\n\n### Common Issues\n\n#### Permission Errors (macOS/Linux)\n```bash\n# Fix npm permissions\nsudo chown -R $(whoami) ~/.npm\n\n# Or use a Node version manager\ncurl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash\nnvm install node\n```\n\n#### Windows Path Issues\n```powershell\n# Run as Administrator and add to PATH\n$env:PATH += \";C:\\Users\\YourName\\AppData\\Roaming\\npm\"\n```\n\n#### Node Version Conflicts\n```bash\n# Check Node version\nnode --version\n\n# Update Node.js\nnpm install -g n\nn latest\n```\n\n### Getting Help\n\nIf you encounter issues:\n\n1. Check our [FAQ](/faq) for common solutions\n2. Search [GitHub Issues](https://github.com/zyrasoftware/zyros/issues)\n3. Join our [Discord community](https://discord.gg/zyros)\n4. Email support: support@zyros.dev\n\n## Next Steps\n\nNow that Zyros is installed:\n\n- [Quick Start Guide](/quick-start) - Build your first site\n- [Configuration](/configuration) - Learn about site.json\n- [CLI Commands](/cli) - Master the command line tools\n\n---\n\n*Installation complete! Ready to [create your first site](/quick-start)?*"
+    },
+    {
+      "title": "Quick Start Guide",
+      "slug": "quick-start",
+      "description": "Build your first Zyros website in 5 minutes",
+      "category": "getting-started",
+      "tags": ["quick-start", "tutorial", "beginner"],
+      "publishedAt": "2024-01-17",
+      "readingTime": 4,
+      "layout": "documentation",
+      "content": "# Quick Start Guide\n\nBuild your first Zyros website in just 5 minutes! This guide will walk you through creating a simple blog from scratch.\n\n## Step 1: Create Your Project\n\n```bash\n# Create a new Zyros project\nnpx zyros@latest init my-blog\n\n# Navigate to your project\ncd my-blog\n\n# Install dependencies\nnpm install\n```\n\n## Step 2: Start Development Server\n\n```bash\n# Start the development server\nnpm run dev\n```\n\nYour site will be available at `http://localhost:3000`.\n\n## Step 3: Customize Your Site\n\nOpen `public/site.json` in your favorite editor and customize:\n\n### Basic Site Information\n```json\n{\n  \"site\": {\n    \"title\": \"My Awesome Blog\",\n    \"description\": \"A blog about web development and design\",\n    \"author\": \"Your Name\",\n    \"theme\": \"ocean\"\n  }\n}\n```\n\n### Add Your First Post\n```json\n{\n  \"pages\": [\n    {\n      \"title\": \"Hello World\",\n      \"slug\": \"hello-world\",\n      \"description\": \"My first blog post\",\n      \"category\": \"blog\",\n      \"tags\": [\"introduction\", \"hello\"],\n      \"publishedAt\": \"2024-01-20\",\n      \"content\": \"# Hello World\\n\\nWelcome to my new blog!\"\n    }\n  ]\n}\n```\n\n## Step 4: Explore Themes\n\nTry different themes by changing the `theme` value:\n\n- `light` - Clean and bright\n- `dark` - Modern dark theme\n- `ocean` - Cool blue tones\n- `sunset` - Warm orange/pink\n- `forest` - Natural green\n- `minimal` - Ultra-clean\n- `midnight` - Deep purple\n- `neon` - Cyberpunk green\n\n## Step 5: Add More Content\n\n### Create an About Page\n```json\n{\n  \"title\": \"About Me\",\n  \"slug\": \"about\",\n  \"description\": \"Learn more about me\",\n  \"content\": \"# About Me\\n\\nI'm a developer passionate about...\"\n}\n```\n\n### Add Navigation\n```json\n{\n  \"header\": {\n    \"navigation\": [\n      { \"title\": \"Home\", \"href\": \"/\" },\n      { \"title\": \"About\", \"href\": \"/about\" },\n      { \"title\": \"Blog\", \"href\": \"/blog\" }\n    ]\n  }\n}\n```\n\n## Step 6: Build for Production\n\n```bash\n# Build your site\nnpm run build\n\n# The built site will be in the 'out' directory\n```\n\n## Step 7: Deploy Your Site\n\nChoose your preferred hosting platform:\n\n### Vercel (Recommended)\n```bash\n# Install Vercel CLI\nnpm install -g vercel\n\n# Deploy\nvercel --prod\n```\n\n### Netlify\n```bash\n# Install Netlify CLI\nnpm install -g netlify-cli\n\n# Deploy\nnetlify deploy --prod --dir=out\n```\n\n### GitHub Pages\n```bash\n# Use the built-in deploy command\nzyros deploy github\n```\n\n## What's Next?\n\nCongratulations! You've built and deployed your first Zyros site. Here's what to explore next:\n\n### Learn More\n- [Site Configuration](/configuration) - Detailed configuration options\n- [Content Management](/content-management) - Advanced content features\n- [Themes & Customization](/themes) - Create custom themes\n- [API Reference](/api) - Complete API documentation\n\n### Advanced Features\n- [Content Blocks](/api/content-blocks) - Rich interactive sections\n- [Forms](/api/forms) - Contact forms and user input\n- [SEO Optimization](/seo) - Search engine optimization\n- [Analytics](/analytics) - Track your site's performance\n\n### Get Help\n- [FAQ](/faq) - Common questions and solutions\n- [GitHub](https://github.com/zyrasoftware/zyros) - Source code and issues\n- [Discord](https://discord.gg/zyros) - Community support\n\n---\n\n*Great job! You've successfully created your first Zyros site. Ready to [dive deeper](/configuration)?*"
+    },
+    {
+      "title": "Site Configuration",
+      "slug": "configuration",
+      "description": "Complete guide to configuring your Zyros site",
+      "category": "core-concepts",
+      "tags": ["configuration", "site.json", "settings"],
+      "publishedAt": "2024-01-18",
+      "readingTime": 8,
+      "layout": "documentation",
+      "content": "# Site Configuration\n\nThe `site.json` file is the heart of your Zyros website. This comprehensive guide covers all available configuration options.\n\n## File Structure\n\nYour `site.json` file should be located in the `public/` directory and follows this basic structure:\n\n```json\n{\n  \"site\": { /* Site metadata */ },\n  \"header\": { /* Header configuration */ },\n  \"footer\": { /* Footer configuration */ },\n  \"contentBlocks\": [ /* Reusable content blocks */ ],\n  \"forms\": [ /* Form definitions */ ],\n  \"pages\": [ /* Your site pages */ ]\n}\n```\n\n## Site Configuration\n\n### Basic Settings\n```json\n{\n  \"site\": {\n    \"title\": \"Your Site Title\",\n    \"description\": \"Site description for SEO\",\n    \"author\": \"Your Name\",\n    \"url\": \"https://yoursite.com\",\n    \"language\": \"en\",\n    \"favicon\": \"/favicon.svg\",\n    \"theme\": \"light\"\n  }\n}\n```\n\n### Social Links\n```json\n{\n  \"site\": {\n    \"social\": {\n      \"twitter\": \"https://twitter.com/yourusername\",\n      \"github\": \"https://github.com/yourusername\",\n      \"linkedin\": \"https://linkedin.com/in/yourusername\",\n      \"email\": \"hello@yoursite.com\"\n    }\n  }\n}\n```\n\n### SEO Configuration\n```json\n{\n  \"site\": {\n    \"seo\": {\n      \"keywords\": [\"keyword1\", \"keyword2\"],\n      \"ogImage\": \"/og-image.jpg\",\n      \"twitterCard\": \"summary_large_image\"\n    }\n  }\n}\n```\n\n### Feature Toggles\n```json\n{\n  \"site\": {\n    \"features\": {\n      \"search\": true,\n      \"newsletter\": false,\n      \"comments\": false,\n      \"darkMode\": true,\n      \"analytics\": true,\n      \"socialShare\": true,\n      \"tableOfContents\": true,\n      \"readingProgress\": true\n    }\n  }\n}\n```\n\n## Header Configuration\n\n### Logo Setup\n```json\n{\n  \"header\": {\n    \"logo\": {\n      \"text\": \"Site Name\",\n      \"image\": \"/logo.png\",\n      \"url\": \"/\",\n      \"size\": \"medium\",\n      \"position\": \"left\"\n    }\n  }\n}\n```\n\n### Navigation Menu\n```json\n{\n  \"header\": {\n    \"navigation\": [\n      {\n        \"title\": \"Home\",\n        \"href\": \"/\",\n        \"icon\": \"🏠\"\n      },\n      {\n        \"title\": \"Products\",\n        \"href\": \"#\",\n        \"icon\": \"📦\",\n        \"children\": [\n          {\n            \"title\": \"Product A\",\n            \"href\": \"/product-a\"\n          },\n          {\n            \"title\": \"Product B\",\n            \"href\": \"/product-b\"\n          }\n        ]\n      }\n    ]\n  }\n}\n```\n\n### Header Styling\n```json\n{\n  \"header\": {\n    \"sticky\": true,\n    \"transparent\": false,\n    \"style\": \"modern\",\n    \"height\": \"normal\",\n    \"background\": {\n      \"type\": \"blur\"\n    },\n    \"border\": {\n      \"show\": true,\n      \"style\": \"solid\"\n    }\n  }\n}\n```\n\n## Page Configuration\n\n### Basic Page Structure\n```json\n{\n  \"pages\": [\n    {\n      \"title\": \"Page Title\",\n      \"slug\": \"page-url\",\n      \"description\": \"Page description for SEO\",\n      \"category\": \"blog\",\n      \"tags\": [\"tag1\", \"tag2\"],\n      \"publishedAt\": \"2024-01-20\",\n      \"readingTime\": 5,\n      \"layout\": \"default\",\n      \"content\": \"# Page Content\\n\\nYour markdown content here...\"\n    }\n  ]\n}\n```\n\n### Layout Options\n- `default` - Standard blog layout\n- `minimal` - Clean, distraction-free\n- `full-width` - Edge-to-edge content\n- `sidebar` - Content with sidebar\n- `landing` - Optimized for conversions\n- `portfolio` - Project showcase\n- `documentation` - Technical docs\n\n### Custom Fields\n```json\n{\n  \"customFields\": {\n    \"featured\": true,\n    \"priority\": \"high\",\n    \"showContactForm\": true,\n    \"customCSS\": \".custom { color: red; }\"\n  }\n}\n```\n\n## Content Blocks\n\nReusable sections that can be referenced in pages:\n\n```json\n{\n  \"contentBlocks\": [\n    {\n      \"id\": \"hero-main\",\n      \"type\": \"hero\",\n      \"title\": \"Welcome\",\n      \"subtitle\": \"Subtitle\",\n      \"content\": \"Hero content\",\n      \"data\": {\n        \"buttons\": [\n          {\n            \"text\": \"Get Started\",\n            \"href\": \"/start\",\n            \"style\": \"primary\"\n          }\n        ]\n      },\n      \"visible\": true\n    }\n  ]\n}\n```\n\n## Forms Configuration\n\n```json\n{\n  \"forms\": [\n    {\n      \"id\": \"contact\",\n      \"title\": \"Contact Us\",\n      \"description\": \"Get in touch\",\n      \"fields\": [\n        {\n          \"id\": \"name\",\n          \"type\": \"text\",\n          \"label\": \"Name\",\n          \"required\": true\n        },\n        {\n          \"id\": \"email\",\n          \"type\": \"email\",\n          \"label\": \"Email\",\n          \"required\": true\n        }\n      ],\n      \"submitText\": \"Send\",\n      \"action\": \"/api/contact\"\n    }\n  ]\n}\n```\n\n## Environment Variables\n\nFor sensitive data, use environment variables:\n\n```bash\n# .env.local\nNEXT_PUBLIC_SITE_URL=https://yoursite.com\nGOOGLE_ANALYTICS_ID=GA_MEASUREMENT_ID\nEMAIL_SERVICE_API_KEY=your_api_key\n```\n\n## Validation\n\nValidate your configuration:\n\n```bash\n# Check for errors\nzyros validate\n\n# Detailed validation report\nzyros validate --detailed\n```\n\n## Best Practices\n\n### Performance\n- Keep the site.json file under 1MB\n- Optimize images and use appropriate formats\n- Use content blocks for repeated sections\n\n### SEO\n- Always include page descriptions\n- Use meaningful slugs and titles\n- Add relevant keywords and tags\n\n### Maintenance\n- Use consistent naming conventions\n- Comment complex configurations\n- Version control your site.json\n\n---\n\n*Need help with a specific configuration? Check our [API Reference](/api) or ask in our [Discord community](https://discord.gg/zyros).*"
+    },
+    {
+      "title": "CLI Commands Reference",
+      "slug": "cli",
+      "description": "Complete reference for all Zyros CLI commands and options",
+      "category": "cli",
+      "tags": ["cli", "commands", "reference"],
+      "publishedAt": "2024-01-19",
+      "readingTime": 10,
+      "layout": "documentation",
+      "content": "# CLI Commands Reference\n\nZyros provides a comprehensive command-line interface for managing your static sites. This reference covers all available commands and their options.\n\n## Global Options\n\nThese options are available for all commands:\n\n```bash\n--help, -h     Show help information\n--version, -v  Show version number\n--verbose      Enable verbose logging\n--quiet        Suppress all output except errors\n```\n\n## Project Management\n\n### zyros init\n\nCreate a new Zyros project.\n\n```bash\nzyros init <project-name> [options]\n```\n\n#### Options\n- `--template, -t <name>` - Use a specific template\n- `--force, -f` - Overwrite existing directory\n- `--no-install` - Skip npm install\n- `--git` - Initialize git repository\n\n#### Examples\n```bash\n# Basic project\nzyros init my-blog\n\n# Use portfolio template\nzyros init my-portfolio --template portfolio\n\n# Skip dependency installation\nzyros init my-site --no-install\n```\n\n### zyros dev\n\nStart the development server.\n\n```bash\nzyros dev [options]\n```\n\n#### Options\n- `--port, -p <number>` - Port number (default: 3000)\n- `--host, -H <host>` - Host address (default: localhost)\n- `--open, -o` - Open browser automatically\n\n#### Examples\n```bash\n# Start on default port\nzyros dev\n\n# Custom port and host\nzyros dev --port 8080 --host 0.0.0.0\n\n# Open browser automatically\nzyros dev --open\n```\n\n### zyros build\n\nBuild the site for production.\n\n```bash\nzyros build [options]\n```\n\n#### Options\n- `--output, -o <dir>` - Output directory (default: out)\n- `--analyze` - Analyze bundle size\n- `--no-lint` - Skip linting\n\n#### Examples\n```bash\n# Standard build\nzyros build\n\n# Custom output directory\nzyros build --output dist\n\n# Analyze bundle\nzyros build --analyze\n```\n\n## Content Management\n\n### zyros content create\n\nCreate a new content page.\n\n```bash\nzyros content create [options]\n```\n\n#### Options\n- `--title, -t <title>` - Page title\n- `--slug, -s <slug>` - URL slug\n- `--category, -c <category>` - Page category\n- `--template <template>` - Content template\n- `--interactive, -i` - Interactive mode\n\n#### Examples\n```bash\n# Interactive creation\nzyros content create --interactive\n\n# Quick creation\nzyros content create --title \"My Post\" --slug my-post\n```\n\n### zyros content list\n\nList all content pages.\n\n```bash\nzyros content list [options]\n```\n\n#### Options\n- `--category, -c <category>` - Filter by category\n- `--tag, -t <tag>` - Filter by tag\n- `--format, -f <format>` - Output format (table, json, csv)\n- `--sort, -s <field>` - Sort by field\n\n#### Examples\n```bash\n# List all content\nzyros content list\n\n# Filter by category\nzyros content list --category blog\n\n# JSON output\nzyros content list --format json\n```\n\n### zyros content delete\n\nDelete a content page.\n\n```bash\nzyros content delete <slug> [options]\n```\n\n#### Options\n- `--force, -f` - Skip confirmation\n- `--backup` - Create backup before deletion\n\n#### Examples\n```bash\n# Delete with confirmation\nzyros content delete my-old-post\n\n# Force delete\nzyros content delete my-old-post --force\n```\n\n### zyros content stats\n\nShow content statistics.\n\n```bash\nzyros content stats [options]\n```\n\n#### Options\n- `--detailed, -d` - Show detailed statistics\n- `--category, -c <category>` - Stats for specific category\n\n## Template Management\n\n### zyros template list\n\nList available templates.\n\n```bash\nzyros template list [options]\n```\n\n#### Options\n- `--category, -c <category>` - Filter by category\n- `--detailed, -d` - Show detailed information\n\n### zyros template apply\n\nApply a template to current project.\n\n```bash\nzyros template apply <template-name> [options]\n```\n\n#### Options\n- `--force, -f` - Overwrite existing files\n- `--backup` - Create backup before applying\n\n### zyros template create\n\nCreate a custom template from current project.\n\n```bash\nzyros template create <template-name> [options]\n```\n\n#### Options\n- `--description, -d <desc>` - Template description\n- `--author, -a <author>` - Template author\n- `--force, -f` - Overwrite existing template\n\n## Deployment\n\n### zyros deploy\n\nDeploy your site to various platforms.\n\n```bash\nzyros deploy <platform> [options]\n```\n\n#### Supported Platforms\n- `vercel` - Deploy to Vercel\n- `netlify` - Deploy to Netlify\n- `github` - Deploy to GitHub Pages\n- `s3` - Deploy to AWS S3\n\n#### Options\n- `--prod` - Deploy to production\n- `--preview` - Deploy as preview\n- `--domain <domain>` - Custom domain\n- `--env <file>` - Environment file\n\n#### Examples\n```bash\n# Deploy to Vercel\nzyros deploy vercel --prod\n\n# Deploy to Netlify with custom domain\nzyros deploy netlify --domain mydomain.com\n\n# Deploy to GitHub Pages\nzyros deploy github\n```\n\n## Optimization\n\n### zyros optimize\n\nOptimize your site's assets.\n\n```bash\nzyros optimize [options]\n```\n\n#### Options\n- `--images` - Optimize images only\n- `--webp` - Generate WebP versions\n- `--cleanup` - Clean up optimization artifacts\n\n#### Examples\n```bash\n# Full optimization\nzyros optimize\n\n# Images only\nzyros optimize --images\n\n# Generate WebP\nzyros optimize --webp\n```\n\n## Validation\n\n### zyros validate\n\nValidate your site configuration and content.\n\n```bash\nzyros validate [options]\n```\n\n#### Options\n- `--strict` - Enable strict validation\n- `--fix` - Auto-fix common issues\n- `--report <file>` - Save report to file\n\n#### Examples\n```bash\n# Basic validation\nzyros validate\n\n# Strict mode with auto-fix\nzyros validate --strict --fix\n```\n\n## Configuration\n\n### zyros config\n\nManage configuration settings.\n\n```bash\nzyros config [command] [options]\n```\n\n#### Commands\n- `list` - Show all configuration\n- `get <key>` - Get specific value\n- `set <key> <value>` - Set configuration value\n- `delete <key>` - Delete configuration\n\n#### Examples\n```bash\n# List all config\nzyros config list\n\n# Get site title\nzyros config get site.title\n\n# Set theme\nzyros config set site.theme dark\n```\n\n## Troubleshooting\n\n### Common Issues\n\n#### Command Not Found\n```bash\n# Reinstall globally\nnpm install -g zyros@latest\n\n# Check installation\nwhich zyros\nzyros --version\n```\n\n#### Permission Errors\n```bash\n# Fix npm permissions (macOS/Linux)\nsudo chown -R $(whoami) ~/.npm\n\n# Use npx instead\nnpx zyros@latest <command>\n```\n\n#### Build Failures\n```bash\n# Clear cache\nrm -rf .next node_modules\nnpm install\n\n# Validate configuration\nzyros validate --strict\n```\n\n### Getting Help\n\n```bash\n# Command help\nzyros <command> --help\n\n# General help\nzyros --help\n\n# Version info\nzyros --version\n```\n\n---\n\n*Need more help? Check our [FAQ](/faq) or join our [Discord community](https://discord.gg/zyros).*"
+    }
+  ]
+} 

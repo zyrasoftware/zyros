@@ -165,18 +165,52 @@ async function initProject(projectName, options = {}) {
     // Skip automatic dependency installation to prevent hanging
     spinner.text = 'Project files copied successfully...';
     
+    // Apply template if specified
+    if (options.template && options.template !== 'default') {
+      spinner.text = 'Applying template...';
+      const templatePath = path.join(__dirname, '..', 'templates', options.template);
+      
+      if (fs.existsSync(templatePath)) {
+        // Copy template-specific files
+        const templatePublicPath = path.join(templatePath, 'public');
+        if (fs.existsSync(templatePublicPath)) {
+          await fs.copy(templatePublicPath, path.join(projectPath, 'public'), { overwrite: true });
+        }
+        
+        // Copy other template files if they exist
+        const templateFiles = await fs.readdir(templatePath);
+        for (const file of templateFiles) {
+          if (file !== 'template.json' && file !== 'public') {
+            const srcPath = path.join(templatePath, file);
+            const destPath = path.join(projectPath, file);
+            await fs.copy(srcPath, destPath, { overwrite: true });
+          }
+        }
+      }
+    }
+    
     // Update site.json with project name
     spinner.text = 'Customizing site configuration...';
     const siteJsonPath = path.join(projectPath, 'public', 'site.json');
     if (fs.existsSync(siteJsonPath)) {
       const siteConfig = await fs.readJson(siteJsonPath);
       
-      // Update site title to match project name
+      // Update site title to match project name (but preserve template-specific content)
       if (siteConfig.site) {
         siteConfig.site.title = projectName.charAt(0).toUpperCase() + projectName.slice(1).replace(/-/g, ' ');
-        siteConfig.site.description = `A beautiful static site built with zyros`;
-        siteConfig.site.url = "https://yoursite.com";
-        siteConfig.site.author = "Your Name";
+        // Only update these if they're still default values
+        if (siteConfig.site.description === 'A modern developer blog showcasing the power of zyros with advanced features like content blocks, forms, and custom layouts' ||
+            siteConfig.site.description === 'A beautiful static site built with zyros') {
+          siteConfig.site.description = `A beautiful static site built with zyros`;
+        }
+        if (siteConfig.site.url === 'https://github.com/zyrasoftware/zyros' || 
+            siteConfig.site.url === 'https://yoursite.com') {
+          siteConfig.site.url = "https://yoursite.com";
+        }
+        if (siteConfig.site.author === 'Zyros Team' || 
+            siteConfig.site.author === 'Your Name') {
+          siteConfig.site.author = "Your Name";
+        }
       }
       
       await fs.writeJson(siteJsonPath, siteConfig, { spaces: 2 });

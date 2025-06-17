@@ -1,0 +1,20 @@
+{
+  "name": "minimal",
+  "description": "Ultra-clean minimal design focused on typography and content",
+  "version": "1.0.0",
+  "defaultTheme": "minimal",
+  "features": [
+    "Typography focus",
+    "Minimal UI",
+    "Fast loading",
+    "Clean layouts",
+    "Distraction-free reading",
+    "Elegant spacing",
+    "Subtle animations",
+    "Accessibility focused"
+  ],
+  "author": "Zyra Software",
+  "preview": "https://github.com/zyrasoftware/zyros/templates/minimal",
+  "tags": ["minimal", "clean", "typography", "simple"],
+  "category": "blog"
+} 

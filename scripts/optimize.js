@@ -310,6 +310,8 @@ async function optimizeProject(options = {}) {
     console.log(chalk.gray('  • Run optimization after adding new images'));
     console.log(chalk.gray('  • Use "zyros optimize --cleanup" to remove optimization markers'));
     
+    process.exit(0);
+    
   } catch (error) {
     console.error(chalk.red('Optimization failed:'), error.message);
     process.exit(1);

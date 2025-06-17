@@ -223,6 +223,7 @@ async function updateSiteConfig() {
 
   saveSiteData(siteData);
   console.log(colorize('✓ Site configuration updated!', 'green'));
+  process.exit(0);
 }
 
 function showStats() {
@@ -267,6 +268,8 @@ function showStats() {
         console.log(colorize(`  • ${tag}: ${count} posts`, 'bright'));
       });
   }
+  
+  process.exit(0);
 }
 
 function showHelp() {
@@ -290,6 +293,8 @@ function showHelp() {
   console.log('  node scripts/cli.js stats');
   
       console.log(colorize('\nFor more information, visit: https://github.com/zyrasoftware/zyros', 'blue'));
+  
+  process.exit(0);
 }
 
 async function main() {
@@ -352,6 +357,7 @@ async function manageConfig(options) {
     console.log(colorize(`Title: ${siteData.site.title}`, 'bright'));
     console.log(colorize(`Theme: ${siteData.site.theme}`, 'bright'));
     console.log(colorize(`Description: ${siteData.site.description || 'Not set'}`, 'bright'));
+    process.exit(0);
     return;
   }
   
@@ -363,6 +369,7 @@ async function manageConfig(options) {
       if (value === undefined) break;
     }
     console.log(value || 'Not set');
+    process.exit(0);
     return;
   }
   
@@ -379,6 +386,7 @@ async function manageConfig(options) {
     target[keys[keys.length - 1]] = newValue;
     saveSiteData(siteData);
     console.log(colorize(`✓ Set ${keyPath} = ${newValue}`, 'green'));
+    process.exit(0);
     return;
   }
   

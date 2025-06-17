@@ -75,7 +75,7 @@ async function deployToVercel(options = {}) {
           spinner.succeed(chalk.green('Successfully deployed to Vercel!'));
           console.log(chalk.cyan('\n🎉 Your site is live!'));
           console.log(chalk.yellow('💡 Manage your deployment at https://vercel.com/dashboard'));
-          resolve();
+          process.exit(0);
         } else {
           spinner.fail(chalk.red('Vercel deployment failed'));
           reject(new Error(`Vercel process exited with code ${code}`));
@@ -161,8 +161,10 @@ async function deployToNetlify(options = {}) {
         spinner.succeed(chalk.green('Successfully deployed to Netlify!'));
         console.log(chalk.cyan('\n🎉 Your site is live!'));
         console.log(chalk.yellow('💡 Manage your deployment at https://app.netlify.com/'));
+        process.exit(0);
       } else {
         spinner.fail(chalk.red('Netlify deployment failed'));
+        process.exit(1);
       }
     });
     
@@ -251,6 +253,8 @@ async function deployToGitHubPages(options = {}) {
     
     console.log(chalk.yellow('\n💡 Enable GitHub Pages in your repository settings'));
     
+    process.exit(0);
+    
   } catch (error) {
     spinner.fail(chalk.red('GitHub Pages deployment failed'));
     throw error;
@@ -310,6 +314,8 @@ async function deployToS3(bucketName, options = {}) {
     if (options.cloudfront) {
       console.log(chalk.yellow('\n💡 Don\'t forget to invalidate your CloudFront distribution'));
     }
+    
+    process.exit(0);
     
   } catch (error) {
     spinner.fail(chalk.red('AWS S3 deployment failed'));

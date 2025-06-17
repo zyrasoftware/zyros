@@ -1,0 +1,20 @@
+{
+  "name": "business",
+  "description": "Professional business website with landing page and services",
+  "version": "1.0.0",
+  "defaultTheme": "dark",
+  "features": [
+    "Landing page",
+    "Services section",
+    "Team profiles",
+    "Contact forms",
+    "Testimonials",
+    "Call-to-action blocks",
+    "Newsletter signup",
+    "Social media integration"
+  ],
+  "author": "Zyra Software",
+  "preview": "https://github.com/zyrasoftware/zyros/templates/business",
+  "tags": ["business", "professional", "corporate", "landing"],
+  "category": "business"
+} 
