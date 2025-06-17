@@ -5,7 +5,78 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - 2024-01-30
+## [2.1.2] - 2025-06-17
+
+### 🔧 Critical Fixes & Improvements
+
+This release addresses critical command termination issues and completes the template system implementation.
+
+### Fixed
+
+#### 🐛 Command Termination Issues
+- **CLI Command Hanging** - Fixed all CLI commands not terminating properly after completion
+- **Process Exit Handling** - Added proper `process.exit()` calls to all script functions
+- **User Experience** - Commands now immediately return control to the user after completion
+- **Cross-platform Compatibility** - Improved Windows PowerShell compatibility
+
+#### 🎨 Template System Completion
+- **Template Discovery** - Fixed template listing and discovery functionality
+- **Template Application** - Ensured all templates apply correctly during project initialization
+- **Template Validation** - All 5 templates now properly configured and tested
+
+### Added
+
+#### 📦 Complete Template System
+- **Business Template** - Professional business website with landing page, services, team profiles
+- **Documentation Template** - Technical documentation site with sidebar navigation, code highlighting
+- **Minimal Template** - Ultra-clean minimal design focused on typography
+- **Portfolio Template** - Showcase template with project galleries, about section, contact form
+- **Enhanced Default Template** - Improved default blog template with better content
+
+#### 🛠️ Enhanced CLI Experience
+- **Immediate Feedback** - All commands now provide clear completion status
+- **Proper Termination** - No more hanging commands or user confusion
+- **Consistent Behavior** - All CLI operations follow the same termination pattern
+- **Error Handling** - Improved error reporting with proper exit codes
+
+### Enhanced
+
+#### 🎯 Reliability Improvements
+- **Command Execution** - All CLI commands now execute and terminate reliably
+- **Template Initialization** - Project creation with templates works consistently
+- **Validation Process** - Content validation completes properly
+- **Build Process** - Build operations terminate correctly after completion
+
+#### 📊 Testing & Validation
+- **Comprehensive Testing** - All CLI commands tested for proper termination
+- **Template Verification** - All 5 templates verified working correctly
+- **Cross-platform Testing** - Tested on Windows PowerShell environment
+- **Error Scenarios** - Proper handling of error conditions with appropriate exit codes
+
+### Technical Details
+
+#### 🔧 Script Modifications
+- **scripts/template.js** - Added process.exit() to all template functions
+- **scripts/validate.js** - Added proper termination for successful validation
+- **scripts/optimize.js** - Fixed optimization command termination
+- **scripts/deploy.js** - Added exit handling for all deployment functions
+- **scripts/build.js** - Added successful build termination
+- **scripts/cli.js** - Fixed all CLI utility function terminations
+
+#### 📁 Template Structure
+- **Complete Configurations** - All templates have proper template.json and site.json
+- **Content Validation** - All template content passes validation
+- **Theme Integration** - Templates properly integrate with theme system
+- **Initialization Testing** - All templates tested with zyros init command
+
+### Migration Notes
+
+- **No Breaking Changes** - All existing functionality preserved
+- **Automatic Improvements** - Command termination fixes apply automatically
+- **Template Availability** - All 5 templates now available for use
+- **Backward Compatibility** - Existing projects continue to work unchanged
+
+## [2.0.0] - 2025-05-30
 
 ### 🎉 Major Release - NPM Package Ready!
 
@@ -106,7 +177,7 @@ This is a major release that transforms zyros into a fully-featured npm package 
 - **XSS protection** - Improved cross-site scripting protection
 - **Content Security Policy** - Better CSP headers for deployed sites
 
-## [1.0.0] - 2024-01-01
+## [1.0.0] - 2025-05-01
 
 ### Added
 - Initial release of zyros
@@ -180,8 +251,8 @@ This is a major release that transforms zyros into a fully-featured npm package 
 ---
 
 ## Support
-
+#SOON
 - 📖 [Documentation](https://github.com/zyrasoftware/zyros)
 - 💬 [Community](https://github.com/zyrasoftware/zyros/discussions)
 - 🐛 [Issues](https://github.com/zyrasoftware/zyros/issues)
-- 📧 [Email](mailto:hello@zyra.software) 
+- 📧 [Email](mailto:zyrasoftwaredev@gmail.com) 

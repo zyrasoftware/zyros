@@ -4,7 +4,7 @@
 
 A **developer-friendly static site generator** built with Next.js and Tailwind CSS. Transform a simple JSON file into a beautiful, fast static website with powerful features that developers and content creators love.
 
-![zyros](https://img.shields.io/badge/zyros-v2.1.1-blue)
+![zyros](https://img.shields.io/badge/zyros-v2.1.2-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
@@ -461,17 +461,18 @@ All analytics are privacy-first and stored locally.
 
 ## 🗺️ Roadmap
 
-### ✅ Recently Added (v2.0.5)
+### ✅ Recently Added (v2.1.3)
 - [x] **NPM Package** - Install globally or use with npx
-- [x] **CLI Tool** - Complete command-line interface
-- [x] **Template System** - Multiple starter templates
+- [x] **CLI Tool** - Complete command-line interface with proper termination
+- [x] **Template System** - 5 complete starter templates (Default, Portfolio, Documentation, Business, Minimal)
 - [x] **Content Validation** - Validate structure and content
 - [x] **Image Optimization** - Automatic image processing
 - [x] **One-click Deployment** - Deploy to multiple platforms
 - [x] **TypeScript Support** - Full type definitions
 - [x] **Enhanced Reliability** - Fixed critical file filtering issues
 - [x] **Windows Compatibility** - Improved cross-platform support
-- [x] **Comprehensive Testing** - Thoroughly tested and validated
+- [x] **Command Termination** - All CLI commands now properly exit
+- [x] **Complete Template System** - All templates working with proper configurations
 
 ### 🚧 Coming Soon (v2.1)
 - [ ] **Plugin System** - Extensible architecture
