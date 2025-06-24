@@ -1,14 +1,24 @@
 import { useState, useEffect } from 'react';
 import { Theme } from '../styles/themes';
+import { UICustomizationConfig } from '../types/site';
 
 interface ReadingProgressProps {
   theme: Theme;
+  uiConfig?: UICustomizationConfig;
 }
 
-export default function ReadingProgress({ }: ReadingProgressProps) {
+export default function ReadingProgress({ theme, uiConfig }: ReadingProgressProps) {
   const [progress, setProgress] = useState(0);
 
+  // Get reading progress configuration
+  const readingProgressConfig = uiConfig?.readingProgress;
+
   useEffect(() => {
+    // Don't set up listeners if disabled
+    if (!readingProgressConfig?.enabled) {
+      return;
+    }
+
     const updateProgress = () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -20,14 +30,40 @@ export default function ReadingProgress({ }: ReadingProgressProps) {
     window.addEventListener('scroll', throttledUpdate);
     
     return () => window.removeEventListener('scroll', throttledUpdate);
-  }, []);
+  }, [readingProgressConfig?.enabled]);
+
+  // Don't render if disabled
+  if (!readingProgressConfig?.enabled) {
+    return null;
+  }
+
+  // Use configuration values or fallbacks
+  const height = readingProgressConfig.height || '3px';
+  const background = readingProgressConfig.background || '#e2e8f0';
+  const foreground = readingProgressConfig.foreground || 'linear-gradient(90deg, #0ea5e9 0%, #06b6d4 50%, #8b5cf6 100%)';
+  const position = readingProgressConfig.position || 'top';
+  const zIndex = readingProgressConfig.zIndex || 50;
+
+  const containerStyle: React.CSSProperties = {
+    position: 'fixed',
+    [position]: 0,
+    left: 0,
+    width: '100%',
+    height: height,
+    background: background,
+    zIndex: zIndex,
+  };
+
+  const progressStyle: React.CSSProperties = {
+    height: '100%',
+    background: foreground,
+    width: `${progress}%`,
+    transition: 'width 150ms ease-out',
+  };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 dark:bg-gray-800 z-50">
-      <div 
-        className={`h-full bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-150 ease-out`}
-        style={{ width: `${progress}%` }}
-      />
+    <div className="reading-progress-bar" style={containerStyle}>
+      <div className="reading-progress-fill" style={progressStyle} />
     </div>
   );
 }

@@ -198,12 +198,6 @@ export const Send = ({ className = "w-4 h-4", size }: IconProps) => (
   </svg>
 );
 
-export const Upload = ({ className = "w-4 h-4", size }: IconProps) => (
-  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-  </svg>
-);
-
 export const AlertCircle = ({ className = "w-4 h-4", size }: IconProps) => (
   <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -250,5 +244,110 @@ export const Quote = ({ className = "w-4 h-4", size }: IconProps) => (
 export const Play = ({ className = "w-4 h-4", size }: IconProps) => (
   <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293H15M9 10V9a2 2 0 012-2h2a2 2 0 012 2v1M9 10v5a2 2 0 002 2h2a2 2 0 002-2v-5m-6 0h6" />
+  </svg>
+);
+
+export const Wand2 = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 4V2m0 2v2m0-2h2m-2 0h-2m11 5h-2m2 0v2m0-2v-2M9.5 9A2.5 2.5 0 007 11.5M9.5 9a2.5 2.5 0 012.5 2.5M9.5 9L12 6.5M7 11.5a2.5 2.5 0 002.5 2.5m0-5L12 6.5m-2.5 5L12 14m-2.5-2.5L7 14m5-2.5L14.5 9M12 14l2.5-2.5" />
+  </svg>
+);
+
+export const Sparkles = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3L3 5l2 2 2-2-2-2zM19 17l-2 2 2 2 2-2-2-2zM9 11l-2 2 2 2 2-2-2-2zM15 7l-2 2 2 2 2-2-2-2z" />
+  </svg>
+);
+
+export const Brain = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3a3 3 0 00-3 3v6a3 3 0 006 0V6a3 3 0 00-3-3zM9 12a3 3 0 00-3 3v3a3 3 0 003 3h6a3 3 0 003-3v-3a3 3 0 00-3-3" />
+  </svg>
+);
+
+export const Plus = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+  </svg>
+);
+
+export const Move = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l4-4 4 4m0-8l-4 4-4-4" />
+  </svg>
+);
+
+export const Code = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+  </svg>
+);
+
+export const Save = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+  </svg>
+);
+
+export const Type = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7V4a1 1 0 011-1h14a1 1 0 011 1v3M9 20h6M12 4v16" />
+  </svg>
+);
+
+export const Layout = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+  </svg>
+);
+
+export const Square = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" />
+  </svg>
+);
+
+export const Upload = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+  </svg>
+);
+
+export const Settings = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+);
+
+export const Briefcase = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14V3a9 9 0 019 9c0 5-4 9-9 9s-9-4-9-9a9 9 0 019-9z" />
+  </svg>
+);
+
+export const Monitor = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>
+);
+
+export const Globe = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+  </svg>
+);
+
+export const Target = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+  </svg>
+);
+
+export const Heart = ({ className = "w-4 h-4", size }: IconProps) => (
+  <svg className={className} width={size} height={size} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
   </svg>
 ); 

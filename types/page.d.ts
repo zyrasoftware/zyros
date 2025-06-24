@@ -5,6 +5,7 @@ export interface Page {
   description?: string;
   category?: string;
   tags?: string[];
+  date?: string; // For frontmatter compatibility
   publishedAt?: string;
   updatedAt?: string;
   readingTime?: number;

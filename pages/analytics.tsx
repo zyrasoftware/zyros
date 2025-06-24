@@ -84,48 +84,48 @@ export default function Analytics({ siteData }: AnalyticsProps) {
 
         {/* Overview Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <div className={`p-6 rounded-2xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}>
+          <div className={`analytics-card p-6 rounded-2xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}>
             <div className="flex items-center justify-between mb-4">
               <div className={`p-3 rounded-xl bg-blue-500/10 text-blue-500`}>
                 <Eye className="w-6 h-6" />
               </div>
-              <div className={`text-3xl font-bold ${theme.accent}`}>
+              <div className={`analytics-metric-views text-3xl font-bold ${theme.accent}`}>
                 {totalViews.toLocaleString()}
               </div>
             </div>
             <div className={`text-sm ${theme.secondary}`}>Total Page Views</div>
           </div>
 
-          <div className={`p-6 rounded-2xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}>
+          <div className={`analytics-card p-6 rounded-2xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}>
             <div className="flex items-center justify-between mb-4">
               <div className={`p-3 rounded-xl bg-green-500/10 text-green-500`}>
                 <TrendingUp className="w-6 h-6" />
               </div>
-              <div className={`text-3xl font-bold ${theme.accent}`}>
+              <div className={`analytics-metric-pages text-3xl font-bold ${theme.accent}`}>
                 {uniquePages}
               </div>
             </div>
             <div className={`text-sm ${theme.secondary}`}>Unique Pages Viewed</div>
           </div>
 
-          <div className={`p-6 rounded-2xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}>
+          <div className={`analytics-card p-6 rounded-2xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}>
             <div className="flex items-center justify-between mb-4">
               <div className={`p-3 rounded-xl bg-purple-500/10 text-purple-500`}>
                 <Search className="w-6 h-6" />
               </div>
-              <div className={`text-3xl font-bold ${theme.accent}`}>
+              <div className={`analytics-metric-searches text-3xl font-bold ${theme.accent}`}>
                 {searchAnalytics.length}
               </div>
             </div>
             <div className={`text-sm ${theme.secondary}`}>Search Queries</div>
           </div>
 
-          <div className={`p-6 rounded-2xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}>
+          <div className={`analytics-card p-6 rounded-2xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}>
             <div className="flex items-center justify-between mb-4">
               <div className={`p-3 rounded-xl bg-orange-500/10 text-orange-500`}>
                 <Share2 className="w-6 h-6" />
               </div>
-              <div className={`text-3xl font-bold ${theme.accent}`}>
+              <div className={`analytics-metric-shares text-3xl font-bold ${theme.accent}`}>
                 {pageAnalytics.reduce((sum, page) => sum + page.shares, 0)}
               </div>
             </div>
@@ -166,19 +166,19 @@ export default function Analytics({ siteData }: AnalyticsProps) {
                     </div>
                     <div className="flex items-center space-x-6 text-sm">
                       <div className="text-center">
-                        <div className={`font-bold ${theme.accent}`}>{page.views}</div>
+                        <div className={`analytics-metric-views font-bold ${theme.accent}`}>{page.views}</div>
                         <div className={`${theme.secondary}`}>Views</div>
                       </div>
                       <div className="text-center">
-                        <div className={`font-bold ${theme.accent}`}>{Math.round(page.averageReadingTime)}s</div>
+                        <div className={`analytics-metric-pages font-bold ${theme.accent}`}>{Math.round(page.averageReadingTime)}s</div>
                         <div className={`${theme.secondary}`}>Avg Time</div>
                       </div>
                       <div className="text-center">
-                        <div className={`font-bold ${theme.accent}`}>{Math.round(page.scrollDepth)}%</div>
+                        <div className={`analytics-metric-searches font-bold ${theme.accent}`}>{Math.round(page.scrollDepth)}%</div>
                         <div className={`${theme.secondary}`}>Scroll</div>
                       </div>
                       <div className="text-center">
-                        <div className={`font-bold ${theme.accent}`}>{page.shares}</div>
+                        <div className={`analytics-metric-shares font-bold ${theme.accent}`}>{page.shares}</div>
                         <div className={`${theme.secondary}`}>Shares</div>
                       </div>
                     </div>
@@ -188,9 +188,9 @@ export default function Analytics({ siteData }: AnalyticsProps) {
                   <div className="space-y-2">
                     <div className="flex items-center space-x-3">
                       <span className={`text-xs ${theme.secondary} w-16`}>Engagement</span>
-                      <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                      <div className="analytics-progress-bg flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                         <div 
-                          className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-500"
+                          className="analytics-progress-fill bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-500"
                           style={{ width: `${Math.min(page.scrollDepth, 100)}%` }}
                         ></div>
                       </div>
@@ -292,9 +292,12 @@ export default function Analytics({ siteData }: AnalyticsProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const siteData = loadSiteData();
   
+  // Remove undefined values to prevent serialization issues
+  const cleanSiteData = JSON.parse(JSON.stringify(siteData));
+  
   return {
     props: {
-      siteData,
+      siteData: cleanSiteData,
     },
   };
 }; 

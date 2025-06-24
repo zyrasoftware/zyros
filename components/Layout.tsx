@@ -11,6 +11,12 @@ import QuickThemeToggle from './QuickThemeToggle';
 import { analytics } from '../lib/analytics';
 import CustomizableHeader from './CustomizableHeader';
 import CustomizableFooter from './CustomizableFooter';
+import AIContentGenerator from './AIContentGenerator';
+import SEOAnalyzer from './SEOAnalyzer';
+import PerformanceDashboard from './PerformanceDashboard';
+import VisualPageBuilder from './VisualPageBuilder';
+
+import { useCustomization } from '../hooks/useCustomization';
 
 interface LayoutProps {
   children: ReactNode;
@@ -27,15 +33,34 @@ export default function Layout({
   pages, 
   currentPage 
 }: LayoutProps) {
-  const [theme, setTheme] = useState(initialTheme);
+  const [baseTheme, setBaseTheme] = useState(initialTheme);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
+  // Use the base theme directly
+  const theme = baseTheme;
+
+  // Apply customization settings
+  const {
+    animationCSS,
+    layoutCSS,
+    uiCSS,
+    getFloatingElementStyle,
+    isElementEnabled,
+    getUIConfig,
+    floatingElements
+  } = useCustomization({
+    ui: siteConfig.ui || undefined,
+    animations: siteConfig.animations || undefined,
+    layout: siteConfig.layout || undefined,
+    floatingElements: siteConfig.floatingElements || undefined
+  });
+
   // Handle theme changes
   const handleThemeChange = (themeName: string) => {
     const newTheme = getTheme(themeName);
-    setTheme(newTheme);
+    setBaseTheme(newTheme);
     
     // Save theme preference and track change
     if (typeof window !== 'undefined') {
@@ -50,7 +75,7 @@ export default function Layout({
       const savedTheme = localStorage.getItem('zyros-theme');
       if (savedTheme) {
         const newTheme = getTheme(savedTheme);
-        setTheme(newTheme);
+        setBaseTheme(newTheme);
       }
     }
   }, []);
@@ -63,12 +88,16 @@ export default function Layout({
       const scrollPercent = (scrollTop / docHeight) * 100;
       
       setScrollProgress(scrollPercent);
-      setShowScrollTop(scrollTop > 400);
+      
+      // Use custom threshold from configuration or default to 400
+      const uiThreshold = getUIConfig('scrollToTop')?.threshold;
+      const threshold = uiThreshold || 400;
+      setShowScrollTop(scrollTop > threshold);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [getUIConfig]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -108,9 +137,20 @@ export default function Layout({
         {typeof window !== 'undefined' && (
           <link rel="canonical" href={window.location.href} />
         )}
+
+        {/* Inject custom CSS from customization settings */}
+        {animationCSS && <style dangerouslySetInnerHTML={{ __html: animationCSS }} />}
+        {layoutCSS && <style dangerouslySetInnerHTML={{ __html: layoutCSS }} />}
+        {uiCSS && <style dangerouslySetInnerHTML={{ __html: uiCSS }} />}
       </Head>
 
-      <div className={`min-h-screen transition-all duration-500 ${theme.background} ${theme.text}`}>
+      <div 
+        className={`min-h-screen transition-all duration-500 ${theme.background}`}
+        style={{
+          backgroundColor: siteConfig.site.customization?.colorScheme?.background,
+          color: siteConfig.site.customization?.colorScheme?.text
+        }}
+      >
         {/* Use Customizable Header if configured, otherwise fallback to default */}
         {siteConfig.header ? (
           <CustomizableHeader
@@ -123,7 +163,7 @@ export default function Layout({
             scrollProgress={scrollProgress}
           />
         ) : (
-          <header className={`sticky top-0 z-50 backdrop-blur-xl border-b ${theme.border} ${theme.card}/95 supports-[backdrop-filter]:bg-background/80 shadow-lg transition-all duration-300`}>
+          <header className={`navigation-header sticky top-0 z-50 backdrop-blur-xl border-b ${theme.border} ${theme.card}/95 supports-[backdrop-filter]:bg-background/80 shadow-lg transition-all duration-300`}>
           {/* Navigation Progress Bar */}
           <div className="absolute top-0 left-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-300" 
                style={{ width: `${Math.min(100, scrollProgress)}%` }} />
@@ -136,7 +176,7 @@ export default function Layout({
                 className={`text-xl font-bold ${theme.accent} hover:opacity-90 transition-all duration-300 flex items-center space-x-3 group`}
               >
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 animate-gradient bg-[length:200%_200%]">
+                  <div className="navigation-logo w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 animate-gradient bg-[length:200%_200%]">
                     Z
                   </div>
                   <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-2xl opacity-20 group-hover:opacity-40 blur transition-all duration-300"></div>
@@ -155,9 +195,9 @@ export default function Layout({
               <nav className="hidden lg:flex items-center space-x-1">
                 <Link 
                   href="/" 
-                  className={`relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 group ${
+                  className={`navigation-link relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 group ${
                     !currentPage 
-                      ? `${theme.accent} bg-gradient-to-r from-blue-500/10 to-purple-500/10 shadow-md` 
+                      ? `active ${theme.accent} bg-gradient-to-r from-blue-500/10 to-purple-500/10 shadow-md` 
                       : `${theme.link} hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5`
                   }`}
                 >
@@ -171,9 +211,9 @@ export default function Layout({
                   <Link 
                     key={page.slug} 
                     href={`/${page.slug}`}
-                    className={`relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 group ${
+                    className={`navigation-link relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 group ${
                       currentPage?.slug === page.slug 
-                        ? `${theme.accent} bg-gradient-to-r from-blue-500/10 to-purple-500/10 shadow-md` 
+                        ? `active ${theme.accent} bg-gradient-to-r from-blue-500/10 to-purple-500/10 shadow-md` 
                         : `${theme.link} hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5`
                     }`}
                     style={{ animationDelay: `${index * 100}ms` }}
@@ -189,7 +229,7 @@ export default function Layout({
                 
                 <Link 
                   href="/analytics" 
-                  className={`relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 group ${theme.link} hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5`}
+                  className={`navigation-link relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 group ${theme.link} hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5`}
                 >
                   <span className="relative z-10">Analytics</span>
                 </Link>
@@ -398,16 +438,161 @@ export default function Layout({
           </footer>
         )}
 
-        {/* Scroll to Top Button */}
-        {showScrollTop && (
+        {/* Scroll to Top Button - Only render if explicitly enabled */}
+        {(() => {
+          // Check floatingElements first, then ui config
+          const floatingConfig = floatingElements?.scrollToTop;
+          const uiConfig = getUIConfig('scrollToTop');
+          
+          console.log('🔍 ScrollToTop Debug:', {
+            showScrollTop,
+            floatingConfig: floatingConfig,
+            floatingEnabled: floatingConfig?.enabled,
+            uiConfig: uiConfig,
+            uiEnabled: uiConfig?.enabled
+          });
+          
+          // Determine if button should be shown
+          let shouldShow = false;
+          
+          // If floatingElements config exists AND is enabled, use it
+          if (floatingConfig?.enabled === true) {
+            console.log('📌 Using floatingElements config:', floatingConfig.enabled);
+            shouldShow = true;
+          } else if (uiConfig?.enabled === true) {
+            // Use UI config if floatingElements is not enabled
+          console.log('📌 Using UI config:', uiConfig?.enabled);
+            shouldShow = true;
+          } else {
+            console.log('📌 Both configs disabled or missing');
+            shouldShow = false;
+          }
+          
+          // Final decision: must have scroll position AND be enabled
+          const finalDecision = showScrollTop && shouldShow;
+          console.log('🎯 Final ScrollToTop Decision:', finalDecision);
+          
+          return finalDecision;
+        })() && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 p-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-30"
+            className="transition-all duration-300 hover:scale-110"
+            data-scroll-to-top="true"
+            style={(() => {
+              // Determine which config is being used for rendering
+              const floatingConfig = floatingElements?.scrollToTop;
+              const uiConfig = getUIConfig('scrollToTop');
+              
+              // Use the SAME logic as the shouldShow logic above
+              // If floatingElements is enabled, use its styles
+              if (floatingConfig?.enabled === true) {
+                return {
+                  position: 'fixed',
+                  bottom: floatingConfig.position?.bottom || '2rem',
+                  right: floatingConfig.position?.right || '2rem',
+                  padding: '0.75rem',
+                  borderRadius: floatingConfig.style?.borderRadius || '50%',
+                  background: floatingConfig.style?.background || 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)',
+                  color: floatingConfig.style?.color || '#ffffff',
+                  width: floatingConfig.style?.size || '3rem',
+                  height: floatingConfig.style?.size || '3rem',
+                  boxShadow: floatingConfig.style?.shadow || '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+                  zIndex: floatingConfig.zIndex || 30,
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                };
+              } 
+              // Otherwise, use UI config styles (this is the current case)
+              else if (uiConfig?.enabled === true && uiConfig?.style) {
+                return {
+                  position: 'fixed',
+                  bottom: uiConfig.position?.bottom || '2rem',
+                  right: uiConfig.position?.right || '2rem',
+                  padding: '0.75rem',
+                  borderRadius: uiConfig.style.borderRadius || '50%',
+                  background: uiConfig.style.background || 'linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%)',
+                  color: uiConfig.style.color || '#ffffff',
+                  width: uiConfig.style.size || '3rem',
+                  height: uiConfig.style.size || '3rem',
+                  boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+                  zIndex: 30,
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                };
+              }
+              // Fallback style (blue)
+              return {
+                position: 'fixed',
+                bottom: '2rem',
+                right: '2rem',
+                padding: '0.75rem',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%)',
+                color: '#ffffff',
+                boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+                zIndex: 30,
+                border: 'none',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              };
+            })()}
             title="Scroll to top"
           >
             <ArrowUp className="w-5 h-5" />
           </button>
         )}
+
+        {/* AI-Powered Tools */}
+        {isElementEnabled('aiContentGenerator') && (
+          <AIContentGenerator 
+            theme={theme} 
+            customStyle={getFloatingElementStyle('aiContentGenerator')}
+            onContentGenerated={(content) => {
+              console.log('Generated content:', content);
+              // In a real implementation, this would save the content
+            }} 
+          />
+        )}
+        
+        {isElementEnabled('seoAnalyzer') && (
+          <SEOAnalyzer 
+            theme={theme}
+            customStyle={getFloatingElementStyle('seoAnalyzer')}
+            content={currentPage?.content || ''}
+            title={currentPage?.title || ''}
+            description={currentPage?.description || ''}
+            keywords={[]}
+            onOptimizationSuggestion={(suggestions) => {
+              console.log('SEO suggestions:', suggestions);
+            }}
+          />
+        )}
+        
+        {isElementEnabled('performanceDashboard') && (
+          <PerformanceDashboard 
+            theme={theme}
+          />
+        )}
+        
+        {isElementEnabled('visualPageBuilder') && (
+          <VisualPageBuilder 
+            theme={theme}
+            onSavePage={(pageData) => {
+              console.log('New page created:', pageData);
+              // In a real implementation, this would save the page
+            }}
+          />
+        )}
+        
+
       </div>
     </>
   );

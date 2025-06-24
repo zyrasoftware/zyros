@@ -5,7 +5,288 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.2] - 2025-06-17
+## [Unreleased] v2.2.0
+
+### 🚀 Community Feedback Implementation & Content Management Evolution
+
+This release directly addresses comprehensive community feedback with major improvements to content management, theme system, and developer experience.
+
+### 🔧 Critical Fixes
+
+#### 🎨 Dark Theme Text Visibility
+- **Fixed Invisible Text** - Resolved dark text on dark backgrounds issue
+- **Smart Color Selection** - Automatic text color based on background luminance
+- **Enhanced Contrast** - Improved readability across all custom color schemes
+- **WCAG Compliance** - Better accessibility with proper contrast ratios
+
+### 🚀 Content Management Revolution
+
+#### 📁 Multi-File Markdown Support
+- **Scalable Structure** - New `content/` directory with separate markdown files
+- **Frontmatter Support** - YAML metadata for posts and pages
+- **Backward Compatibility** - Existing `site.json` projects continue to work
+- **Git-Friendly** - Proper diffs, no merge conflicts on large files
+
+#### 🛠️ Enhanced Content Tools
+- **Migration Tools** - Easy transition from site.json to markdown structure
+- **Content Creation** - CLI tools for creating posts and pages
+- **Structure Detection** - Automatic detection of content organization
+- **Dual Support** - Works with both approaches seamlessly
+
+### 📚 Strategic Architecture Improvements
+
+#### 🏗️ Future-Ready Architecture
+- **Dependency Model Planning** - Roadmap for NPM package approach
+- **Target Audience Focus** - Refined focus on developers as primary audience
+- **CLI Simplification** - Streamlined commands based on community feedback
+- **Update Strategy** - Clear path for easier updates and maintenance
+
+### 📖 Enhanced Documentation
+
+#### 🔍 Analytics Clarification
+- **Access Instructions** - Clear documentation for `/analytics` route
+- **Development vs Production** - Environment-specific access controls
+- **Privacy First** - GDPR compliant, local-only analytics
+- **Security Guidelines** - Password protection and environment variables
+
+#### 📊 Improved Guides
+- **Migration Guide** - Step-by-step content structure migration
+- **Content Management** - Best practices for scalable content
+- **Theme Customization** - Enhanced theme system documentation
+
+### 🛠️ Developer Experience
+
+#### ⚡ Enhanced Content Loader
+- **Dual Mode Support** - Both site.json and markdown file approaches
+- **Performance Optimized** - Efficient content discovery and processing
+- **Error Handling** - Graceful fallbacks and clear error messages
+- **Type Safety** - Improved TypeScript definitions
+
+#### 🎯 CLI Improvements
+- **Focused Commands** - Emphasis on unique value-add operations
+- **Content Management** - New tools for markdown-based workflows
+- **Migration Utilities** - Easy project structure upgrades
+- **Better Feedback** - Clear success/error messages
+
+### 📋 New Content Structure
+
+#### 🗂️ Recommended Organization
+```
+content/
+├── site.json          # Global configuration
+├── pages/             # Static pages
+│   ├── about.md
+│   └── contact.md
+└── posts/             # Blog posts
+    ├── 2024-01-15-welcome.md
+    └── 2024-01-20-getting-started.md
+```
+
+#### 📝 Frontmatter Example
+```yaml
+---
+title: "Getting Started"
+date: "2024-01-20"
+category: "tutorial"
+tags: ["zyros", "getting-started"]
+author: "Your Name"
+featured: true
+---
+```
+
+### 🔧 Technical Improvements
+
+#### 🎨 Smart Color System
+- **Contrast Detection** - Automatic text color selection
+- **Accessibility** - WCAG 2.1 compliance improvements
+- **Theme Compatibility** - Better custom color scheme handling
+
+#### 📊 Content Processing
+- **Multi-Source Support** - Flexible content loading pipeline
+- **Reading Time Calculation** - Automatic estimation for markdown content
+- **Tag Management** - Enhanced tag processing and categorization
+
+### 🚀 Migration Tools
+
+#### 🔄 Easy Transitions
+- **Detection** - `detect` command shows current structure
+- **Migration** - `migrate` command converts site.json to markdown
+- **Validation** - Verify migration success
+- **Preservation** - Original files kept for safety
+
+### 📈 Community-Driven Improvements
+
+This release directly implements feedback addressing:
+- **Scalability Concerns** - Multi-file markdown structure
+- **Update Problems** - Foundation for dependency model
+- **Target Audience** - Developer-focused approach
+- **Documentation** - Clarified access and features
+- **Content Management** - Git-friendly, collaborative approach
+
+### 🔮 Roadmap Foundation
+
+#### v3.0 Preparation
+- **Dependency Architecture** - Planning for NPM package model
+- **CMS Integration** - Foundation for headless CMS support
+- **Visual Tools** - Preparation for page builder features
+- **Performance** - Enhanced monitoring and optimization
+
+### 📚 New Documentation
+
+#### 📖 Comprehensive Guides
+- **ARCHITECTURE_EVOLUTION.md** - Detailed technical improvements
+- **ROADMAP.md** - Strategic planning and future vision
+- **Migration documentation** - Step-by-step upgrade guides
+
+### 🤝 Community Impact
+
+#### 💡 Feedback Integration
+- **Dark Theme Fix** - Immediate visibility improvement
+- **Scalability Solution** - Markdown file structure
+- **Developer Focus** - Refined target audience
+- **CLI Streamlining** - Focused command set
+- **Documentation** - Clearer feature access
+
+## [3.0.0] - 2025-01-20
+
+### 🚀 Major Release - AI-Powered Features & Enhanced User Experience
+
+This is a groundbreaking release that transforms Zyros into an AI-powered static site generator with advanced tools for content creation, SEO optimization, and performance monitoring.
+
+### 🤖 AI-Powered Features
+
+#### 🧠 AI Content Generator
+- **Smart Content Creation** - Generate blog posts, landing pages, product descriptions, and about pages with AI assistance
+- **Template-Based Generation** - Pre-built templates for different content types with optimized prompts
+- **Real-time Preview** - See generated content before applying it to your site
+- **One-Click Integration** - Seamlessly integrate generated content into your site structure
+- **CLI Support** - Generate content from command line with `zyros-ai generate`
+
+#### 📊 SEO Analyzer
+- **Real-time Analysis** - Instant SEO scoring and optimization suggestions
+- **Comprehensive Metrics** - Analyze title, description, content, keywords, readability, and structure
+- **Visual Scoring** - Color-coded scores with detailed breakdown and progress indicators
+- **Actionable Suggestions** - Specific recommendations with fix instructions
+- **CLI Integration** - Analyze content files with `zyros-ai seo`
+
+#### ⚡ Performance Dashboard
+- **Core Web Vitals Monitoring** - Track LCP, FID, and CLS with real-time status indicators
+- **Lighthouse Integration** - Monitor performance, accessibility, best practices, SEO, and PWA scores
+- **Resource Analysis** - Detailed breakdown of JavaScript, CSS, image sizes, and HTTP requests
+- **User Experience Metrics** - Track bounce rate, session duration, and pages per session
+- **Optimization Suggestions** - Prioritized recommendations with impact and effort indicators
+
+#### 🎨 Visual Page Builder
+- **Drag-and-Drop Interface** - Create pages visually without coding
+- **10 Content Blocks** - Hero, features, testimonials, CTA, gallery, stats, team, FAQ, pricing, contact
+- **Real-time Preview** - Switch between edit and preview modes instantly
+- **Property Editor** - Customize block content and styling with intuitive controls
+- **Export Functionality** - Save created pages directly to your site structure
+
+### 🎨 Enhanced Theme System
+
+#### 5 New Themes
+- **Aurora** - Mystical northern lights with purple-pink gradients and glassmorphism effects
+- **Autumn** - Warm amber and orange fall-inspired palette with cozy aesthetics
+- **Cyberpunk** - High-contrast cyan and magenta futuristic design with neon accents
+- **Sakura** - Delicate pink cherry blossom aesthetic with soft, elegant styling
+- **Enhanced Existing Themes** - Improved gradients, shadows, and visual effects across all themes
+
+#### Advanced Theme Features
+- **13 Total Themes** - Expanded from 8 to 13 beautiful, professionally designed themes
+- **Improved Gradients** - Enhanced gradient backgrounds and visual effects
+- **Better Accessibility** - Improved contrast ratios and readability across all themes
+- **Smooth Transitions** - Enhanced theme switching with seamless animations
+
+### 🛠️ Developer Experience Improvements
+
+#### Enhanced CLI Tools
+- **New AI Command** - `zyros-ai` command for AI-powered content generation and analysis
+- **Interactive Prompts** - Beautiful, user-friendly command-line interfaces
+- **Progress Indicators** - Visual feedback for long-running operations
+- **Error Handling** - Improved error messages and recovery suggestions
+
+#### Component Architecture
+- **Modular Design** - New components are fully modular and reusable
+- **TypeScript Integration** - Full type safety for all new AI-powered features
+- **Performance Optimized** - Lazy loading and efficient rendering for complex UI components
+- **Accessibility First** - WCAG 2.1 compliant components with keyboard navigation
+
+### 🎯 User Interface Enhancements
+
+#### Floating Action Buttons
+- **AI Content Generator** - Purple gradient floating button for quick content creation
+- **SEO Analyzer** - Green gradient floating button for instant SEO analysis
+- **Performance Dashboard** - Blue gradient floating button for performance monitoring
+- **Visual Page Builder** - Indigo gradient floating button for visual page creation
+
+#### Improved Analytics Dashboard
+- **Enhanced Visualizations** - Better charts, progress bars, and data presentation
+- **Real-time Updates** - Live data updates without page refresh
+- **Export Functionality** - Download analytics data in JSON format
+- **Mobile Responsive** - Fully optimized for mobile and tablet viewing
+
+### 🔧 Technical Improvements
+
+#### Performance Optimizations
+- **Code Splitting** - Improved bundle splitting for faster initial load times
+- **Lazy Loading** - Components load only when needed
+- **Memory Management** - Optimized memory usage for large sites
+- **Build Performance** - Faster build times with improved optimization
+
+#### Security Enhancements
+- **Input Validation** - Enhanced validation for user inputs and file uploads
+- **XSS Protection** - Improved cross-site scripting protection
+- **Content Security Policy** - Better CSP headers for enhanced security
+- **Dependency Updates** - All dependencies updated to latest secure versions
+
+### 📱 Mobile Experience
+
+#### Responsive Design
+- **Mobile-First AI Tools** - All new AI features fully optimized for mobile devices
+- **Touch Interactions** - Improved touch handling for drag-and-drop functionality
+- **Adaptive UI** - Interface adapts intelligently to different screen sizes
+- **Performance** - Optimized for mobile performance and battery life
+
+### 🌐 Accessibility Improvements
+
+#### WCAG 2.1 Compliance
+- **Keyboard Navigation** - Full keyboard accessibility for all new features
+- **Screen Reader Support** - Comprehensive ARIA labels and descriptions
+- **Color Contrast** - Enhanced contrast ratios across all themes
+- **Focus Management** - Improved focus handling and visual indicators
+
+### 📚 Documentation Updates
+
+#### Comprehensive Guides
+- **AI Tools Documentation** - Complete guide for using AI-powered features
+- **Theme Customization** - Enhanced theme customization documentation
+- **Performance Optimization** - Best practices for site performance
+- **SEO Guide** - Complete SEO optimization guide
+
+### 🔄 Migration Notes
+
+#### Backward Compatibility
+- **No Breaking Changes** - All existing functionality preserved
+- **Automatic Upgrades** - New features available immediately upon update
+- **Optional Features** - All AI features are opt-in and don't affect existing sites
+- **Theme Compatibility** - Existing themes continue to work unchanged
+
+#### New Features Access
+- **Floating Buttons** - New AI tools accessible via floating action buttons
+- **CLI Commands** - Access AI tools via new `zyros-ai` command
+- **Theme Selection** - 5 new themes available in theme switcher
+- **Performance Monitoring** - Built-in performance dashboard available
+
+### 🎉 What's Next
+
+This release establishes Zyros as the most advanced static site generator with AI-powered features. Future releases will focus on:
+- **AI Model Integration** - Connect with real AI APIs for content generation
+- **Advanced Analytics** - More detailed user behavior tracking
+- **Collaboration Features** - Multi-user editing and collaboration tools
+- **E-commerce Integration** - Built-in e-commerce capabilities
+
+## [2.1.4] - 2025-06-24
 
 ### 🔧 Critical Fixes & Improvements
 

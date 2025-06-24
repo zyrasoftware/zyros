@@ -107,7 +107,7 @@ export default function SocialShare({ title, url, description, theme, slug }: So
               {/* Twitter */}
               <button
                 onClick={() => handleShare('twitter')}
-                className={`w-full flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${theme.code} hover:${theme.accent} hover:scale-105`}
+                className={`social-share-button w-full flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${theme.code} hover:${theme.accent} hover:scale-105`}
               >
                 <Twitter className="w-5 h-5 mr-3 text-blue-400" />
                 <span className={`font-medium ${theme.text}`}>Share on Twitter</span>
@@ -116,7 +116,7 @@ export default function SocialShare({ title, url, description, theme, slug }: So
               {/* Facebook */}
               <button
                 onClick={() => handleShare('facebook')}
-                className={`w-full flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${theme.code} hover:${theme.accent} hover:scale-105`}
+                className={`social-share-button w-full flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${theme.code} hover:${theme.accent} hover:scale-105`}
               >
                 <Facebook className="w-5 h-5 mr-3 text-blue-600" />
                 <span className={`font-medium ${theme.text}`}>Share on Facebook</span>
@@ -125,7 +125,7 @@ export default function SocialShare({ title, url, description, theme, slug }: So
               {/* LinkedIn */}
               <button
                 onClick={() => handleShare('linkedin')}
-                className={`w-full flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${theme.code} hover:${theme.accent} hover:scale-105`}
+                className={`social-share-button w-full flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${theme.code} hover:${theme.accent} hover:scale-105`}
               >
                 <Linkedin className="w-5 h-5 mr-3 text-blue-700" />
                 <span className={`font-medium ${theme.text}`}>Share on LinkedIn</span>

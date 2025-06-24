@@ -21,8 +21,8 @@ const template = require('../scripts/template');
 const validate = require('../scripts/validate');
 const optimize = require('../scripts/optimize');
 const deploy = require('../scripts/deploy');
-
-// Package info
+const ai = require('../scripts/ai-tools');
+// Package infoc
 const packageJson = require('../package.json');
 
 program
@@ -52,6 +52,10 @@ program
   .option('-o, --output <dir>', 'Output directory', 'dist')
   .option('--base-url <url>', 'Base URL for the site')
   .action(async (options) => {
+    console.log(chalk.yellow('⚠️  The "zyros build" command is deprecated.'));
+    console.log(chalk.cyan('Use "npm run build" instead for better compatibility.'));
+    console.log(chalk.gray('This command will be removed in v2.3.0\n'));
+    
     try {
       process.env.SITE_URL = options.baseUrl;
       await build.generateSite();
@@ -67,6 +71,10 @@ program
   .description('Start development server')
   .option('-p, --port <port>', 'Port number', '3000')
   .action(async (options) => {
+    console.log(chalk.yellow('⚠️  The "zyros dev" command is deprecated.'));
+    console.log(chalk.cyan('Use "npm run dev" instead for better compatibility.'));
+    console.log(chalk.gray('This command will be removed in v2.3.0\n'));
+    
     try {
       const { spawn } = require('child_process');
       const isWindows = process.platform === 'win32';
@@ -272,6 +280,50 @@ program
       process.exit(1);
     }
   });
+
+
+// AI tools
+const aiTools = program
+  .command('ai')
+  .description('AI tools commands');
+
+aiTools
+  .command('generate')
+  .description('Generate content with AI')
+  .action(async () => {
+    try {
+      await ai.generateContent();
+    } catch (error) {
+      console.error(chalk.red('AI generation failed:'), error.message);
+      process.exit(1);
+    }
+  });
+
+aiTools
+  .command('seo')
+  .description('Analyze SEO')
+  .action(async () => {
+    try {
+      await ai.analyzeSEO();
+    } catch (error) {
+      console.error(chalk.red('SEO analysis failed:'), error.message);
+      process.exit(1);
+    }
+  });
+
+aiTools
+  .command('performance')
+  .description('Performance audit')
+  .action(async () => {
+    try {
+      await ai.performanceAudit();
+    } catch (error) {
+      console.error(chalk.red('Performance audit failed:'), error.message);
+      process.exit(1);
+    }
+  });
+
+
 
 // Parse command line arguments
 program.parse();

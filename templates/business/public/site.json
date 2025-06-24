@@ -1,495 +1,214 @@
 {
   "site": {
-    "title": "TechCorp Solutions",
+    "title": "InnovateCorp",
+    "description": "Leading the future of technology innovation with cutting-edge solutions and expert consulting services.",
+    "author": "InnovateCorp Team",
+    "url": "https://innovatecorp.com",
     "theme": "dark",
-    "description": "Leading technology solutions provider helping businesses transform digitally",
     "layout": "business",
-    "author": "TechCorp Team",
-    "url": "https://techcorp.com",
-    "language": "en",
-    "favicon": "/favicon.svg",
-    "social": {
-      "linkedin": "https://linkedin.com/company/techcorp",
-      "twitter": "https://twitter.com/techcorp",
-      "facebook": "https://facebook.com/techcorp",
-      "email": "hello@techcorp.com"
+    "customization": {
+      "colorScheme": {
+        "primary": "#1E40AF",
+        "secondary": "#3B82F6",
+        "accent": "#06B6D4",
+        "background": "#0F172A",
+        "surface": "#1E293B",
+        "text": "#F1F5F9"
+      },
+      "hero": {
+        "style": "split",
+        "showStats": true,
+        "backgroundType": "gradient",
+        "overlayOpacity": 0.2
+      },
+      "content": {
+        "cardStyle": "elevated",
+        "spacing": "relaxed",
+        "animation": "fade",
+        "showExcerpts": true,
+        "showReadingTime": true,
+        "showTags": true
+      },
+      "typography": {
+        "headingFont": "Inter",
+        "bodyFont": "Source Sans Pro",
+        "fontSize": "lg",
+        "fontWeight": "medium"
+      }
     },
-    "seo": {
-      "keywords": ["business", "technology", "solutions", "consulting", "digital transformation"],
-      "ogImage": "/og-business.jpg",
-      "twitterCard": "summary_large_image"
+    "social": {
+      "twitter": "https://twitter.com/innovatecorp",
+      "github": "https://github.com/innovatecorp",
+      "linkedin": "https://linkedin.com/company/innovatecorp",
+      "email": "hello@innovatecorp.com"
     },
     "features": {
-      "search": false,
       "newsletter": true,
-      "comments": false,
       "darkMode": true,
-      "analytics": true,
       "socialShare": true,
-      "tableOfContents": false,
-      "readingProgress": false
+      "analytics": true
     }
   },
-  "header": {
-    "logo": {
-      "text": "TechCorp",
-      "image": "/logo-business.png",
-      "url": "/",
-      "size": "large",
-      "position": "left"
+  "pages": [
+    {
+      "title": "The Future of Cloud Computing",
+      "slug": "future-cloud-computing",
+      "content": "# The Future of Cloud Computing\n\nCloud computing continues to evolve at an unprecedented pace. In this comprehensive analysis, we explore the emerging trends, technologies, and opportunities that will shape the next decade of cloud infrastructure.\n\n## Key Trends\n\n- **Edge Computing**: Bringing computation closer to data sources\n- **Serverless Architecture**: Function-as-a-Service revolutionizing development\n- **Multi-Cloud Strategies**: Avoiding vendor lock-in through diversification\n- **AI-Powered Operations**: Intelligent automation and optimization\n\n## Market Impact\n\nThe global cloud computing market is projected to reach $832.1 billion by 2025, driven by digital transformation initiatives across industries.\n\n### Enterprise Adoption\n\nEnterprises are increasingly adopting hybrid cloud solutions that combine:\n\n1. Public cloud scalability\n2. Private cloud security\n3. On-premises control\n\n## Conclusion\n\nAs we move forward, organizations that embrace cloud-native architectures and emerging technologies will gain significant competitive advantages in the digital economy.",
+      "description": "Explore the emerging trends and technologies shaping the future of cloud computing infrastructure.",
+      "category": "Technology",
+      "tags": ["Cloud Computing", "Technology Trends", "Digital Transformation"],
+      "publishedAt": "2024-01-15",
+      "readingTime": 8,
+      "featured": true,
+      "author": "Sarah Chen, Cloud Architect"
     },
-    "navigation": [
-      {
-        "title": "Home",
-        "href": "/",
-        "icon": "🏠"
-      },
-      {
-        "title": "Services",
-        "href": "#",
-        "icon": "⚙️",
-        "children": [
-          {
-            "title": "Web Development",
-            "href": "/services/web-development"
-          },
-          {
-            "title": "Digital Marketing",
-            "href": "/services/digital-marketing"
-          },
-          {
-            "title": "Cloud Solutions",
-            "href": "/services/cloud-solutions"
-          },
-          {
-            "title": "Consulting",
-            "href": "/services/consulting"
-          }
-        ]
-      },
-      {
-        "title": "About",
-        "href": "/about",
-        "icon": "🏢"
-      },
-      {
-        "title": "Team",
-        "href": "/team",
-        "icon": "👥"
-      },
-      {
-        "title": "Contact",
-        "href": "/contact",
-        "icon": "📞",
-        "badge": "Free Quote"
-      }
-    ],
-    "themeToggle": true,
-    "sticky": true,
-    "style": "business"
-  },
+    {
+      "title": "Digital Transformation Strategies for Modern Businesses",
+      "slug": "digital-transformation-strategies",
+      "content": "# Digital Transformation Strategies for Modern Businesses\n\nDigital transformation is no longer optional—it's essential for business survival and growth in today's competitive landscape.\n\n## Understanding Digital Transformation\n\nDigital transformation involves integrating digital technology into all areas of a business, fundamentally changing how you operate and deliver value to customers.\n\n### Core Components\n\n- **Technology Infrastructure**: Cloud platforms, APIs, and microservices\n- **Data Analytics**: Business intelligence and predictive analytics\n- **Customer Experience**: Omnichannel engagement and personalization\n- **Operational Excellence**: Process automation and optimization\n\n## Implementation Framework\n\n### Phase 1: Assessment and Planning\n- Evaluate current state\n- Define transformation goals\n- Identify key stakeholders\n\n### Phase 2: Technology Foundation\n- Modernize infrastructure\n- Implement cloud solutions\n- Establish data governance\n\n### Phase 3: Process Optimization\n- Automate repetitive tasks\n- Streamline workflows\n- Enhance collaboration\n\n### Phase 4: Innovation and Growth\n- Develop new digital products\n- Explore emerging technologies\n- Scale successful initiatives\n\n## Success Metrics\n\nMeasure transformation success through:\n\n- Customer satisfaction scores\n- Operational efficiency gains\n- Revenue from digital channels\n- Employee productivity metrics\n\n## Conclusion\n\nSuccessful digital transformation requires a holistic approach that combines technology, people, and processes to create lasting competitive advantages.",
+      "description": "A comprehensive guide to implementing successful digital transformation strategies in modern business environments.",
+      "category": "Business Strategy",
+      "tags": ["Digital Transformation", "Business Strategy", "Technology"],
+      "publishedAt": "2024-01-10",
+      "readingTime": 12,
+      "featured": false,
+      "author": "Michael Rodriguez, Digital Strategy Consultant"
+    },
+    {
+      "title": "Cybersecurity Best Practices for Remote Teams",
+      "slug": "cybersecurity-remote-teams",
+      "content": "# Cybersecurity Best Practices for Remote Teams\n\nWith the rise of remote work, organizations face new cybersecurity challenges that require comprehensive security strategies.\n\n## Remote Work Security Challenges\n\n### Common Threats\n- Unsecured home networks\n- Personal device vulnerabilities\n- Phishing attacks targeting remote workers\n- Inadequate access controls\n\n## Essential Security Measures\n\n### 1. Zero Trust Architecture\nImplement a \"never trust, always verify\" approach:\n- Multi-factor authentication (MFA)\n- Device verification\n- Continuous monitoring\n- Least privilege access\n\n### 2. Secure Communication\n- End-to-end encrypted messaging\n- VPN for network access\n- Secure video conferencing\n- Protected file sharing\n\n### 3. Endpoint Protection\n- Antivirus and anti-malware software\n- Regular security updates\n- Device encryption\n- Remote wipe capabilities\n\n### 4. Employee Training\n- Security awareness programs\n- Phishing simulation exercises\n- Regular security briefings\n- Incident reporting procedures\n\n## Implementation Strategy\n\n### Phase 1: Risk Assessment\n- Identify vulnerabilities\n- Assess current security posture\n- Prioritize security investments\n\n### Phase 2: Technology Deployment\n- Deploy security tools\n- Configure access controls\n- Implement monitoring systems\n\n### Phase 3: Training and Awareness\n- Conduct security training\n- Establish security policies\n- Create incident response plans\n\n## Monitoring and Compliance\n\nContinuous monitoring includes:\n- Network traffic analysis\n- User behavior analytics\n- Threat intelligence integration\n- Compliance reporting\n\n## Conclusion\n\nProtecting remote teams requires a multi-layered approach combining technology, processes, and human awareness to create a robust security posture.",
+      "description": "Essential cybersecurity practices and strategies to protect remote teams and maintain security in distributed work environments.",
+      "category": "Cybersecurity",
+      "tags": ["Cybersecurity", "Remote Work", "Security Best Practices"],
+      "publishedAt": "2024-01-05",
+      "readingTime": 10,
+      "featured": false,
+      "author": "David Kim, Cybersecurity Specialist"
+    }
+  ],
+  "navigation": [
+    { "title": "Home", "href": "/" },
+    { "title": "Services", "href": "/services" },
+    { "title": "About", "href": "/about" },
+    { "title": "Blog", "href": "/blog" },
+    { "title": "Contact", "href": "/contact" }
+  ],
   "footer": {
-    "copyright": "© 2024 TechCorp Solutions. All rights reserved.",
+    "layout": "columns",
+    "style": "modern",
+    "spacing": "normal",
+    "background": {
+      "type": "gradient",
+      "gradient": {
+        "from": "#1E293B",
+        "to": "#0F172A",
+        "direction": "diagonal"
+      }
+    },
+    "customization": {
+      "colorScheme": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "accent": "#06B6D4",
+        "background": "#1E293B",
+        "surface": "#334155",
+        "text": "#F1F5F9"
+      }
+    },
     "columns": [
       {
         "title": "Services",
         "links": [
-          {
-            "title": "Web Development",
-            "href": "/services/web-development"
-          },
-          {
-            "title": "Digital Marketing",
-            "href": "/services/digital-marketing"
-          },
-          {
-            "title": "Cloud Solutions",
-            "href": "/services/cloud-solutions"
-          },
-          {
-            "title": "Consulting",
-            "href": "/services/consulting"
-          }
+          { "text": "Cloud Solutions", "url": "/services/cloud", "icon": "☁️" },
+          { "text": "Digital Transformation", "url": "/services/digital", "icon": "🚀" },
+          { "text": "Cybersecurity", "url": "/services/security", "icon": "🔒" },
+          { "text": "Data Analytics", "url": "/services/analytics", "icon": "📊" }
         ]
       },
       {
         "title": "Company",
         "links": [
-          {
-            "title": "About Us",
-            "href": "/about"
-          },
-          {
-            "title": "Our Team",
-            "href": "/team"
-          },
-          {
-            "title": "Careers",
-            "href": "/careers"
-          },
-          {
-            "title": "News",
-            "href": "/news"
-          }
+          { "text": "About Us", "url": "/about", "icon": "🏢" },
+          { "text": "Our Team", "url": "/team", "icon": "👥" },
+          { "text": "Careers", "url": "/careers", "icon": "💼" },
+          { "text": "Press", "url": "/press", "icon": "📰" }
         ]
       },
       {
-        "title": "Support",
+        "title": "Resources",
         "links": [
-          {
-            "title": "Contact",
-            "href": "/contact"
-          },
-          {
-            "title": "Help Center",
-            "href": "/help"
-          },
-          {
-            "title": "Privacy Policy",
-            "href": "/privacy"
-          },
-          {
-            "title": "Terms of Service",
-            "href": "/terms"
-          }
+          { "text": "Documentation", "url": "/docs", "icon": "📚" },
+          { "text": "Case Studies", "url": "/case-studies", "icon": "📋" },
+          { "text": "Whitepapers", "url": "/whitepapers", "icon": "📄" },
+          { "text": "Support", "url": "/support", "icon": "🛠️" }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          { "text": "Contact Us", "url": "/contact", "icon": "📧" },
+          { "text": "Schedule Demo", "url": "/demo", "icon": "📅" },
+          { "text": "Partner Program", "url": "/partners", "icon": "🤝" },
+          { "text": "Events", "url": "/events", "icon": "🎯" }
         ]
       }
     ],
-    "newsletter": true,
     "social": true,
-    "style": "business"
-  },
-  "contentBlocks": [
-    {
-      "id": "hero-business",
-      "type": "hero",
-      "title": "Transform Your Business Digitally",
-      "subtitle": "Leading Technology Solutions",
-      "content": "We help businesses leverage cutting-edge technology to drive growth, improve efficiency, and stay competitive in today's digital landscape.",
-      "data": {
-        "backgroundImage": "/hero-business.jpg",
-        "buttons": [
-          {
-            "text": "Get Free Consultation",
-            "href": "/contact",
-            "style": "primary"
-          },
-          {
-            "text": "Our Services",
-            "href": "/services",
-            "style": "outline"
-          }
-        ],
-        "features": [
-          "10+ Years Experience",
-          "500+ Successful Projects",
-          "24/7 Support",
-          "Proven Results"
-        ]
+    "socialLinks": [
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/innovatecorp",
+        "icon": "🐦",
+        "color": "#1DA1F2"
       },
-      "visible": true
-    },
-    {
-      "id": "services-overview",
-      "type": "features",
-      "title": "Our Core Services",
-      "subtitle": "Comprehensive Solutions",
-      "content": "From web development to digital transformation, we provide end-to-end technology solutions tailored to your business needs.",
-      "data": {
-        "layout": "grid",
-        "features": [
-          {
-            "title": "Web Development",
-            "description": "Custom websites and web applications built with modern technologies and best practices.",
-            "icon": "💻"
-          },
-          {
-            "title": "Digital Marketing",
-            "description": "Strategic digital marketing campaigns to increase your online presence and drive growth.",
-            "icon": "📈"
-          },
-          {
-            "title": "Cloud Solutions",
-            "description": "Scalable cloud infrastructure and migration services for improved performance and cost efficiency.",
-            "icon": "☁️"
-          },
-          {
-            "title": "IT Consulting",
-            "description": "Expert technology consulting to help you make informed decisions and optimize your IT strategy.",
-            "icon": "🎯"
-          },
-          {
-            "title": "Mobile Development",
-            "description": "Native and cross-platform mobile applications for iOS and Android devices.",
-            "icon": "📱"
-          },
-          {
-            "title": "Data Analytics",
-            "description": "Turn your data into actionable insights with our advanced analytics and reporting solutions.",
-            "icon": "📊"
-          }
-        ]
+      {
+        "platform": "LinkedIn", 
+        "url": "https://linkedin.com/company/innovatecorp",
+        "icon": "💼",
+        "color": "#0A66C2"
       },
-      "visible": true
-    },
-    {
-      "id": "stats-business",
-      "type": "stats",
-      "title": "Proven Track Record",
-      "content": "Numbers that speak for our commitment to excellence and client success.",
-      "data": {
-        "stats": [
-          {
-            "value": "500+",
-            "label": "Projects Completed",
-            "description": "Successfully delivered",
-            "icon": "✅"
-          },
-          {
-            "value": "98%",
-            "label": "Client Satisfaction",
-            "description": "Happy customers",
-            "icon": "😊"
-          },
-          {
-            "value": "10+",
-            "label": "Years Experience",
-            "description": "In the industry",
-            "icon": "🏆"
-          },
-          {
-            "value": "24/7",
-            "label": "Support Available",
-            "description": "Always here to help",
-            "icon": "🛟"
-          }
-        ]
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/innovatecorp",
+        "icon": "⭐",
+        "color": "#333"
       },
-      "visible": true
+      {
+        "platform": "YouTube",
+        "url": "https://youtube.com/innovatecorp",
+        "icon": "📺",
+        "color": "#FF0000"
+      }
+    ],
+    "contact": {
+      "email": "hello@innovatecorp.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "123 Innovation Drive, Tech City, TC 12345"
     },
-    {
-      "id": "team-business",
-      "type": "team",
-      "title": "Meet Our Expert Team",
-      "subtitle": "The People Behind Our Success",
-      "content": "Our diverse team of experts brings together years of experience in technology, design, and business strategy.",
-      "data": {
-        "members": [
-          {
-            "name": "Sarah Johnson",
-            "role": "CEO & Founder",
-            "bio": "Visionary leader with 15+ years in technology and business transformation.",
-            "avatar": "/team/sarah.jpg",
-            "social": {
-              "linkedin": "https://linkedin.com/in/sarahjohnson",
-              "twitter": "https://twitter.com/sarahjohnson"
-            }
-          },
-          {
-            "name": "Michael Chen",
-            "role": "CTO",
-            "bio": "Technical architect specializing in scalable systems and cloud infrastructure.",
-            "avatar": "/team/michael.jpg",
-            "social": {
-              "linkedin": "https://linkedin.com/in/michaelchen",
-              "github": "https://github.com/michaelchen"
-            }
-          },
-          {
-            "name": "Emily Rodriguez",
-            "role": "Head of Design",
-            "bio": "Creative director focused on user experience and brand development.",
-            "avatar": "/team/emily.jpg",
-            "social": {
-              "linkedin": "https://linkedin.com/in/emilyrodriguez",
-              "dribbble": "https://dribbble.com/emilyrodriguez"
-            }
-          },
-          {
-            "name": "David Park",
-            "role": "Lead Developer",
-            "bio": "Full-stack developer with expertise in modern web technologies.",
-            "avatar": "/team/david.jpg",
-            "social": {
-              "linkedin": "https://linkedin.com/in/davidpark",
-              "github": "https://github.com/davidpark"
-            }
-          }
-        ]
+    "newsletter": {
+      "enabled": true,
+      "style": "modern",
+      "layout": "split",
+      "showStats": true,
+      "showIcon": true,
+      "colorScheme": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "accent": "#06B6D4",
+        "background": "#1E293B",
+        "surface": "#334155"
       },
-      "visible": true
+      "content": {
+        "title": "Stay Ahead of Innovation",
+        "subtitle": "Get the latest insights on technology trends, digital transformation strategies, and industry best practices delivered to your inbox.",
+        "placeholder": "Enter your business email",
+        "buttonText": "Subscribe Now",
+        "successMessage": "Thanks for subscribing! You'll receive our next newsletter with exclusive insights and updates.",
+        "privacyNote": "We respect your privacy and will never share your information. Unsubscribe anytime."
+      }
     },
-    {
-      "id": "cta-business",
-      "type": "cta",
-      "title": "Ready to Transform Your Business?",
-      "content": "Let's discuss how our technology solutions can help you achieve your business goals and stay ahead of the competition.",
-      "data": {
-        "buttons": [
-          {
-            "text": "Schedule Free Consultation",
-            "href": "/contact",
-            "style": "primary"
-          },
-          {
-            "text": "View Case Studies",
-            "href": "/case-studies",
-            "style": "outline"
-          }
-        ],
-        "features": [
-          "Free initial consultation",
-          "Custom solution design",
-          "Transparent pricing",
-          "Ongoing support"
-        ]
-      },
-      "visible": true
-    }
-  ],
-  "forms": [
-    {
-      "id": "business-contact",
-      "title": "Get Your Free Consultation",
-      "description": "Tell us about your project and we'll provide a custom solution proposal within 24 hours.",
-      "fields": [
-        {
-          "id": "company",
-          "type": "text",
-          "label": "Company Name",
-          "placeholder": "Your company name",
-          "required": true
-        },
-        {
-          "id": "name",
-          "type": "text",
-          "label": "Contact Name",
-          "placeholder": "Your full name",
-          "required": true
-        },
-        {
-          "id": "email",
-          "type": "email",
-          "label": "Business Email",
-          "placeholder": "your@company.com",
-          "required": true
-        },
-        {
-          "id": "phone",
-          "type": "tel",
-          "label": "Phone Number",
-          "placeholder": "+1 (555) 123-4567",
-          "required": false
-        },
-        {
-          "id": "service",
-          "type": "select",
-          "label": "Service Interest",
-          "placeholder": "Select primary service",
-          "required": true,
-          "options": [
-            "Web Development",
-            "Digital Marketing",
-            "Cloud Solutions",
-            "IT Consulting",
-            "Mobile Development",
-            "Data Analytics",
-            "Full Digital Transformation"
-          ]
-        },
-        {
-          "id": "budget",
-          "type": "select",
-          "label": "Project Budget",
-          "placeholder": "Select budget range",
-          "options": [
-            "$10,000 - $25,000",
-            "$25,000 - $50,000",
-            "$50,000 - $100,000",
-            "$100,000+",
-            "Let's discuss"
-          ]
-        },
-        {
-          "id": "timeline",
-          "type": "select",
-          "label": "Project Timeline",
-          "placeholder": "When do you need this completed?",
-          "options": [
-            "ASAP",
-            "Within 1 month",
-            "Within 3 months",
-            "Within 6 months",
-            "More than 6 months"
-          ]
-        },
-        {
-          "id": "details",
-          "type": "textarea",
-          "label": "Project Details",
-          "placeholder": "Tell us about your project requirements, goals, and any specific challenges you're facing...",
-          "required": true,
-          "validation": {
-            "minLength": 20
-          }
-        }
-      ],
-      "submitText": "Request Free Consultation",
-      "successMessage": "Thank you! We'll review your request and get back to you within 24 hours with a custom proposal.",
-      "action": "/api/business-contact",
-      "method": "POST"
-    }
-  ],
-  "pages": [
-    {
-      "title": "About TechCorp Solutions",
-      "slug": "about",
-      "description": "Learn about our company, mission, and commitment to helping businesses succeed through technology.",
-      "category": "company",
-      "tags": ["about", "company", "mission", "values"],
-      "publishedAt": "2024-01-15",
-      "readingTime": 4,
-      "layout": "business",
-      "content": "# About TechCorp Solutions\n\nFounded in 2014, **TechCorp Solutions** has been at the forefront of digital transformation, helping businesses of all sizes leverage technology to achieve their goals and stay competitive in an ever-evolving digital landscape.\n\n## Our Mission\n\nTo empower businesses with innovative technology solutions that drive growth, improve efficiency, and create lasting competitive advantages.\n\n## Our Story\n\nWhat started as a small web development agency has grown into a comprehensive technology solutions provider. Our journey began when our founder, Sarah Johnson, recognized the growing gap between rapidly advancing technology and businesses' ability to adopt and implement these innovations effectively.\n\n### Key Milestones\n\n- **2014** - Founded as a web development studio\n- **2016** - Expanded into digital marketing services\n- **2018** - Launched cloud solutions division\n- **2020** - Added data analytics and AI capabilities\n- **2022** - Reached 500+ successful project completions\n- **2024** - Celebrating 10 years of innovation\n\n## Our Values\n\n### Innovation First\nWe stay ahead of technology trends to provide cutting-edge solutions that give our clients a competitive edge.\n\n### Client Success\nYour success is our success. We measure our achievements by the growth and satisfaction of our clients.\n\n### Transparency\nHonest communication, clear pricing, and transparent processes build trust and long-term partnerships.\n\n### Quality Excellence\nWe never compromise on quality. Every project receives our full attention and expertise.\n\n### Continuous Learning\nThe tech landscape evolves rapidly, and so do we. Our team continuously updates their skills and knowledge.\n\n## Why Choose TechCorp?\n\n### Proven Experience\n- 10+ years in the industry\n- 500+ successful projects\n- 98% client satisfaction rate\n- Award-winning solutions\n\n### Comprehensive Services\n- End-to-end project management\n- Full-stack development capabilities\n- Strategic consulting and planning\n- Ongoing support and maintenance\n\n### Industry Expertise\nWe've worked across various industries including:\n- Healthcare and Medical\n- Financial Services\n- E-commerce and Retail\n- Education and Training\n- Manufacturing and Logistics\n- Professional Services\n\n---\n\n*Ready to transform your business? [Contact us today](/contact) for a free consultation.*"
-    },
-    {
-      "title": "Our Services",
-      "slug": "services",
-      "description": "Comprehensive technology solutions including web development, digital marketing, cloud services, and IT consulting.",
-      "category": "services",
-      "tags": ["services", "solutions", "technology"],
-      "publishedAt": "2024-01-18",
-      "readingTime": 6,
-      "layout": "business",
-      "contentBlocks": ["services-overview"],
-      "content": "# Our Services\n\nTechCorp Solutions offers a comprehensive suite of technology services designed to help your business thrive in the digital age. From custom software development to strategic IT consulting, we have the expertise to tackle your most challenging technology needs.\n\n## Web Development\n\n### Custom Web Applications\n- **Frontend Development** - React, Vue.js, Angular applications\n- **Backend Development** - Node.js, Python, .NET solutions\n- **Database Design** - SQL and NoSQL database architecture\n- **API Development** - RESTful and GraphQL APIs\n\n### E-commerce Solutions\n- **Online Stores** - Custom e-commerce platforms\n- **Payment Integration** - Secure payment processing\n- **Inventory Management** - Real-time stock tracking\n- **Customer Portals** - User accounts and order management\n\n### Content Management\n- **CMS Development** - Custom content management systems\n- **Headless CMS** - Flexible content delivery\n- **Multi-site Management** - Centralized content control\n- **SEO Optimization** - Search engine friendly architecture\n\n## Digital Marketing\n\n### Search Engine Optimization\n- **Technical SEO** - Site optimization and performance\n- **Content Strategy** - Keyword research and content planning\n- **Local SEO** - Google My Business and local listings\n- **Analytics & Reporting** - Performance tracking and insights\n\n### Pay-Per-Click Advertising\n- **Google Ads** - Search and display campaigns\n- **Social Media Ads** - Facebook, Instagram, LinkedIn advertising\n- **Campaign Management** - Ongoing optimization and monitoring\n- **Conversion Tracking** - ROI measurement and reporting\n\n### Social Media Marketing\n- **Strategy Development** - Platform-specific strategies\n- **Content Creation** - Engaging posts and visuals\n- **Community Management** - Audience engagement and growth\n- **Influencer Partnerships** - Collaboration opportunities\n\n## Cloud Solutions\n\n### Cloud Migration\n- **Assessment & Planning** - Current infrastructure analysis\n- **Migration Strategy** - Phased migration approach\n- **Data Transfer** - Secure and efficient data migration\n- **Testing & Validation** - Comprehensive migration testing\n\n### Infrastructure Management\n- **AWS Solutions** - EC2, S3, RDS, Lambda services\n- **Azure Services** - Virtual machines, storage, databases\n- **Google Cloud** - Compute Engine, Cloud Storage, BigQuery\n- **Hybrid Solutions** - On-premise and cloud integration\n\n### DevOps & Automation\n- **CI/CD Pipelines** - Automated deployment processes\n- **Container Solutions** - Docker and Kubernetes\n- **Monitoring & Logging** - System health and performance tracking\n- **Security Implementation** - Cloud security best practices\n\n## IT Consulting\n\n### Technology Strategy\n- **Digital Transformation** - Comprehensive digitization planning\n- **Technology Roadmaps** - Long-term technology planning\n- **Vendor Selection** - Technology stack recommendations\n- **Cost Optimization** - Budget planning and cost reduction\n\n### System Architecture\n- **Scalability Planning** - Growth-ready system design\n- **Integration Strategy** - System interconnection planning\n- **Performance Optimization** - System efficiency improvements\n- **Security Architecture** - Comprehensive security planning\n\n### Project Management\n- **Agile Methodology** - Iterative development approach\n- **Team Coordination** - Cross-functional team management\n- **Timeline Management** - Milestone tracking and delivery\n- **Quality Assurance** - Comprehensive testing and validation\n\n## Industry Solutions\n\n### Healthcare Technology\n- **HIPAA Compliance** - Healthcare data security\n- **Patient Portals** - Secure patient communication\n- **Telemedicine Platforms** - Remote healthcare delivery\n- **Electronic Health Records** - EHR system integration\n\n### Financial Services\n- **Fintech Applications** - Financial technology solutions\n- **Security Compliance** - PCI DSS and banking regulations\n- **Trading Platforms** - Real-time financial data systems\n- **Risk Management** - Automated risk assessment tools\n\n### E-learning Platforms\n- **Learning Management Systems** - Comprehensive LMS solutions\n- **Video Streaming** - Educational content delivery\n- **Student Portals** - Enrollment and progress tracking\n- **Certification Systems** - Automated certification processes\n\n---\n\n*Need a custom solution? [Contact our experts](/contact) to discuss your specific requirements.*"
-    },
-    {
-      "title": "Our Team",
-      "slug": "team",
-      "description": "Meet the expert team behind TechCorp Solutions - experienced professionals dedicated to your success.",
-      "category": "company",
-      "tags": ["team", "experts", "leadership"],
-      "publishedAt": "2024-01-20",
-      "readingTime": 5,
-      "layout": "business",
-      "contentBlocks": ["team-business"],
-      "content": "# Meet Our Expert Team\n\nAt TechCorp Solutions, our success is built on the expertise, dedication, and passion of our team members. Each person brings unique skills and perspectives that contribute to our ability to deliver exceptional technology solutions.\n\n## Leadership Team\n\n### Sarah Johnson - CEO & Founder\n\nWith over 15 years of experience in technology and business transformation, Sarah founded TechCorp Solutions with a vision to bridge the gap between cutting-edge technology and practical business applications. Her strategic leadership has guided the company's growth from a small startup to a recognized leader in digital solutions.\n\n**Expertise:**\n- Digital transformation strategy\n- Business process optimization\n- Technology leadership\n- Client relationship management\n\n**Education:**\n- MBA, Business Strategy - Stanford University\n- BS, Computer Science - MIT\n\n### Michael Chen - Chief Technology Officer\n\nMichael leads our technical vision and oversees all technology initiatives. With a background in enterprise architecture and cloud computing, he ensures our solutions are built on solid, scalable foundations that can grow with our clients' needs.\n\n**Expertise:**\n- Cloud architecture and migration\n- Enterprise system design\n- DevOps and automation\n- Technology stack optimization\n\n**Education:**\n- MS, Computer Science - Carnegie Mellon\n- AWS Solutions Architect - Professional\n- Google Cloud Professional Architect\n\n## Department Heads\n\n### Emily Rodriguez - Head of Design\n\nEmily brings a user-centered approach to all our projects, ensuring that technology solutions are not only functional but also intuitive and engaging. Her design philosophy focuses on creating experiences that users love while meeting business objectives.\n\n**Expertise:**\n- User experience (UX) design\n- User interface (UI) design\n- Design systems and branding\n- Usability testing and research\n\n**Education:**\n- MFA, Interaction Design - Art Center College of Design\n- Certified Usability Analyst (CUA)\n\n### David Park - Lead Developer\n\nDavid oversees our development team and ensures code quality, performance, and maintainability across all projects. His full-stack expertise and commitment to best practices make him an invaluable technical leader.\n\n**Expertise:**\n- Full-stack web development\n- Database design and optimization\n- API development and integration\n- Code review and mentoring\n\n**Education:**\n- BS, Software Engineering - UC Berkeley\n- Certified Scrum Master (CSM)\n- AWS Certified Developer\n\n## Specialized Teams\n\n### Development Team\nOur developers specialize in modern frameworks and technologies:\n- **Frontend Specialists** - React, Vue.js, Angular experts\n- **Backend Engineers** - Node.js, Python, .NET developers\n- **Mobile Developers** - iOS and Android native development\n- **DevOps Engineers** - CI/CD, containerization, cloud deployment\n\n### Digital Marketing Team\nOur marketing experts drive online growth:\n- **SEO Specialists** - Technical and content optimization\n- **PPC Managers** - Google Ads and social media advertising\n- **Content Creators** - Copywriting and visual content\n- **Analytics Experts** - Data analysis and reporting\n\n### Cloud Solutions Team\nOur cloud architects design scalable infrastructure:\n- **AWS Specialists** - Amazon Web Services experts\n- **Azure Engineers** - Microsoft cloud solutions\n- **Google Cloud Experts** - GCP implementation specialists\n- **Security Engineers** - Cloud security and compliance\n\n## Our Culture\n\n### Continuous Learning\nWe invest in our team's growth through:\n- Regular training and certification programs\n- Conference attendance and industry events\n- Internal knowledge sharing sessions\n- Mentorship and career development\n\n### Collaboration & Innovation\nWe foster a collaborative environment where:\n- Ideas are welcomed from all team members\n- Cross-functional teams work together seamlessly\n- Innovation is encouraged and supported\n- Failure is seen as a learning opportunity\n\n### Work-Life Balance\nWe believe in sustainable success:\n- Flexible working arrangements\n- Remote work options\n- Comprehensive benefits package\n- Team building and social events\n\n## Join Our Team\n\nWe're always looking for talented individuals who share our passion for technology and client success. Current opportunities include:\n\n- **Senior Full-Stack Developer**\n- **Cloud Solutions Architect**\n- **Digital Marketing Specialist**\n- **UX/UI Designer**\n- **DevOps Engineer**\n\nInterested in joining our team? [View open positions](/careers) or [send us your resume](/contact).\n\n---\n\n*Ready to work with our expert team? [Contact us today](/contact) to discuss your project.*"
-    },
-    {
-      "title": "Contact TechCorp Solutions",
-      "slug": "contact",
-      "description": "Get in touch with our team for a free consultation and custom technology solution proposal.",
-      "category": "contact",
-      "tags": ["contact", "consultation", "quote"],
-      "publishedAt": "2024-01-22",
-      "readingTime": 3,
-      "layout": "business",
-      "customFields": {
-        "showContactForm": true,
-        "priority": "high"
-      },
-      "content": "# Contact TechCorp Solutions\n\nReady to transform your business with cutting-edge technology solutions? Our team of experts is here to help you achieve your goals and stay ahead of the competition.\n\n## Get Your Free Consultation\n\nWe offer a **completely free initial consultation** where we'll:\n\n✅ **Analyze your current technology setup**\n✅ **Identify opportunities for improvement**\n✅ **Provide strategic recommendations**\n✅ **Create a custom solution proposal**\n✅ **Discuss timeline and investment**\n\n*No obligation, no sales pressure - just valuable insights for your business.*\n\n## Multiple Ways to Connect\n\n### Immediate Response\n📞 **Phone**: +1 (555) 123-TECH (8324)\n📧 **Email**: hello@techcorp.com\n💬 **Live Chat**: Available on our website 9 AM - 6 PM EST\n\n### Business Hours\n**Monday - Friday**: 9:00 AM - 6:00 PM EST\n**Saturday**: 10:00 AM - 2:00 PM EST\n**Sunday**: Emergency support only\n\n### Office Locations\n\n#### Headquarters - New York\n**TechCorp Solutions HQ**\n123 Technology Drive, Suite 500\nNew York, NY 10001\n\n#### West Coast Office - San Francisco\n**TechCorp West**\n456 Innovation Boulevard, Floor 12\nSan Francisco, CA 94105\n\n#### Remote Team\nWe also have talented team members working remotely across the United States, ensuring we can provide support during extended hours.\n\n## What Happens Next?\n\n### 1. Initial Contact (Same Day)\nWe'll respond to your inquiry within 2 hours during business hours, or first thing the next business day.\n\n### 2. Discovery Call (Within 24 Hours)\nA 30-minute call to understand your needs, challenges, and goals.\n\n### 3. Solution Design (2-3 Days)\nOur team will create a custom solution proposal tailored to your requirements.\n\n### 4. Proposal Presentation (Within 1 Week)\nWe'll present our recommendations, timeline, and investment details.\n\n### 5. Project Kickoff\nOnce approved, we'll begin your project with clear milestones and regular updates.\n\n## Frequently Asked Questions\n\n### How much do your services cost?\nEvery project is unique, so we provide custom quotes based on your specific requirements. Our free consultation includes a detailed proposal with transparent pricing.\n\n### Do you work with small businesses?\nAbsolutely! We work with businesses of all sizes, from startups to enterprise corporations. Our solutions are scalable and budget-conscious.\n\n### Can you work with our existing team?\nYes, we often collaborate with internal teams and can provide training, mentoring, or supplemental development resources.\n\n### Do you provide ongoing support?\nWe offer comprehensive support and maintenance packages to ensure your technology continues to perform optimally.\n\n### How long do projects typically take?\nProject timelines vary based on complexity and scope. Simple websites might take 4-6 weeks, while complex applications can take 3-6 months or more.\n\n## Emergency Support\n\nFor existing clients experiencing critical issues:\n- **Emergency Hotline**: +1 (555) 911-TECH\n- **24/7 Support Email**: emergency@techcorp.com\n- **Response Time**: Within 1 hour for critical issues\n\n## Follow Us\n\nStay updated with the latest technology trends and TechCorp news:\n\n- 💼 **LinkedIn**: [linkedin.com/company/techcorp-solutions](https://linkedin.com/company/techcorp-solutions)\n- 🐦 **Twitter**: [@TechCorpSolutions](https://twitter.com/techcorpsolutions)\n- 📘 **Facebook**: [facebook.com/TechCorpSolutions](https://facebook.com/techcorpsolutions)\n- 📧 **Newsletter**: Subscribe for monthly insights and tips\n\n---\n\n*Ready to get started? Fill out the form above or call us at +1 (555) 123-TECH. We're excited to help transform your business!*"
-    }
-  ]
-} 
+    "backToTop": true,
+    "copyright": "© 2024 InnovateCorp. All rights reserved. Empowering businesses through innovative technology solutions."
+  }
+}

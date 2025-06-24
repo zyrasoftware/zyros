@@ -1,0 +1,645 @@
+{
+  "site": {
+    "title": "Modern Blog",
+    "theme": "light",
+    "description": "A clean and modern blog with powerful features and beautiful design",
+    "layout": "blog",
+    "author": "Blog Author",
+    "url": "https://modern-blog.example.com",
+    "language": "en",
+    "favicon": "/favicon.svg",
+    "logo": "/logo.svg",
+    "social": {
+      "twitter": "https://twitter.com/modern_blog",
+      "github": "https://github.com/modern/blog",
+      "linkedin": "https://linkedin.com/in/modern-blog",
+      "email": "hello@modern-blog.example.com",
+      "instagram": "https://instagram.com/modern.blog"
+    },
+    "analytics": {
+      "googleAnalytics": "GA_MEASUREMENT_ID"
+    },
+    "seo": {
+      "keywords": ["blog", "modern", "clean", "responsive", "fast"],
+      "ogImage": "/og-image.jpg",
+      "twitterCard": "summary_large_image"
+    },
+    "features": {
+      "search": true,
+      "newsletter": true,
+      "comments": false,
+      "darkMode": true,
+      "analytics": true,
+      "socialShare": true,
+      "tableOfContents": true,
+      "readingProgress": true
+    }
+  },
+  "header": {
+    "logo": {
+      "text": "Modern Blog",
+      "image": "/logo.svg",
+      "url": "/",
+      "size": "medium",
+      "position": "left"
+    },
+    "navigation": [
+      {
+        "title": "Home",
+        "href": "/",
+        "icon": "🏠"
+      },
+      {
+        "title": "Blog",
+        "href": "/blog",
+        "icon": "📝"
+      },
+      {
+        "title": "About",
+        "href": "/about",
+        "icon": "👤"
+      },
+      {
+        "title": "Projects",
+        "href": "#",
+        "icon": "💼",
+        "children": [
+          {
+            "title": "Web Apps",
+            "href": "/projects/web-apps",
+            "icon": "🌐"
+          },
+          {
+            "title": "Mobile Apps",
+            "href": "/projects/mobile-apps",
+            "icon": "📱"
+          },
+          {
+            "title": "Open Source",
+            "href": "/projects/open-source",
+            "icon": "🔓"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "href": "/contact",
+        "icon": "📧"
+      }
+    ],
+    "search": true,
+    "themeToggle": true,
+    "sticky": true,
+    "transparent": false,
+    "height": "normal",
+    "style": "modern",
+    "background": {
+      "type": "blur"
+    },
+    "border": {
+      "show": true,
+      "style": "solid",
+      "width": "thin"
+    },
+    "layout": "spread",
+    "mobileMenu": {
+      "style": "slide",
+      "position": "right"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Modern Blog. All rights reserved.",
+    "columns": [
+      {
+        "title": "Content",
+        "links": [
+          {
+            "title": "Latest Posts",
+            "href": "/blog"
+          },
+          {
+            "title": "Popular Posts",
+            "href": "/popular"
+          },
+          {
+            "title": "Categories",
+            "href": "/categories"
+          },
+          {
+            "title": "Archive",
+            "href": "/archive"
+          }
+        ]
+      },
+      {
+        "title": "About",
+        "links": [
+          {
+            "title": "About Me",
+            "href": "/about"
+          },
+          {
+            "title": "My Story",
+            "href": "/story"
+          },
+          {
+            "title": "Skills",
+            "href": "/skills"
+          },
+          {
+            "title": "Experience",
+            "href": "/experience"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "title": "Contact",
+            "href": "/contact"
+          },
+          {
+            "title": "Newsletter",
+            "href": "/newsletter"
+          },
+          {
+            "title": "RSS Feed",
+            "href": "/feed.xml"
+          },
+          {
+            "title": "Sitemap",
+            "href": "/sitemap.xml"
+          }
+        ]
+      }
+    ],
+    "newsletter": true,
+    "social": true,
+    "scrollToTop": true,
+    "style": "modern",
+    "layout": "columns",
+    "background": {
+      "type": "gradient",
+      "gradient": {
+        "from": "#f8fafc",
+        "to": "#e2e8f0",
+        "direction": "diagonal"
+      }
+    },
+    "spacing": "normal",
+    "border": {
+      "show": true,
+      "style": "solid",
+      "width": "thin"
+    },
+    "socialLinks": [
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/modern_blog",
+        "icon": "🐦",
+        "color": "#1DA1F2"
+      },
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/modern/blog",
+        "icon": "🐙",
+        "color": "#333"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/modern-blog",
+        "icon": "💼",
+        "color": "#0077B5"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/modern.blog",
+        "icon": "📷",
+        "color": "#E4405F"
+      }
+    ]
+  },
+  "contentBlocks": [
+    {
+      "id": "hero-default",
+      "type": "hero",
+      "title": "Welcome to Modern Blog",
+      "subtitle": "Clean Design & Great Content",
+      "content": "Discover thoughtful articles, tutorials, and insights on web development, design, and technology. Built with modern tools for the best reading experience.",
+      "data": {
+        "backgroundImage": "/hero-bg.jpg",
+        "buttons": [
+          {
+            "text": "Start Reading",
+            "href": "/blog",
+            "style": "primary"
+          },
+          {
+            "text": "About Me",
+            "href": "/about",
+            "style": "outline"
+          }
+        ],
+        "features": [
+          "Modern design",
+          "Fast loading",
+          "Mobile responsive",
+          "SEO optimized"
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "features-default",
+      "type": "features",
+      "title": "Why This Blog?",
+      "subtitle": "Built for readers and writers",
+      "content": "Everything you need for a great reading and writing experience, with modern features and clean design.",
+      "data": {
+        "layout": "grid",
+        "features": [
+          {
+            "title": "Fast & Responsive",
+            "description": "Lightning-fast loading times and perfect display on all devices, from mobile to desktop.",
+            "icon": "⚡"
+          },
+          {
+            "title": "SEO Optimized",
+            "description": "Built-in SEO best practices ensure your content reaches the right audience through search engines.",
+            "icon": "🔍"
+          },
+          {
+            "title": "Dark Mode",
+            "description": "Toggle between light and dark themes for comfortable reading in any lighting condition.",
+            "icon": "🌙"
+          },
+          {
+            "title": "Social Sharing",
+            "description": "Easy sharing buttons for all major social platforms to help spread your content.",
+            "icon": "📱"
+          },
+          {
+            "title": "Reading Progress",
+            "description": "Visual reading progress indicator keeps readers engaged and shows how much content remains.",
+            "icon": "📊"
+          },
+          {
+            "title": "Table of Contents",
+            "description": "Automatic table of contents generation for long-form content with smooth scrolling navigation.",
+            "icon": "📋"
+          }
+        ]
+      },
+      "visible": true
+    },
+    {
+      "id": "newsletter-signup",
+      "type": "newsletter",
+      "title": "Stay Updated",
+      "subtitle": "Get the latest posts delivered to your inbox",
+      "content": "Join our newsletter to receive weekly updates with the latest articles, tutorials, and insights.",
+      "data": {
+        "placeholder": "Enter your email address",
+        "buttonText": "Subscribe",
+        "privacy": "We respect your privacy. Unsubscribe at any time."
+      },
+      "visible": true
+    }
+  ],
+  "ui": {
+    "scrollToTop": {
+      "enabled": true,
+      "threshold": 400,
+      "position": {
+        "bottom": "2rem",
+        "right": "2rem"
+      },
+      "style": {
+        "background": "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+        "color": "#ffffff",
+        "size": "3rem",
+        "borderRadius": "50%"
+      }
+    },
+    "readingProgress": {
+      "enabled": true,
+      "height": "3px",
+      "background": "#e2e8f0",
+      "foreground": "linear-gradient(90deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%)",
+      "position": "top",
+      "zIndex": 50
+    },
+    "hero": {
+      "enabled": false,
+      "background": {
+        "type": "gradient",
+        "gradient": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)"
+      },
+      "title": {
+        "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+        "fontWeight": "700",
+        "color": "#1e293b"
+      },
+      "subtitle": {
+        "fontSize": "clamp(1.125rem, 2.5vw, 1.5rem)",
+        "color": "#64748b"
+      },
+      "badge": {
+        "backgroundColor": "rgba(59, 130, 246, 0.1)",
+        "color": "#3b82f6",
+        "borderRadius": "9999px"
+      }
+    },
+    "stats": {
+      "enabled": false
+    },
+    "cards": {
+      "enabled": false,
+      "background": "#ffffff",
+      "border": {
+        "color": "#e2e8f0",
+        "width": "1px",
+        "radius": "1rem"
+      },
+      "shadow": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+      "hover": {
+        "transform": "translateY(-4px)",
+        "shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "borderColor": "#3b82f6"
+      }
+    },
+    "buttons": {
+      "enabled": false,
+      "primary": {
+        "background": "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+        "color": "#ffffff",
+        "borderRadius": "0.5rem",
+        "padding": "0.75rem 1.5rem",
+        "fontSize": "0.875rem",
+        "fontWeight": "600",
+        "hover": {
+          "background": "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
+          "transform": "translateY(-2px)",
+          "shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1)"
+        }
+      },
+      "secondary": {
+        "background": "transparent",
+        "color": "#3b82f6",
+        "border": "1px solid #e2e8f0",
+        "borderRadius": "0.5rem",
+        "hover": {
+          "background": "#f8fafc",
+          "borderColor": "#3b82f6"
+        }
+      }
+    },
+    "navigation": {
+      "enabled": false,
+      "background": {
+        "type": "blur",
+        "color": "rgba(255, 255, 255, 0.95)"
+      },
+      "links": {
+        "color": "#64748b",
+        "activeColor": "#3b82f6",
+        "fontSize": "0.875rem",
+        "fontWeight": "500",
+        "hoverBackground": "rgba(59, 130, 246, 0.05)",
+        "borderRadius": "0.5rem"
+      }
+    },
+    "footer": {
+      "background": {
+        "type": "gradient",
+        "gradient": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)"
+      },
+      "text": {
+        "color": "#64748b",
+        "linkColor": "#3b82f6"
+      },
+      "border": {
+        "color": "#e2e8f0",
+        "width": "1px"
+      }
+    },
+    "analytics": {
+      "enabled": false,
+      "cards": {
+        "background": "#ffffff",
+        "border": "1px solid #e2e8f0",
+        "borderRadius": "1rem"
+      },
+      "metrics": {
+        "colors": {
+          "views": "#3b82f6",
+          "pages": "#10b981",
+          "searches": "#8b5cf6",
+          "shares": "#f59e0b"
+        }
+      }
+    },
+    "forms": {
+      "enabled": false,
+      "input": {
+        "background": "#ffffff",
+        "border": "1px solid #e2e8f0",
+        "borderRadius": "0.5rem",
+        "fontSize": "0.875rem",
+        "padding": "0.75rem 1rem",
+        "focus": {
+          "borderColor": "#3b82f6",
+          "boxShadow": "0 0 0 3px rgba(59, 130, 246, 0.1)"
+        }
+      },
+      "button": {
+        "background": "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+        "color": "#ffffff",
+        "borderRadius": "0.5rem",
+        "padding": "0.75rem 1.5rem",
+        "fontSize": "0.875rem",
+        "fontWeight": "600"
+      }
+    },
+    "newsletter": {
+      "enabled": false,
+      "background": {
+        "type": "gradient",
+        "gradient": "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)"
+      },
+      "title": {
+        "fontSize": "2rem",
+        "fontWeight": "bold",
+        "color": "#ffffff"
+      },
+      "subtitle": {
+        "fontSize": "1.125rem",
+        "color": "rgba(255, 255, 255, 0.9)"
+      },
+      "input": {
+        "background": "rgba(255, 255, 255, 0.95)",
+        "borderRadius": "0.5rem",
+        "padding": "0.75rem 1rem",
+        "fontSize": "0.875rem"
+      },
+      "button": {
+        "background": "linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%)",
+        "color": "#ffffff",
+        "borderRadius": "0.5rem",
+        "padding": "0.75rem 1.5rem",
+        "fontSize": "0.875rem",
+        "fontWeight": "600"
+      }
+    },
+    "socialShare": {
+      "enabled": false,
+      "button": {
+        "background": "transparent",
+        "border": "1px solid #e2e8f0",
+        "color": "#64748b",
+        "borderRadius": "0.5rem",
+        "padding": "0.5rem 0.75rem",
+        "fontSize": "0.75rem",
+        "hover": {
+          "background": "#f8fafc",
+          "borderColor": "#3b82f6",
+          "color": "#3b82f6"
+        }
+      }
+    },
+    "loadingSpinner": {
+      "enabled": false,
+      "color": "#3b82f6",
+      "size": "2rem"
+    },
+    "searchBar": {
+      "enabled": false,
+      "background": "#ffffff",
+      "border": "1px solid #e2e8f0",
+      "borderRadius": "0.5rem",
+      "padding": "0.75rem 1rem",
+      "fontSize": "0.875rem",
+      "focus": {
+        "borderColor": "#3b82f6",
+        "boxShadow": "0 0 0 3px rgba(59, 130, 246, 0.1)"
+      }
+    },
+    "tableOfContents": {
+      "enabled": false,
+      "background": "#f8fafc",
+      "border": "1px solid #e2e8f0",
+      "borderRadius": "1rem",
+      "padding": "1.5rem",
+      "title": {
+        "fontSize": "1rem",
+        "fontWeight": "600",
+        "color": "#1e293b"
+      },
+      "link": {
+        "color": "#64748b",
+        "fontSize": "0.875rem",
+        "padding": "0.5rem 0.75rem",
+        "borderRadius": "0.5rem",
+        "hover": {
+          "background": "rgba(59, 130, 246, 0.05)",
+          "color": "#3b82f6"
+        },
+        "active": {
+          "background": "rgba(59, 130, 246, 0.1)",
+          "color": "#3b82f6"
+        }
+      }
+    },
+    "contentBlocks": {
+      "enabled": false,
+      "features": {
+        "background": "#ffffff",
+        "border": "1px solid #e2e8f0",
+        "borderRadius": "1rem",
+        "padding": "2rem",
+        "title": {
+          "fontSize": "1.25rem",
+          "fontWeight": "600",
+          "color": "#1e293b"
+        },
+        "description": {
+          "fontSize": "0.875rem",
+          "color": "#64748b"
+        },
+        "icon": {
+          "background": "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+          "color": "#ffffff",
+          "borderRadius": "0.75rem",
+          "size": "3rem"
+        }
+      },
+      "newsletter": {
+        "background": "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+        "title": {
+          "color": "#ffffff"
+        },
+        "subtitle": {
+          "color": "rgba(255, 255, 255, 0.9)"
+        }
+      }
+    },
+    "gradients": {
+      "primary": "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+      "secondary": "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+      "accent": "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)"
+    },
+    "animations": {
+      "durations": {
+        "fast": "150ms",
+        "normal": "300ms",
+        "slow": "500ms"
+      },
+      "easings": {
+        "default": "cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "hover": {
+        "scale": "1.02",
+        "translateY": "-4px"
+      }
+    }
+  },
+  "animations": {
+    "durations": {
+      "fast": "150ms",
+      "normal": "300ms",
+      "slow": "500ms"
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "transitions": {
+      "page": "all 300ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "component": "all 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "hover": "all 150ms cubic-bezier(0.4, 0, 0.2, 1)"
+    }
+  },
+  "layout": {
+    "container": {
+      "maxWidth": "1200px",
+      "padding": "1rem",
+      "margin": "0 auto"
+    },
+    "spacing": {
+      "section": "4rem",
+      "component": "2rem",
+      "element": "1rem"
+    },
+    "breakpoints": {
+      "mobile": "640px",
+      "tablet": "768px",
+      "desktop": "1024px",
+      "wide": "1280px"
+    }
+  },
+  "floatingElements": {
+    "scrollToTop": {
+      "enabled": false
+    }
+  }
+}

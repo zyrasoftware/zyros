@@ -73,7 +73,7 @@ function HeroBlock({ block, theme }: ContentBlockProps) {
   };
 
   return (
-    <section className={`relative py-20 lg:py-32 overflow-hidden ${theme.background}`}>
+    <section className={`hero-section relative py-20 lg:py-32 overflow-hidden ${theme.background}`}>
       {data?.backgroundImage && (
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
@@ -84,18 +84,18 @@ function HeroBlock({ block, theme }: ContentBlockProps) {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {block.subtitle && (
-          <div className={`inline-flex items-center px-4 py-2 rounded-full ${theme.card} border ${theme.border} text-sm font-medium ${theme.accent} mb-8`}>
+          <div className={`hero-badge inline-flex items-center px-4 py-2 rounded-full ${theme.card} border ${theme.border} text-sm font-medium ${theme.accent} mb-8`}>
             <Star className="w-4 h-4 mr-2" />
             {block.subtitle}
           </div>
         )}
         
-        <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold ${theme.accent} mb-8 leading-tight`}>
+        <h1 className={`hero-title text-4xl md:text-6xl lg:text-7xl font-bold ${theme.accent} mb-8 leading-tight`}>
           {block.title}
         </h1>
         
         {block.content && (
-          <p className={`text-xl lg:text-2xl ${theme.secondary} mb-12 max-w-4xl mx-auto leading-relaxed`}>
+          <p className={`hero-subtitle text-xl lg:text-2xl ${theme.secondary} mb-12 max-w-4xl mx-auto leading-relaxed`}>
             {block.content}
           </p>
         )}
@@ -106,11 +106,11 @@ function HeroBlock({ block, theme }: ContentBlockProps) {
               <a
                 key={index}
                 href={button.href}
-                className={`inline-flex items-center px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl ${
+                className={`zyros-button-primary inline-flex items-center px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl ${
                   button.style === 'primary' 
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                     : button.style === 'secondary'
-                    ? `${theme.card} border ${theme.border} ${theme.text} hover:${theme.accent}`
+                    ? `zyros-button-secondary ${theme.card} border ${theme.border} ${theme.text} hover:${theme.accent}`
                     : `border-2 border-current ${theme.accent} hover:bg-current hover:text-white`
                 }`}
               >
@@ -360,7 +360,7 @@ function StatsBlock({ block, theme }: ContentBlockProps) {
   if (!data?.stats) return null;
 
   return (
-    <section className={`py-20 ${theme.background}`}>
+    <section className={`stats-section py-20 ${theme.background}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           {block.title && (
@@ -379,17 +379,17 @@ function StatsBlock({ block, theme }: ContentBlockProps) {
           {data.stats.map((stat, index) => (
             <div 
               key={index}
-              className={`text-center p-8 rounded-3xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}
+              className={`zyros-card text-center p-8 rounded-3xl ${theme.card} border ${theme.border} shadow-lg hover:shadow-xl transition-all duration-300`}
             >
               {stat.icon && (
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white flex items-center justify-center mx-auto mb-6 text-2xl`}>
+                <div className={`stats-icon w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white flex items-center justify-center mx-auto mb-6 text-2xl`}>
                   {stat.icon}
                 </div>
               )}
-              <div className={`text-4xl font-bold ${theme.accent} mb-2`}>
+              <div className={`stats-number text-4xl font-bold ${theme.accent} mb-2`}>
                 {stat.value}
               </div>
-              <div className={`text-lg font-semibold ${theme.text} mb-2`}>
+              <div className={`stats-label text-lg font-semibold ${theme.text} mb-2`}>
                 {stat.label}
               </div>
               {stat.description && (

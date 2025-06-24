@@ -54,7 +54,7 @@ export default function DynamicPage({ page, siteData }: PageProps) {
       pages={siteData.pages}
       currentPage={page}
     >
-      <PageRenderer page={page} theme={theme} />
+      <PageRenderer page={page} theme={theme} uiConfig={siteData.ui || undefined} />
     </Layout>
   );
 }
@@ -99,10 +99,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       };
     }
 
+    // Remove undefined values to prevent serialization issues
+    const cleanSiteData = JSON.parse(JSON.stringify(siteData));
+    
     return {
       props: {
         page,
-        siteData,
+        siteData: cleanSiteData,
       },
     };
   } catch (error) {

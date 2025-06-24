@@ -4,7 +4,7 @@
 
 A **developer-friendly static site generator** built with Next.js and Tailwind CSS. Transform a simple JSON file into a beautiful, fast static website with powerful features that developers and content creators love.
 
-![zyros](https://img.shields.io/badge/zyros-v2.1.2-blue)
+![zyros](https://img.shields.io/badge/zyros-v2.1.4-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
@@ -12,6 +12,17 @@ A **developer-friendly static site generator** built with Next.js and Tailwind C
 ![License](https://img.shields.io/npm/l/zyros)
 ![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)
 
+## 🎉 Recent Improvements (v2.1.4)
+
+Based on valuable community feedback, we've made significant improvements:
+
+- ✅ **Fixed dark theme text visibility** - Intelligent color contrast for all themes
+- ✅ **Scalable content management** - Multi-file markdown support with frontmatter
+- ✅ **Enhanced documentation** - Clear analytics dashboard access and security guidelines
+- ✅ **Backward compatibility** - Existing projects continue to work seamlessly
+- 🔄 **CLI optimization** - Deprecated redundant commands (use `npm run dev/build` instead)
+
+> 📋 **Coming in v2.1.5**: Dependency-based architecture for easy updates and maintenance
 
 ## DEMO
 **https://zyros.vercel.app/**
@@ -21,11 +32,17 @@ A **developer-friendly static site generator** built with Next.js and Tailwind C
 
 ### 🎯 Core Features
 - 📄 **JSON-based content management** - Define your entire site in a single JSON file
-- 🎨 **8 Beautiful themes** - Choose from light, dark, minimal, ocean, sunset, forest, midnight, and neon themes
+- 🎨 **13 Beautiful themes** - Choose from light, dark, minimal, ocean, sunset, forest, midnight, neon, aurora, autumn, cyberpunk, and sakura themes
 - 📝 **Enhanced Markdown support** - Write content in Markdown with beautiful rendering and syntax highlighting
 - ⚡ **Static generation** - Lightning-fast sites with Next.js static export
 - 📱 **Responsive design** - Mobile-first, beautiful on all devices with smooth animations
 - 🎯 **Zero configuration** - Works out of the box
+
+### 🤖 AI-Powered Features
+- 🧠 **AI Content Generator** - Generate blog posts, landing pages, and content blocks with AI assistance
+- 📊 **SEO Analyzer** - Real-time SEO analysis with optimization suggestions and scoring
+- ⚡ **Performance Dashboard** - Monitor Core Web Vitals, Lighthouse scores, and user metrics
+- 🎨 **Visual Page Builder** - Drag-and-drop page builder for creating pages without code
 
 ### 🔍 Advanced Search & Discovery
 - 🔍 **Smart search** - Built-in fuzzy search with keyboard shortcuts (⌘+K)
@@ -46,6 +63,32 @@ A **developer-friendly static site generator** built with Next.js and Tailwind C
 - 🎨 **Theme preferences** - Understand which themes are most popular
 - 📊 **Performance metrics** - Monitor scroll depth and content engagement
 - 💾 **Privacy-first** - All analytics stored locally, no external tracking
+
+#### Accessing the Analytics Dashboard
+
+Your Zyros site includes a powerful analytics dashboard at `/analytics`:
+
+**Development Mode:**
+```bash
+npm run dev
+# Visit http://localhost:3000/analytics
+```
+
+**Production Mode:**
+```bash
+npm run build
+npm run start
+# Visit http://yoursite.com/analytics
+```
+
+> **🔒 Security Note**: The analytics dashboard is publicly accessible by default. For production sites, consider implementing authentication or restricting access via your hosting provider's settings.
+
+**Features include:**
+- Real-time page performance metrics
+- Search query analytics
+- Theme preference tracking
+- Content engagement insights
+- Data export functionality
 
 ### 🚀 Social & Engagement
 - 📤 **Social sharing** - Share articles on Twitter, Facebook, LinkedIn with native support
@@ -183,7 +226,7 @@ my-blog/
 
 ## 🎨 Themes
 
-Choose from eight stunning themes, each with unique color palettes and visual styles:
+Choose from thirteen stunning themes, each with unique color palettes and visual styles:
 
 ### Available Themes
 - **Light** - Clean and bright with excellent readability
@@ -194,6 +237,10 @@ Choose from eight stunning themes, each with unique color palettes and visual st
 - **Forest** - Natural and calming emerald-green palette
 - **Midnight** - Deep and mysterious purple-slate combination
 - **Neon** - Bold and electric green-on-black cyberpunk style
+- **Aurora** - Mystical northern lights with purple-pink gradients
+- **Autumn** - Warm amber and orange fall-inspired palette
+- **Cyberpunk** - High-contrast cyan and magenta futuristic design
+- **Sakura** - Delicate pink cherry blossom aesthetic
 
 ### Usage
 ```json
@@ -461,7 +508,7 @@ All analytics are privacy-first and stored locally.
 
 ## 🗺️ Roadmap
 
-### ✅ Recently Added (v2.1.3)
+### ✅ Recently Added (v2.1.4)
 - [x] **NPM Package** - Install globally or use with npx
 - [x] **CLI Tool** - Complete command-line interface with proper termination
 - [x] **Template System** - 5 complete starter templates (Default, Portfolio, Documentation, Business, Minimal)

@@ -271,5 +271,278 @@
       "layout": "documentation",
       "content": "# CLI Commands Reference\n\nZyros provides a comprehensive command-line interface for managing your static sites. This reference covers all available commands and their options.\n\n## Global Options\n\nThese options are available for all commands:\n\n```bash\n--help, -h     Show help information\n--version, -v  Show version number\n--verbose      Enable verbose logging\n--quiet        Suppress all output except errors\n```\n\n## Project Management\n\n### zyros init\n\nCreate a new Zyros project.\n\n```bash\nzyros init <project-name> [options]\n```\n\n#### Options\n- `--template, -t <name>` - Use a specific template\n- `--force, -f` - Overwrite existing directory\n- `--no-install` - Skip npm install\n- `--git` - Initialize git repository\n\n#### Examples\n```bash\n# Basic project\nzyros init my-blog\n\n# Use portfolio template\nzyros init my-portfolio --template portfolio\n\n# Skip dependency installation\nzyros init my-site --no-install\n```\n\n### zyros dev\n\nStart the development server.\n\n```bash\nzyros dev [options]\n```\n\n#### Options\n- `--port, -p <number>` - Port number (default: 3000)\n- `--host, -H <host>` - Host address (default: localhost)\n- `--open, -o` - Open browser automatically\n\n#### Examples\n```bash\n# Start on default port\nzyros dev\n\n# Custom port and host\nzyros dev --port 8080 --host 0.0.0.0\n\n# Open browser automatically\nzyros dev --open\n```\n\n### zyros build\n\nBuild the site for production.\n\n```bash\nzyros build [options]\n```\n\n#### Options\n- `--output, -o <dir>` - Output directory (default: out)\n- `--analyze` - Analyze bundle size\n- `--no-lint` - Skip linting\n\n#### Examples\n```bash\n# Standard build\nzyros build\n\n# Custom output directory\nzyros build --output dist\n\n# Analyze bundle\nzyros build --analyze\n```\n\n## Content Management\n\n### zyros content create\n\nCreate a new content page.\n\n```bash\nzyros content create [options]\n```\n\n#### Options\n- `--title, -t <title>` - Page title\n- `--slug, -s <slug>` - URL slug\n- `--category, -c <category>` - Page category\n- `--template <template>` - Content template\n- `--interactive, -i` - Interactive mode\n\n#### Examples\n```bash\n# Interactive creation\nzyros content create --interactive\n\n# Quick creation\nzyros content create --title \"My Post\" --slug my-post\n```\n\n### zyros content list\n\nList all content pages.\n\n```bash\nzyros content list [options]\n```\n\n#### Options\n- `--category, -c <category>` - Filter by category\n- `--tag, -t <tag>` - Filter by tag\n- `--format, -f <format>` - Output format (table, json, csv)\n- `--sort, -s <field>` - Sort by field\n\n#### Examples\n```bash\n# List all content\nzyros content list\n\n# Filter by category\nzyros content list --category blog\n\n# JSON output\nzyros content list --format json\n```\n\n### zyros content delete\n\nDelete a content page.\n\n```bash\nzyros content delete <slug> [options]\n```\n\n#### Options\n- `--force, -f` - Skip confirmation\n- `--backup` - Create backup before deletion\n\n#### Examples\n```bash\n# Delete with confirmation\nzyros content delete my-old-post\n\n# Force delete\nzyros content delete my-old-post --force\n```\n\n### zyros content stats\n\nShow content statistics.\n\n```bash\nzyros content stats [options]\n```\n\n#### Options\n- `--detailed, -d` - Show detailed statistics\n- `--category, -c <category>` - Stats for specific category\n\n## Template Management\n\n### zyros template list\n\nList available templates.\n\n```bash\nzyros template list [options]\n```\n\n#### Options\n- `--category, -c <category>` - Filter by category\n- `--detailed, -d` - Show detailed information\n\n### zyros template apply\n\nApply a template to current project.\n\n```bash\nzyros template apply <template-name> [options]\n```\n\n#### Options\n- `--force, -f` - Overwrite existing files\n- `--backup` - Create backup before applying\n\n### zyros template create\n\nCreate a custom template from current project.\n\n```bash\nzyros template create <template-name> [options]\n```\n\n#### Options\n- `--description, -d <desc>` - Template description\n- `--author, -a <author>` - Template author\n- `--force, -f` - Overwrite existing template\n\n## Deployment\n\n### zyros deploy\n\nDeploy your site to various platforms.\n\n```bash\nzyros deploy <platform> [options]\n```\n\n#### Supported Platforms\n- `vercel` - Deploy to Vercel\n- `netlify` - Deploy to Netlify\n- `github` - Deploy to GitHub Pages\n- `s3` - Deploy to AWS S3\n\n#### Options\n- `--prod` - Deploy to production\n- `--preview` - Deploy as preview\n- `--domain <domain>` - Custom domain\n- `--env <file>` - Environment file\n\n#### Examples\n```bash\n# Deploy to Vercel\nzyros deploy vercel --prod\n\n# Deploy to Netlify with custom domain\nzyros deploy netlify --domain mydomain.com\n\n# Deploy to GitHub Pages\nzyros deploy github\n```\n\n## Optimization\n\n### zyros optimize\n\nOptimize your site's assets.\n\n```bash\nzyros optimize [options]\n```\n\n#### Options\n- `--images` - Optimize images only\n- `--webp` - Generate WebP versions\n- `--cleanup` - Clean up optimization artifacts\n\n#### Examples\n```bash\n# Full optimization\nzyros optimize\n\n# Images only\nzyros optimize --images\n\n# Generate WebP\nzyros optimize --webp\n```\n\n## Validation\n\n### zyros validate\n\nValidate your site configuration and content.\n\n```bash\nzyros validate [options]\n```\n\n#### Options\n- `--strict` - Enable strict validation\n- `--fix` - Auto-fix common issues\n- `--report <file>` - Save report to file\n\n#### Examples\n```bash\n# Basic validation\nzyros validate\n\n# Strict mode with auto-fix\nzyros validate --strict --fix\n```\n\n## Configuration\n\n### zyros config\n\nManage configuration settings.\n\n```bash\nzyros config [command] [options]\n```\n\n#### Commands\n- `list` - Show all configuration\n- `get <key>` - Get specific value\n- `set <key> <value>` - Set configuration value\n- `delete <key>` - Delete configuration\n\n#### Examples\n```bash\n# List all config\nzyros config list\n\n# Get site title\nzyros config get site.title\n\n# Set theme\nzyros config set site.theme dark\n```\n\n## Troubleshooting\n\n### Common Issues\n\n#### Command Not Found\n```bash\n# Reinstall globally\nnpm install -g zyros@latest\n\n# Check installation\nwhich zyros\nzyros --version\n```\n\n#### Permission Errors\n```bash\n# Fix npm permissions (macOS/Linux)\nsudo chown -R $(whoami) ~/.npm\n\n# Use npx instead\nnpx zyros@latest <command>\n```\n\n#### Build Failures\n```bash\n# Clear cache\nrm -rf .next node_modules\nnpm install\n\n# Validate configuration\nzyros validate --strict\n```\n\n### Getting Help\n\n```bash\n# Command help\nzyros <command> --help\n\n# General help\nzyros --help\n\n# Version info\nzyros --version\n```\n\n---\n\n*Need more help? Check our [FAQ](/faq) or join our [Discord community](https://discord.gg/zyros).*"
     }
-  ]
+  ],
+  "ui": {
+    "scrollToTop": {
+      "enabled": true,
+      "threshold": 400,
+      "position": {
+        "bottom": "2rem",
+        "right": "2rem"
+      },
+      "style": {
+        "background": "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
+        "color": "#ffffff",
+        "size": "3rem",
+        "borderRadius": "50%"
+      }
+    },
+    "readingProgress": {
+      "enabled": true,
+      "height": "3px",
+      "background": "#e2e8f0",
+      "foreground": "linear-gradient(90deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%)",
+      "position": "top",
+      "zIndex": 50
+    },
+    "hero": {
+      "enabled": false,
+      "background": {
+        "type": "gradient",
+        "gradient": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)"
+      },
+      "title": {
+        "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+        "fontWeight": "700",
+        "color": "#1e293b"
+      },
+      "subtitle": {
+        "fontSize": "clamp(1.125rem, 2.5vw, 1.5rem)",
+        "color": "#64748b"
+      }
+    },
+    "stats": {
+      "enabled": false
+    },
+    "cards": {
+      "enabled": false,
+      "background": "#ffffff",
+      "border": {
+        "color": "#e2e8f0",
+        "width": "1px",
+        "radius": "0.75rem"
+      },
+      "shadow": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+      "hover": {
+        "transform": "translateY(-4px)",
+        "shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "borderColor": "#2563eb"
+      }
+    },
+    "buttons": {
+      "enabled": false,
+      "primary": {
+        "background": "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
+        "color": "#ffffff",
+        "borderRadius": "0.5rem",
+        "padding": "0.75rem 1.5rem",
+        "fontSize": "0.875rem",
+        "fontWeight": "600",
+        "hover": {
+          "background": "linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%)",
+          "transform": "translateY(-2px)",
+          "shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1)"
+        }
+      },
+      "secondary": {
+        "background": "transparent",
+        "color": "#2563eb",
+        "border": "1px solid #e2e8f0",
+        "borderRadius": "0.5rem",
+        "hover": {
+          "background": "#f8fafc",
+          "borderColor": "#2563eb"
+        }
+      }
+    },
+    "navigation": {
+      "enabled": false,
+      "background": {
+        "type": "blur",
+        "color": "rgba(248, 250, 252, 0.95)"
+      },
+      "links": {
+        "color": "#64748b",
+        "activeColor": "#2563eb",
+        "fontSize": "0.875rem",
+        "fontWeight": "500",
+        "hoverBackground": "rgba(37, 99, 235, 0.05)",
+        "borderRadius": "0.5rem"
+      }
+    },
+    "footer": {
+      "background": {
+        "type": "gradient",
+        "gradient": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)"
+      },
+      "text": {
+        "color": "#64748b",
+        "linkColor": "#2563eb"
+      },
+      "border": {
+        "color": "#e2e8f0",
+        "width": "1px"
+      }
+    },
+    "analytics": {
+      "enabled": false,
+      "cards": {
+        "background": "#ffffff",
+        "border": "1px solid #e2e8f0",
+        "borderRadius": "0.75rem"
+      },
+      "metrics": {
+        "colors": {
+          "views": "#2563eb",
+          "pages": "#059669",
+          "searches": "#7c3aed",
+          "shares": "#dc2626"
+        }
+      }
+    },
+    "forms": {
+      "enabled": false,
+      "input": {
+        "background": "#ffffff",
+        "border": "1px solid #e2e8f0",
+        "borderRadius": "0.5rem",
+        "fontSize": "0.875rem",
+        "padding": "0.75rem 1rem",
+        "focus": {
+          "borderColor": "#2563eb",
+          "boxShadow": "0 0 0 3px rgba(37, 99, 235, 0.1)"
+        }
+      },
+      "button": {
+        "background": "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
+        "color": "#ffffff",
+        "borderRadius": "0.5rem",
+        "padding": "0.75rem 1.5rem",
+        "fontSize": "0.875rem",
+        "fontWeight": "600"
+      }
+    },
+    "newsletter": {
+      "enabled": false
+    },
+    "socialShare": {
+      "enabled": false,
+      "button": {
+        "background": "transparent",
+        "border": "1px solid #e2e8f0",
+        "color": "#64748b",
+        "borderRadius": "0.5rem",
+        "padding": "0.5rem 0.75rem",
+        "fontSize": "0.75rem",
+        "hover": {
+          "background": "#f8fafc",
+          "borderColor": "#2563eb",
+          "color": "#2563eb"
+        }
+      }
+    },
+    "loadingSpinner": {
+      "enabled": false,
+      "color": "#2563eb",
+      "size": "2rem"
+    },
+    "searchBar": {
+      "enabled": false,
+      "background": "#ffffff",
+      "border": "1px solid #e2e8f0",
+      "borderRadius": "0.5rem",
+      "padding": "0.75rem 1rem",
+      "fontSize": "0.875rem",
+      "focus": {
+        "borderColor": "#2563eb",
+        "boxShadow": "0 0 0 3px rgba(37, 99, 235, 0.1)"
+      }
+    },
+    "tableOfContents": {
+      "enabled": false,
+      "background": "#f8fafc",
+      "border": "1px solid #e2e8f0",
+      "borderRadius": "0.75rem",
+      "padding": "1.5rem",
+      "title": {
+        "fontSize": "1rem",
+        "fontWeight": "600",
+        "color": "#1e293b"
+      },
+      "link": {
+        "color": "#64748b",
+        "fontSize": "0.875rem",
+        "padding": "0.5rem 0.75rem",
+        "borderRadius": "0.5rem",
+        "hover": {
+          "background": "rgba(37, 99, 235, 0.05)",
+          "color": "#2563eb"
+        },
+        "active": {
+          "background": "rgba(37, 99, 235, 0.1)",
+          "color": "#2563eb"
+        }
+      }
+    },
+    "contentBlocks": {
+      "enabled": false
+    },
+    "gradients": {
+      "primary": "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
+      "secondary": "linear-gradient(135deg, #059669 0%, #047857 100%)",
+      "accent": "linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)"
+    },
+    "animations": {
+      "durations": {
+        "fast": "150ms",
+        "normal": "300ms",
+        "slow": "500ms"
+      },
+      "easings": {
+        "default": "cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "hover": {
+        "scale": "1.02",
+        "translateY": "-4px"
+      }
+    }
+  },
+  "animations": {
+    "durations": {
+      "fast": "150ms",
+      "normal": "300ms",
+      "slow": "500ms"
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "transitions": {
+      "page": "all 300ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "component": "all 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "hover": "all 150ms cubic-bezier(0.4, 0, 0.2, 1)"
+    }
+  },
+  "layout": {
+    "container": {
+      "maxWidth": "1200px",
+      "padding": "1rem",
+      "margin": "0 auto"
+    },
+    "spacing": {
+      "section": "4rem",
+      "component": "2rem",
+      "element": "1rem"
+    },
+    "breakpoints": {
+      "mobile": "640px",
+      "tablet": "768px",
+      "desktop": "1024px",
+      "wide": "1280px"
+    }
+  },
+  "floatingElements": {
+    "scrollToTop": {
+      "enabled": false
+    }
+  }
 } 

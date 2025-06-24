@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import { Theme } from '../styles/themes';
 import { Page } from '../lib/contentLoader';
+import { UICustomizationConfig } from '../types/site';
 import ReadingProgress from './ReadingProgress';
 import TableOfContents from './TableOfContents';
 import CopyCodeButton from './CopyCodeButton';
@@ -12,12 +13,13 @@ import { Tag, Clock, Calendar } from './Icons';
 interface PageRendererProps {
   page: Page;
   theme: Theme;
+  uiConfig?: UICustomizationConfig;
 }
 
-export default function PageRenderer({ page, theme }: PageRendererProps) {
+export default function PageRenderer({ page, theme, uiConfig }: PageRendererProps) {
   return (
     <>
-      <ReadingProgress theme={theme} />
+      <ReadingProgress theme={theme} uiConfig={uiConfig} />
       <TableOfContents content={page.content} theme={theme} />
       
       <div className="max-w-4xl mx-auto px-4">
