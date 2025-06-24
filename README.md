@@ -26,7 +26,7 @@ Based on valuable community feedback, we've made significant improvements:
 
 ## DEMO
 **https://zyros.vercel.app/**
-![Demo](p0s9gqg.jpg)
+![Demo](Ekran Alıntısı.png)
 
 ## ✨ Features
 
